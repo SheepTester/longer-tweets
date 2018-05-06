@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', e => {
       .filter(t => t);
     if (filteredTags.length) {
       postFilterer.innerHTML = `.post-entry`
-        + filteredTags.map(t => t[0] === '~' ? `:not(.${t})` : `.${t}`).join('')
+        + filteredTags.map(t => t[0] === '~' ? `:not(.${t.slice(1)})` : `.${t}`).join('')
         + ' { display: block; } .post-entry { display: none; }';
     } else {
       postFilterer.textContent = '';
