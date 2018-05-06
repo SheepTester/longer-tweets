@@ -22,7 +22,8 @@ function completeHTML(template, vars) {
 }
 
 let templates = {},
-posts = [];
+posts = [],
+tags = [];
 
 const days = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'],
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -46,6 +47,7 @@ async function makePost(fileName) {
     id: metadata.id,
     tags: metadata.tags
   });
+  metadata.tags.forEach(t => !tags.includes(t) && tags.push(t));
   await fsPromisify(fs.writeFile, dirName + '/index.html', completeHTML(templates.post, {
     posthtml: rendered,
     title: metadata.title,
@@ -73,6 +75,7 @@ fsPromisify(fs.readdir, templatesFolder).then(files =>
       posttitle: p.title,
       postdesc: p.description,
       postdate: p.date,
+      tagnames: p.tags.join(' '),
       tags: p.tags.map(t => completeHTML(templates.tag, {tagname: t, root: '.'})).join(''),
       root: '.'
     })).join(''),
