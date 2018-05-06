@@ -11,9 +11,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
-.content a:hover, .content a:focus {
+.content a:hover {
   border-bottom: 1px solid currentColor;
-  outline: none;
 }
 .content code {
   background-color: rgba(0, 0, 0, 0.4);
@@ -27,7 +26,7 @@
   margin-left: -20px;
   margin-right: -20px;
   white-space: pre-wrap;
-  word-break: break-all;
+  word-break: break-word;
 }
 .content pre code {
   background: none;
@@ -83,4 +82,7 @@
 .content ol > li::before {
   content: counter(item);
   counter-increment: item;
+}
+.content s {
+  color: rgba(255, 255, 255, 0.5);
 }
