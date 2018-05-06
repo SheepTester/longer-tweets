@@ -24,8 +24,7 @@ span.date {
 h1.title {
   font-size: 48px;
   font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 16px;
+  margin: 0;
 }
 .links {
   margin: 20px;
@@ -41,13 +40,14 @@ h1.title {
   border-bottom: 1px solid currentColor;
 }
 .tags .tag {
+  display: inline-block;
   background-color: rgba(0, 0, 0, 0.3);
-  line-height: 1;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   padding: 5px 10px;
   border-radius: 1em;
   margin-right: 5px;
+  margin-top: 10px;
 }
 .tags .tag:hover {
   background-color: rgba(0, 0, 0, 0.5);

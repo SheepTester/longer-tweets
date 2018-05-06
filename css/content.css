@@ -36,10 +36,12 @@
   width: 100%;
   border-collapse: collapse;
   line-height: 1;
+  margin: 15px 0;
 }
 .content th {
   font-weight: bold;
   text-align: left;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .content td, .content th {
   border: 1px solid rgba(0, 0, 0, 0.3);

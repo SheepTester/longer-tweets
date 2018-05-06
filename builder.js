@@ -39,11 +39,12 @@ async function makePost(fileName) {
   metadata = md.meta,
   filestats = await fsPromisify(fs.stat, postsFolder + fileName);
   await fsPromisify(fs.access, dirName).catch(() => fsPromisify(fs.mkdir, dirName));
+  metadata.date = formatDate(new Date(metadata.date.getTime() + 60000 * metadata.date.getTimezoneOffset()), false);
   posts.push({
     path: dirName.slice(2) + '/',
     title: metadata.title,
     description: metadata.description,
-    date: formatDate(metadata.date, false),
+    date: metadata.date,
     id: metadata.id,
     tags: metadata.tags
   });
@@ -53,7 +54,7 @@ async function makePost(fileName) {
     title: metadata.title,
     description: metadata.description,
     root: '..',
-    creationdate: formatDate(metadata.date, false),
+    creationdate: metadata.date,
     lastedit: formatDate(filestats.mtime, true),
     tags: metadata.tags.map(t => completeHTML(templates.tag, {tagname: t, root: '..'})).join('')
   }));

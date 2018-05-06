@@ -13,8 +13,8 @@ I've tried to create a blog multiple times.
 1. a WordPress blog while learning web development
 2. [the Box of Sean](https://boxofsean.blogspot.com/) (a Blogger blog): I actually put content on there, but I stopped mainly because of the editor:
 
-  - it is light theme
-  - it's not very easy to use for me
+    - it is light theme
+    - it's not very easy to use for me
 
 3. [Opinions](https://sheeptester.github.io/opinions/): I'm not sure what happened to it; I guess I didn't care much at the time or I didn't know how
 4. [Blog de Sean](https://sheeptester.github.io/blog/) (made with [Jekyll Now](https://github.com/barryclark/jekyll-now)): I made it just to try it out and actually [posted something](https://sheeptester.github.io/blog/SHOWBALL-PROBLEM-JOURNAL/). I ended up not using it partially because I didn't like the design
