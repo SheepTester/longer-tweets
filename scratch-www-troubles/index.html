@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- MADE BY SEAN -->
+
+<title>scratch-www troubles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="I tried and kind of succeeded in building Scratch WWW.">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="scratch-www troubles"/>
+<meta property="og:description" content="I tried and kind of succeeded in building Scratch WWW."/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="scratch-www troubles"/>
+<meta name="twitter:description" content="I tried and kind of succeeded in building Scratch WWW."/>
+
+<link rel="stylesheet" type="text/css" href="/sheep2.css">
+<script src="/sheep2.js" charset="utf-8"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CInconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tomorrow-night.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <div class="links">
+  <a href="../">home</a> &middot; <a href="../">main</a> &middot; <a href="../">index</a>
+</div>
+
+    <div class="background"></div>
+    <span class="date">Sunday, July 1, 2018</span>
+    <h1 class="title">scratch-www troubles</h1>
+    <div class="tags"><a class="tag" href="../#programming">programming</a>
+<a class="tag" href="../#node">node</a>
+<a class="tag" href="../#scratch">scratch</a>
+</div>
+    <div class="content">
+      <p>One day, I decided to see if I could see the progress on the project page redesign.</p>
+<p>It shouldn't be too hard, I thought. I just had to clone their repository and follow their very helpful and detailed steps to build it somehow. And it would have worked. But there were a few problems.</p>
+<h1>cloning the repository</h1>
+<pre><code>git clone https://github.com/LLK/scratch-www.git
+</code></pre>
+<p>I did, after making a <code>test</code> folder in my Documents (because I didn't intend on keeping it; I imagined it would be pretty big in terms of file size).</p>
+<p>It didn't take too long for it to reach 22%, and then it stopped. It was probably the bad internet, I thought, since we were on vacation.</p>
+<p>And then it failed.</p>
+<p><img src="../images/git-clone-fail.png" alt="it failed to clone the repository" title="At first if you don't succeed, try try again."></p>
+<p>So I tried again multiple times, and it still didn't work. As it was loading, I decided to try out Vim, and every time I checked back on it, it had failed. Oh well.</p>
+<p>After a lot of time, I decided to switch to my mom's apparently unlimited data plan thing, which was a lot faster. The cloning took quite a long time at 39% (probably a large file?), but it finished with no problems. Yay!</p>
+<h1>following their very helpful steps</h1>
+<h2>getting the packages</h2>
+<p>The <a href="https://github.com/LLK/scratch-www"><code>scratch-www</code></a> README said to run</p>
+<pre><code>npm install
+</code></pre>
+<p>which I did. It took a while, and Node outputted a bunch of security vulnerabilities that didn't concern me much at this point in time.</p>
+<p><img src="../images/lol-securproblems.png" alt="&quot;npm WARN notice (SECURITY) xyz has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=xyz&amp;version=1.2.3 etc&quot; (many times)" title="Hopefully this doesn't break anything."></p>
+<p>Now I see why people joke about the sheer amount of dependencies in a single Node project.</p>
+<p><img src="../images/too-many-node-dependencies.png" alt="a lot of node dependencies" title="On the contrary, libraries in Scratch is currently a foreign concept. This may change in Scratch 3.0."></p>
+<h2>building the things</h2>
+<p>Then they told me to run</p>
+<pre><code>npm run build
+</code></pre>
+<p>and so I did. Amongst the errors, there was:</p>
+<pre><code>'make' is not recognized as an internal or external command,
+operable program or batch file.
+</code></pre>
+<p>I tried running the next step (the README said building wasn't necessary), but the same error arose.</p>
+<p>It turned out I didn't have some <code>make.exe</code> thing, which Unix system things have but Windows 10 doesn't. There are ways to get it, but it's rather complicated and would require too many (more than 1) administrator password, I imagined.</p>
+<p>At this point I decided that doing this was hopeless. It's impossible to do this on a Windows, I thought.</p>
+<p>Suddenly, after some more Googling, I found a <a href="https://www.npmjs.com/package/make"><code>make</code> Node package</a>. It looked promising, so I installed it.</p>
+<p>It seemed to add the <code>make</code> command to the bash thingy.</p>
+<pre><code>npm run build
+</code></pre>
+<p>worked! It didn't seem to do anything, so I continued with the steps.</p>
+<h2>running the things</h2>
+<p>I ran</p>
+<pre><code>make translations
+npm start
+</code></pre>
+<p>and an error came up. As I expected, the Node <code>make</code> package wasn't perfect.</p>
+<p>However, I found a <code>Makefile</code> file which seemed to define the &quot;functions&quot; that the commands called.</p>
+<pre><code class="language-makefile"><span class="hljs-section">translations:</span>
+	./bin/get-localized-urls localized-urls.json
+	./bin/build-locales node_modules/scratchr2_translations/www/translations intl
+</code></pre>
+<pre><code class="language-makefile"><span class="hljs-section">start:</span>
+	<span class="hljs-variable">$(NODE)</span> ./dev-server/index.js
+</code></pre>
+<p>I tried running each line separately, and surprisingly, that worked.</p>
+<pre><code>./bin/get-localized-urls localized-urls.json
+./bin/build-locales node_modules/scratchr2_translations/www/translations intl
+node ./dev-server/index.js
+</code></pre>
+<p>Scratch build successfully. Non-redesigned pages gave an error, but I ignored them thinking they wouldn't be a big deal.</p>
+<h1>fixing the project page</h1>
+<p>There was just one problem: when I tried to open a preview project page (at <code>/preview/115618276/</code>), it was empty. I would expect that if they were working on the project pages (as evidenced by the issues), it would work here too (there was only one branch).</p>
+<p>The console gave a 404 error trying to GET <code>/session/</code>, which I assumed was a non-redesigned page. Thus, I needed to somehow make non-redesigned pages work.</p>
+<p>The README had something to say about a &quot;fallback,&quot; which I assumed was relevant.</p>
+<blockquote>
+<p>Blah <code>FALLBACK=https://scratch.mit.edu</code> blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+</blockquote>
+<p>I reran the last command but with the <code>FALLBACK</code> thing appended to it. Surprisingly there were no errors:</p>
+<pre><code>node ./dev-server/index.js FALLBACK=https://scratch.mit.edu
+</code></pre>
+<p>However, it still didn't work.</p>
+<p>Looking back at the <code>Makefile</code> file from earlier, it seemed these &quot;environment variables&quot; are put before the command name, a foreign concept to me.</p>
+<pre><code class="language-makefile">NODE= NODE_OPTIONS=--max_old_space_size=8000 node
+</code></pre>
+<p>Nonetheless, I tried putting the <code>FALLBACK</code> thing before <code>node</code>, and surprisingly, there still were no errors.</p>
+<pre><code>FALLBACK=https://scratch.mit.edu node ./dev-server/index.js
+</code></pre>
+<p>And it worked! Yay.</p>
+<h1>the result</h1>
+<p>Here's the long-awaited project page redesign:
+<img src="../images/preview-project.png" alt="use your imagination" title="The background feels brighter. But not as bright as the Discord light theme/Google Drive redesign! For some reason, people like the Google Drive redesign despite it having the same background colour as the Discord light theme.">
+<em>(not included: the studios sidebar section)</em></p>
+<p>Changes I see:</p>
+<ul>
+<li>the view count is capped at 100 (similar to studio projects). I knew this already from the issues</li>
+<li>profile picture of the creator</li>
+<li>no more last changed date (or did they remove the shared date?)</li>
+<li>a copy link button, which I'd assume would be very helpful</li>
+</ul>
+<p>Of course, it may look like they're removed the remix tree, report button, share button, comment section, etc, but because they're still working on it, I wouldn't assume their removal this early.</p>
+<h1>what I learned from this experience</h1>
+<p>Nothing lol</p>
+<p>jk I learned that there really is a lot of Node dependencies in a Node project. Yikes!</p>
+
+    </div>
+    <span class="date">Last edited on Sunday, July 1, 2018 at 05:51.</span>
+    <div class="links">
+  <a href="../">home</a> &middot; <a href="../">main</a> &middot; <a href="../">index</a>
+</div>
+
+  </body>
+</html>
