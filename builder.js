@@ -1,5 +1,5 @@
-const postsFolder = './posts/';
-const templatesFolder = './templates/';
+const postsFolder = './_posts/';
+const templatesFolder = './_templates/';
 
 const fs = require('fs');
 const fsPromisify = require('./fs-promisifier.js');
