@@ -39,7 +39,7 @@
 <a class="tag" href="../#node">node</a>
 </div>
     <div class="content">
-      <p>I've tried to create a blog multiple times.</p>
+      <p>I’ve tried to create a blog multiple times.</p>
 <ol>
 <li>
 <p>a WordPress blog while learning web development</p>
@@ -48,29 +48,29 @@
 <p><a href="https://boxofsean.blogspot.com/">the Box of Sean</a> (a Blogger blog): I actually put content on there, but I stopped mainly because of the editor:</p>
 <ul>
 <li>it is light theme</li>
-<li>it's not very easy to use for me</li>
+<li>it’s not very easy to use for me</li>
 </ul>
 </li>
 <li>
-<p><a href="https://sheeptester.github.io/opinions/">Opinions</a>: I'm not sure what happened to it; I guess I didn't care much at the time or I didn't know how</p>
+<p><a href="https://sheeptester.github.io/opinions/">Opinions</a>: I’m not sure what happened to it; I guess I didn’t care much at the time or I didn’t know how</p>
 </li>
 <li>
-<p><a href="https://sheeptester.github.io/blog/">Blog de Sean</a> (made with <a href="https://github.com/barryclark/jekyll-now">Jekyll Now</a>): I made it just to try it out and actually <a href="https://sheeptester.github.io/blog/SHOWBALL-PROBLEM-JOURNAL/">posted something</a>. I ended up not using it partially because I didn't like the design</p>
+<p><a href="https://sheeptester.github.io/blog/">Blog de Sean</a> (made with <a href="https://github.com/barryclark/jekyll-now">Jekyll Now</a>): I made it just to try it out and actually <a href="https://sheeptester.github.io/blog/SHOWBALL-PROBLEM-JOURNAL/">posted something</a>. I ended up not using it partially because I didn’t like the design</p>
 </li>
 </ol>
-<p>I'm quite confident this one will fail too.</p>
-<h1>the plan</h1>
+<p>I’m quite confident this one will fail too.</p>
+<h1 id="the-plan"><a class="markdownIt-Anchor" href="#the-plan">#</a> the plan</h1>
 <p>My plan was to use Node.js to magically generate some files by converting Markdown to HTML somehow (I was quite sure a package like that would exist, and I was right).</p>
-<p>Initially, I thought I could use some Git branch trickery so that one branch had all the Markdown files and the other <code>gh-pages</code> branch would only have the generated files. I don't think that's how it works, though.</p>
-<p>Clearly, I'm using Github pages.</p>
-<h1>the packages</h1>
-<p>I was going to use <a href="https://www.npmjs.com/package/markdown"><code>markdown-js</code></a>, but the Internet doesn't really seem to care about its existence. They all speak of the legendary <a href="https://www.npmjs.com/package/markdown-it"><code>markdown-it</code></a>, so I used that instead.</p>
+<p>Initially, I thought I could use some Git branch trickery so that one branch had all the Markdown files and the other <code>gh-pages</code> branch would only have the generated files. I don’t think that’s how it works, though.</p>
+<p>Clearly, I’m using Github pages.</p>
+<h1 id="the-packages"><a class="markdownIt-Anchor" href="#the-packages">#</a> the packages</h1>
+<p>I was going to use <a href="https://www.npmjs.com/package/markdown"><code>markdown-js</code></a>, but the Internet doesn’t really seem to care about its existence. They all speak of the legendary <a href="https://www.npmjs.com/package/markdown-it"><code>markdown-it</code></a>, so I used that instead.</p>
 <p>I wanted a way to include metadata in the Markdown files, so I also installed the <a href="https://www.npmjs.com/package/markdown-it-meta"><code>markdown-it-meta</code></a> extension. I might also add some other extensions that can allow me to use superscript, etc. in Markdown in the future, but for now this is enough.</p>
 <p>And finally, <a href="https://www.npmjs.com/package/highlightjs">Highlight.js</a> for some fancy syntax highlighting.</p>
-<h1>the design</h1>
-<p>I wanted to go with dark theme, but I didn't want the design to burn my eyes with its bright text on a black background. The only app I know that does dark theme well is Discord.</p>
-<p>I hypothesised that having a dark green background image could work. I've used such a design before on my <a href="https://sheeptester.github.io/telegraph/player.html">Morse Code Player</a> and the dark theme version of my <a href="https://sheeptester.github.io/themes/billy-goat/index-dark.html">Billy Goat theme</a>. They didn't burn my eyes, so that's good.</p>
-<p>I recalled finding a rather nice image that could work; I Googled <a href="https://www.google.com/#tbm=isch&amp;q=rain+nature"><code>rain nature</code></a> and found the image I was looking for: <a href="https://lh4.googleusercontent.com/proxy/ht8Uo3fjX0AWFR1t910tQjJw1Cw4PoYaS5gfrZgletc5OqILPjKuVqCjpLfHJLXTOZKcjwBywRJ1uMk0jfWje5hvbFAvqJMmch6pcYlkoRTYm0Cu=s0-d">this image</a> (going to the image URL seems to automatically download the image). The <a href="https://iusisnaturhotosdea.blogspot.com/2016/01/wallpaper-nature-rain.html">website</a> it was on doesn't seem to have any license or whatever, so I'm hoping I can steal it.</p>
+<h1 id="the-design"><a class="markdownIt-Anchor" href="#the-design">#</a> the design</h1>
+<p>I wanted to go with dark theme, but I didn’t want the design to burn my eyes with its bright text on a black background. The only app I know that does dark theme well is Discord.</p>
+<p>I hypothesised that having a dark green background image could work. I’ve used such a design before on my <a href="https://sheeptester.github.io/telegraph/player.html">Morse Code Player</a> and the dark theme version of my <a href="https://sheeptester.github.io/themes/billy-goat/index-dark.html">Billy Goat theme</a>. They didn’t burn my eyes, so that’s good.</p>
+<p>I recalled finding a rather nice image that could work; I Googled <a href="https://www.google.com/#tbm=isch&amp;q=rain+nature"><code>rain nature</code></a> and found the image I was looking for: <a href="https://lh4.googleusercontent.com/proxy/ht8Uo3fjX0AWFR1t910tQjJw1Cw4PoYaS5gfrZgletc5OqILPjKuVqCjpLfHJLXTOZKcjwBywRJ1uMk0jfWje5hvbFAvqJMmch6pcYlkoRTYm0Cu=s0-d">this image</a> (going to the image URL seems to automatically download the image). The <a href="https://iusisnaturhotosdea.blogspot.com/2016/01/wallpaper-nature-rain.html">website</a> it was on doesn’t seem to have any license or whatever, so I’m hoping I can steal it.</p>
 <p>I used <a href="https://designer.gravit.io/">Gravit Designer</a> to blur and shrink the image.</p>
 
     </div>

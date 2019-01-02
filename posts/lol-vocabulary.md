@@ -1,7 +1,7 @@
 ---
 title: fancy vocabulary is bad
 description: prioritise communication
-date: 2018-05-13
+date: 2018-06-17
 id: 5
 tags:
   - philosophy

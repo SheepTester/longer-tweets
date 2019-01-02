@@ -4,6 +4,8 @@ const templatesFolder = './templates/';
 const fs = require('fs');
 const fsPromisify = require('./fs-promisifier.js');
 const hljs = require('highlight.js');
+const meta = require('markdown-it-meta');
+const markdownItTocAndAnchor = require('markdown-it-toc-and-anchor').default;
 const md = require('markdown-it')({
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
@@ -12,10 +14,15 @@ const md = require('markdown-it')({
       } catch (err) {}
     }
     return '';
-  }
-});
-const meta = require('markdown-it-meta');
-md.use(meta);
+  },
+  html: true,
+  linkify: true,
+  typographer: true
+})
+  .use(meta)
+  .use(markdownItTocAndAnchor, {
+    toc: false
+  });
 
 function completeHTML(template, vars) {
   return template.replace(/{{\s*([a-z]+)\s*}}/g, (m, varName) => templates[varName] ? completeHTML(templates[varName], vars) : vars[varName] || "");
@@ -39,14 +46,16 @@ async function makePost(fileName) {
   metadata = md.meta,
   filestats = await fsPromisify(fs.stat, postsFolder + fileName);
   await fsPromisify(fs.access, dirName).catch(() => fsPromisify(fs.mkdir, dirName));
-  metadata.date = formatDate(new Date(metadata.date.getTime() + 60000 * metadata.date.getTimezoneOffset()), false);
+  const dateObj = metadata.date;
+  metadata.date = formatDate(new Date(metadata.date.getTime() + 60000 * metadata.date.getTimezoneOffset()), false); // what was I thinking
   posts.push({
     path: dirName.slice(2) + '/',
     title: metadata.title,
     description: metadata.description,
     date: metadata.date,
     id: metadata.id,
-    tags: metadata.tags
+    tags: metadata.tags,
+    dateObj: dateObj
   });
   metadata.tags.forEach(t => !tags.includes(t) && tags.push(t));
   await fsPromisify(fs.writeFile, dirName + '/index.html', completeHTML(templates.post, {
@@ -67,7 +76,10 @@ fsPromisify(fs.readdir, templatesFolder).then(files =>
 .then(() => fsPromisify(fs.readdir, postsFolder)
   .then(files => Promise.all(files.map(makePost))))
 .then(() => {
-  posts = posts.sort((a, b) => b.id - a.id);
+  posts = posts.sort((a, b) => {
+    const aTime = a.dateObj.getTime(), bTime = b.dateObj.getTime();
+    return aTime === bTime ? (b.id || 0) - (a.id || 0) : bTime - aTime;
+  });
   fsPromisify(fs.writeFile, './index.html', completeHTML(templates.main, {
     title: 'Longer Tweets',
     description: 'Yet another blog by SheepTester',

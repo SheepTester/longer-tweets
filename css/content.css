@@ -1,18 +1,25 @@
 .content {
   font-size: 16px;
   word-wrap: break-word;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 .content h1, .content h2, .content h3 {
   font-weight: normal;
 }
-.content a {
+.content a:not(.markdownIt-Anchor) {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
-.content a:hover {
+.content a:not(.markdownIt-Anchor):hover {
   border-bottom: 1px solid currentColor;
+}
+.content .markdownIt-Anchor {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+.content .markdownIt-Anchor:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 .content code {
   background-color: rgba(0, 0, 0, 0.4);
