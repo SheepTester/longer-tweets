@@ -9,5 +9,8 @@
     "markdown-it": "^8.4.1",
     "markdown-it-meta": "0.0.1",
     "markdown-it-toc-and-anchor": "^4.2.0"
+  },
+  "scripts": {
+    "build": "node builder.js"
   }
 }
