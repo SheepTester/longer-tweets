@@ -34,6 +34,6 @@ Also, with one significant figure in `100%`, that number can be anywhere from at
 
 Racial prejudice is inevitable; even if it is simply regarded as skin colour or the style of our last name, we will still find patterns when we group people by those attributes. There are already stereotypes for hair colour and height; for example, some believe many tall people play basketball.
 
-> instead of thickening the decide, why not ignore race in particular and just conform with the culture of where you are currently living and just get along with the people around you,
+> Instead of thickening the divide, why not ignore race in particular and just conform with the culture of where you are currently living and just get along with the people around you,
 
 Conforming to a culture is a terrible idea; why should we give up our own traditions when we move to a new area? We should instead retain our original cultures while embracing the new ones.
