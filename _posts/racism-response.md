@@ -20,10 +20,6 @@ Humans finding patterns is a tactic that has aided us in evolution; by finding p
 
 We shouldn't be surprised if neural networks forms similar prejudices because that's what they're supposed to do: find patterns in data.
 
-> So here we are, a society that is in that uncanny valley where technically, all races and all genders can do equal things,
-
-If I'm not mistaken, nonbinary and/or homosexual people cannot marry in some states.
-
 > All it takes is to see one person that doesn't fit the stereotype for your brain to reconstruct that stereotype.
 
 Not necessarily; I personally may simply regard them as an exception, and if these "exceptions" become common enough, I may not even notice this shift until this is explicitly pointed out to me.
