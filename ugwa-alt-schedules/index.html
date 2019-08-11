@@ -61,7 +61,7 @@
 <p>Then I had to make it treat <code>&lt;div&gt;</code> and <code>&lt;br&gt;</code> tags like it did for the paragraph tags.</p>
 <p>My previous methods for getting the period name had to be redone when the school added text <em>after</em> the time range; now it would find and remove the time range, and make the rest of the line the period name. Back to school night also introduced the school’s usage of <code>pm</code> for hours after 6 pm, so I had to implement support for that as well.</p>
 <p>When identifying the type of periods, the parser also had to consider the word <code>turkey</code> as an alias for lunch, and similarly <code>development</code> was made a keyword for a no-school day. Using <code>assembly</code> as a search string didn’t work for <code>assemblies</code>, so I made it look for <code>assembl</code> instead. However, using <code>holiday</code> to detect holidays became problematic when two innocent events named “Freshman Parents’ Holiday Social” and “Staff Holiday Luncheon” appeared, so for now it only uses events to declare a no-school day when the calendar event’s description is empty. Also, there was a day with an extended lunch, but the event summary only included <code>lunch</code> without <code>extended</code>, so I made it detect that.</p>
-<p>During CAASPP testing week, they listed periods that took place during other periods; how I made the parser deal with it is beyond the scope of this article (because I don’t remember how).</p>
+<p>During CAASPP testing week, they listed periods that took place during other periods; how I made the parser deal with it is beyond the scope of this article (because I don’t remember how). Also, the parser had to compensate for the school misspelling lunch as <code>unch</code>.</p>
 <p>The most recent change I made at the time of writing is when a newline unexpectedly appeared before the time range parentheses, which broke UGWA; the parser simply finds and removes those newlines.</p>
 <h2 id="ugwita"><a class="markdownIt-Anchor" href="#ugwita">#</a> Ugwita</h2>
 <p>After writing the first version of the parser, I didn’t immediately use it in UGWA. I instead created an entirely new app: <a href="https://orbiit.github.io/gunn-web-app/lite/">UGWA Lite (Ugwita)</a>, aiming to be even more lightweight than UGWA, with minimalist features. It would fetch, parse, and store the alternate schedules, making it possible for alternate schedules to display while offline.</p>
@@ -77,9 +77,10 @@
 <p>Ugwisha, a rewritten version of UGWA, deals with SELF in a more sophisticated manner, and even properly detects SELF grades to the point where normal Thursdays without SELF are considered to be alternate schedules. However, that’s beyond the scope of this article, mostly because I don’t find Ugwisha as interesting of an app to make fun of.</p>
 <h2 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion">#</a> Conclusion</h2>
 <p>UGWA’s alternate schedule system is a mess of hacky solutions and bodges piled on each other; if you don’t want your Gunn app to compute the mass of the universe just for some alternate schedules, you should use the better-optimized Ugwisha.</p>
+<p>Edit: Added something about <code>unch</code>.</p>
 
     </div>
-    <span class="date">Last edited on Saturday, August 10, 2019 at 13:40.</span>
+    <span class="date">Last edited on Sunday, August 11, 2019 at 15:02.</span>
     <div class="links">
   <a href="../">home</a> &middot; <a href="../">main</a> &middot; <a href="../">index</a>
 </div>

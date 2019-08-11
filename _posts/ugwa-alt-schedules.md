@@ -51,7 +51,7 @@ My previous methods for getting the period name had to be redone when the school
 
 When identifying the type of periods, the parser also had to consider the word `turkey` as an alias for lunch, and similarly `development` was made a keyword for a no-school day. Using `assembly` as a search string didn’t work for `assemblies`, so I made it look for `assembl` instead. However, using `holiday` to detect holidays became problematic when two innocent events named “Freshman Parents’ Holiday Social” and “Staff Holiday Luncheon” appeared, so for now it only uses events to declare a no-school day when the calendar event’s description is empty. Also, there was a day with an extended lunch, but the event summary only included `lunch` without `extended`, so I made it detect that.
 
-During CAASPP testing week, they listed periods that took place during other periods; how I made the parser deal with it is beyond the scope of this article (because I don’t remember how).
+During CAASPP testing week, they listed periods that took place during other periods; how I made the parser deal with it is beyond the scope of this article (because I don’t remember how). Also, the parser had to compensate for the school misspelling lunch as `unch`.
 
 The most recent change I made at the time of writing is when a newline unexpectedly appeared before the time range parentheses, which broke UGWA; the parser simply finds and removes those newlines.
 
@@ -82,3 +82,5 @@ Ugwisha, a rewritten version of UGWA, deals with SELF in a more sophisticated ma
 ## Conclusion
 
 UGWA’s alternate schedule system is a mess of hacky solutions and bodges piled on each other; if you don’t want your Gunn app to compute the mass of the universe just for some alternate schedules, you should use the better-optimized Ugwisha.
+
+Edit: Added something about `unch`.
