@@ -9,16 +9,13 @@
   position: relative;
 }
 .content a:not(.markdownIt-Anchor) {
-  color: rgba(255, 255, 255, 0.65);
-  background-color: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
-  border-radius: 5px;
 }
 .content a:not(.markdownIt-Anchor):hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  color: white;
+  border-bottom: 1px solid currentColor;
 }
 .content .markdownIt-Anchor {
   color: rgba(255, 255, 255, 0.1);

@@ -65,7 +65,8 @@ async function makePost(fileName) {
     root: '..',
     creationdate: metadata.date,
     lastedit: formatDate(filestats.mtime, true),
-    tags: metadata.tags.map(t => completeHTML(templates.tag, {tagname: t, root: '..'})).join('')
+    tags: metadata.tags.map(t => completeHTML(templates.tag, {tagname: t, root: '..'})).join(''),
+    filename: fileName
   }));
 }
 
