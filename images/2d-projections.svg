@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 976 855" width="976pt" height="855pt"><defs><clipPath id="_clipPath_ZMvKd35ZUI3XuVRmTg0YjTyrDFcdAliQ"><rect width="976" height="855"/></clipPath></defs><g clip-path="url(#_clipPath_ZMvKd35ZUI3XuVRmTg0YjTyrDFcdAliQ)"><rect width="976" height="855" style="fill:rgb(0,0,0)"/><linearGradient id="_lgradient_13" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(118.5,0,0,127,495.5,602)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(255,0,0)"/><stop offset="100%" stop-opacity="0" style="stop-color:rgb(255,0,0)"/></linearGradient><path d=" M 495.5 665.5 L 614 602 L 614 729 L 495.5 665.5 Z " fill="url(#_lgradient_13)"/><linearGradient id="_lgradient_14" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(0,-85.25,188.5,0,219.25,391.56)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(255,0,0)"/><stop offset="100%" stop-opacity="0" style="stop-color:rgb(255,0,0)"/></linearGradient><path d=" M 313.5 391.56 L 219.25 306.31 L 407.75 306.31 L 313.5 391.56 Z " fill="url(#_lgradient_14)"/><linearGradient id="_lgradient_15" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-213.5,0,0,181,527,407)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(100,58,26)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(40,20,5)"/></linearGradient><rect x="313.5" y="407" width="213.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_15)"/><linearGradient id="_lgradient_16" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(213.5,0,0,181,100,407)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(100,58,26)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(40,20,5)"/></linearGradient><rect x="100" y="407" width="213.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_16)"/><linearGradient id="_lgradient_17" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(87,0,0,181,100,407)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(119,72,37)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(162,104,60)"/></linearGradient><rect x="100" y="407" width="87" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_17)"/><linearGradient id="_lgradient_18" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-87,0,0,181,527,407)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(119,72,37)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(162,104,60)"/></linearGradient><rect x="440" y="407" width="87" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_18)"/><linearGradient id="_lgradient_19" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(67.5,0,0,181,246,407)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(4,135,174)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(56,179,217)"/></linearGradient><rect x="246" y="407" width="67.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_19)"/><linearGradient id="_lgradient_20" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-67.5,0,0,181,381,407)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(4,135,174)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(56,179,217)"/></linearGradient><rect x="313.5" y="407" width="67.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_20)"/><path d=" M 254.81 328 L 196.12 269.31 L 313.5 151.93 L 430.88 269.31 L 372.19 328" fill="none" stroke-width="5" stroke="rgb(179,100,41)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><circle cx="313.4999999999998" cy="269.3101371615164" r="37" fill="none" stroke-width="5" stroke="rgb(28,194,244)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><rect x="607" y="76" width="219" height="512" transform="matrix(1,0,0,1,0,0)" fill="rgb(129,202,255)"/><linearGradient id="_lgradient_21" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(256,0,0,219,588.5,350.5)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(0,94,255)"/><stop offset="100%" stop-opacity="0.35" style="stop-color:rgb(0,94,255)"/></linearGradient><rect x="588.5" y="350.5" width="256" height="219" transform="matrix(0,-1,1,0,256.5,1176.5)" fill="url(#_lgradient_21)"/><linearGradient id="_lgradient_22" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(198,0,0,219,617.5,379.5)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(183,176,79)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(255,250,185)"/></linearGradient><rect x="617.5" y="379.5" width="198" height="219" transform="matrix(0,-1,1,0,227.5,1205.5)" fill="url(#_lgradient_22)"/><linearGradient id="_lgradient_23" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(159,0,0,219,637,399)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(14,104,27)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(80,195,97)"/></linearGradient><rect x="637" y="399" width="159" height="219" transform="matrix(0,-1,1,0,208,1225)" fill="url(#_lgradient_23)"/><linearGradient id="_lgradient_24" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(55,0,0,219,689,451)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(96,55,23)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(164,107,63)"/></linearGradient><rect x="689" y="451" width="55" height="219" transform="matrix(0,-1,1,0,156,1277)" fill="url(#_lgradient_24)"/><linearGradient id="_lgradient_25" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-55,0,0,219,744,-6)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-opacity="1" style="stop-color:rgb(96,55,23)"/><stop offset="100%" stop-opacity="1" style="stop-color:rgb(164,107,63)"/></linearGradient><rect x="689" y="-6" width="55" height="219" transform="matrix(0,-1,1,0,613,820)" fill="url(#_lgradient_25)"/><path d=" M 614 713 L 709 713 L 709 745" fill="none" stroke-width="5" stroke="rgb(58,179,76)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 709 745 L 754 745 L 754 768" fill="none" stroke-width="5" stroke="rgb(255,251,193)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><line x1="754" y1="768" x2="872" y2="768" stroke-width="5" stroke="rgb(33,114,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><line x1="614" y1="713" x2="561" y2="713" stroke-width="5" stroke="rgb(189,103,36)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><line x1="614" y1="618" x2="561" y2="618" stroke-width="5" stroke="rgb(189,103,36)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 976 855" width="976" height="855">
+  <linearGradient id="_lgradient_13" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(118.5,0,0,127,495.5,602)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(255,0,0)" />
+    <stop offset="100%" stop-opacity="0" style="stop-color:rgb(255,0,0)" />
+  </linearGradient>
+  <path d=" M 495.5 665.5 L 614 602 L 614 729 L 495.5 665.5 Z " fill="url(#_lgradient_13)" />
+  <linearGradient id="_lgradient_14" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(0,-85.25,188.5,0,219.25,391.56)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(255,0,0)" />
+    <stop offset="100%" stop-opacity="0" style="stop-color:rgb(255,0,0)" />
+  </linearGradient>
+  <path d=" M 313.5 391.56 L 219.25 306.31 L 407.75 306.31 L 313.5 391.56 Z " fill="url(#_lgradient_14)" />
+  <linearGradient id="_lgradient_15" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-213.5,0,0,181,527,407)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(100,58,26)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(40,20,5)" />
+  </linearGradient>
+  <rect x="313.5" y="407" width="213.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_15)" />
+  <linearGradient id="_lgradient_16" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(213.5,0,0,181,100,407)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(100,58,26)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(40,20,5)" />
+  </linearGradient>
+  <rect x="100" y="407" width="213.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_16)" />
+  <linearGradient id="_lgradient_17" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(87,0,0,181,100,407)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(119,72,37)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(162,104,60)" />
+  </linearGradient>
+  <rect x="100" y="407" width="87" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_17)" />
+  <linearGradient id="_lgradient_18" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-87,0,0,181,527,407)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(119,72,37)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(162,104,60)" />
+  </linearGradient>
+  <rect x="440" y="407" width="87" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_18)" />
+  <linearGradient id="_lgradient_19" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(67.5,0,0,181,246,407)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(4,135,174)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(56,179,217)" />
+  </linearGradient>
+  <rect x="246" y="407" width="67.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_19)" />
+  <linearGradient id="_lgradient_20" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-67.5,0,0,181,381,407)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(4,135,174)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(56,179,217)" />
+  </linearGradient>
+  <rect x="313.5" y="407" width="67.5" height="181" transform="matrix(1,0,0,1,0,0)" fill="url(#_lgradient_20)" />
+  <path d=" M 254.81 328 L 196.12 269.31 L 313.5 151.93 L 430.88 269.31 L 372.19 328" fill="none" stroke-width="5" stroke="rgb(179,100,41)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+  <circle cx="313.4999999999998" cy="269.3101371615164" r="37" fill="none" stroke-width="5" stroke="rgb(28,194,244)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+  <rect x="607" y="76" width="219" height="512" transform="matrix(1,0,0,1,0,0)" fill="rgb(129,202,255)" />
+  <linearGradient id="_lgradient_21" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(256,0,0,219,588.5,350.5)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(0,94,255)" />
+    <stop offset="100%" stop-opacity="0.35" style="stop-color:rgb(0,94,255)" />
+  </linearGradient>
+  <rect x="588.5" y="350.5" width="256" height="219" transform="matrix(0,-1,1,0,256.5,1176.5)" fill="url(#_lgradient_21)" />
+  <linearGradient id="_lgradient_22" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(198,0,0,219,617.5,379.5)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(183,176,79)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(255,250,185)" />
+  </linearGradient>
+  <rect x="617.5" y="379.5" width="198" height="219" transform="matrix(0,-1,1,0,227.5,1205.5)" fill="url(#_lgradient_22)" />
+  <linearGradient id="_lgradient_23" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(159,0,0,219,637,399)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(14,104,27)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(80,195,97)" />
+  </linearGradient>
+  <rect x="637" y="399" width="159" height="219" transform="matrix(0,-1,1,0,208,1225)" fill="url(#_lgradient_23)" />
+  <linearGradient id="_lgradient_24" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(55,0,0,219,689,451)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(96,55,23)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(164,107,63)" />
+  </linearGradient>
+  <rect x="689" y="451" width="55" height="219" transform="matrix(0,-1,1,0,156,1277)" fill="url(#_lgradient_24)" />
+  <linearGradient id="_lgradient_25" x1="0" y1="0.5" x2="1" y2="0.5" gradientTransform="matrix(-55,0,0,219,744,-6)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity="1" style="stop-color:rgb(96,55,23)" />
+    <stop offset="100%" stop-opacity="1" style="stop-color:rgb(164,107,63)" />
+  </linearGradient>
+  <rect x="689" y="-6" width="55" height="219" transform="matrix(0,-1,1,0,613,820)" fill="url(#_lgradient_25)" />
+  <path d=" M 614 713 L 709 713 L 709 745" fill="none" stroke-width="5" stroke="rgb(58,179,76)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+  <path d=" M 709 745 L 754 745 L 754 768" fill="none" stroke-width="5" stroke="rgb(255,251,193)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+  <line x1="754" y1="768" x2="872" y2="768" stroke-width="5" stroke="rgb(33,114,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+  <line x1="614" y1="713" x2="561" y2="713" stroke-width="5" stroke="rgb(189,103,36)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+  <line x1="614" y1="618" x2="561" y2="618" stroke-width="5" stroke="rgb(189,103,36)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3" />
+</svg>
