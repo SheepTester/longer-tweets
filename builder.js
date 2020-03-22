@@ -4,8 +4,6 @@ const templatesFolder = './_templates/';
 const fs = require('fs');
 const fsPromisify = require('./fs-promisifier.js');
 const hljs = require('highlight.js');
-const meta = require('markdown-it-meta');
-const markdownItTocAndAnchor = require('markdown-it-toc-and-anchor').default;
 const md = require('markdown-it')({
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
@@ -19,10 +17,11 @@ const md = require('markdown-it')({
   linkify: true,
   typographer: true
 })
-  .use(meta)
-  .use(markdownItTocAndAnchor, {
+  .use(require('markdown-it-meta'))
+  .use(require('markdown-it-toc-and-anchor').default, {
     toc: false
-  });
+  })
+  .use(require('markdown-it-katex'));
 
 function completeHTML(template, vars) {
   return template.replace(/{{\s*([a-z]+)\s*}}/g, (m, varName) => templates[varName] ? completeHTML(templates[varName], vars) : vars[varName] || "");

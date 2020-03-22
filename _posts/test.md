@@ -7,7 +7,7 @@ tags:
   - test
   - test-tag
 ---
-The English gibberish was from [this fancy website](http://randomtextgenerator.com/ "omg hover text"), but I didn't like the words they had. Do *you* understand? **Listen to me.** ***HELLO?!*** ~~I hate you~~. Test edit.
+The English gibberish was from [this fancy website](http://randomtextgenerator.com/ "omg hover text"), but I didn't like the words they had. Do *you* understand? **Listen to me.** ***HELLO?!*** ~~I hate you~~. Test edit. $NH_4^+$
 
 # hello great humans!
 Martin Luther really did not want a lot of change because he believed the revolting peasants were sinning and said the Pope was power hungry. For example, Luther wrote that the peasants were sinning by disobeying their masters, killing and robbing people, and separating from the Church (Doc E). He believed peasants were supposed to be obedient and nonviolent. Since he believed so, he did not intend to cause the kind of violence he witnessed when he wrote the 95 Theses, so the reform he aimed for was likely supposed to be peaceful and simple. http://www.example.com or <http://www.example.com> and sometimes example.com

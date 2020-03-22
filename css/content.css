@@ -1,6 +1,5 @@
 .content {
   font-size: 16px;
-  word-wrap: break-word;
   line-height: 1.8;
 }
 .content h1, .content h2, .content h3 {
@@ -54,6 +53,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 15px 0;
+  table-layout: fixed;
 }
 .content th {
   font-weight: bold;
