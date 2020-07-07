@@ -4,7 +4,7 @@ description: yet another afterlife idea
 date: 2018-05-06
 id: 3
 tags:
-  - philosophy
+  - thoughts
   - death
 ---
 > Religion should be defined by what one believes happens after death, not the belief in a supernatural force

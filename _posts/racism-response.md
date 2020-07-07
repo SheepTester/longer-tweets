@@ -4,7 +4,7 @@ description: Responding to Gamepro5's article about racism.
 date: 2019-07-18
 tags:
   - politics
-  - philosophy
+  - thoughts
   - racism
   - gamepro5
 ---

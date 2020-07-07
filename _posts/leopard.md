@@ -4,7 +4,7 @@ description: What if the world were 2D?
 date: 2020-03-21
 tags:
   - scratch
-  - philosophy
+  - thoughts
   - html5
 ---
 

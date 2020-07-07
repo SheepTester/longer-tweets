@@ -4,7 +4,7 @@ description: a different testing system
 date: 2018-05-13
 id: 4
 tags:
-  - philosophy
+  - thoughts
   - stress
   - tests
   - school

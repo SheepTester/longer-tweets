@@ -4,7 +4,7 @@ description: prioritise communication
 date: 2018-06-17
 id: 5
 tags:
-  - philosophy
+  - thoughts
   - english-hate
   - vocabulary
 ---
