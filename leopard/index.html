@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- MADE BY SEAN -->
+
+<title>leopard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="A random rant about the new Scratch to JavaScript converter">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="leopard"/>
+<meta property="og:description" content="A random rant about the new Scratch to JavaScript converter"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="leopard"/>
+<meta name="twitter:description" content="A random rant about the new Scratch to JavaScript converter"/>
+
+<link rel="stylesheet" type="text/css" href="/sheep2.css">
+<script src="/sheep2.js" charset="utf-8"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CInconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="../css/tomorrow-night.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <div class="links">
+  <a href="../">home</a> &middot; <a href="../">main</a> &middot; <a href="../">index</a>
+</div>
+
+    <div class="background"></div>
+    <span class="date">Monday, July 6, 2020</span>
+    <h1 class="title">leopard</h1>
+    <div class="tags"><a class="tag" href="../#scratch">scratch</a>
+<a class="tag" href="../#thoughts">thoughts</a>
+<a class="tag" href="../#html5">html5</a>
+</div>
+    <div class="content">
+      <p><a href="https://scratch.mit.edu/users/PullJosh/">PullJosh</a> recently released what is now known as <a href="https://leopardjs.now.sh/">Leopard</a> (which I keep misspelling as “Leapord”), which translates Scratch projects to JavaScript. It seems quite promising, although currently many projects don’t work when translated, which to me seems reasonable. Leopard’s intended use is to extend the capabilities of Scratch by opening access to all of JavaScript’s Web APIs, not necessarily to teach JavaScript. However, having made the <a href="https://sheeptester.github.io/htmlifier/">HTMLifier</a>, I believe that Scratchers will nonetheless see this as a way to step from Scratch to JavaScript.</p>
+<h2 id="not-all-projects-will-work-in-leopard"><a class="markdownIt-Anchor" href="#not-all-projects-will-work-in-leopard">#</a> Not all projects will work in Leopard</h2>
+<p>Perhaps the converters of Scratch to HTML/JS could be plotted on a spectrum, with accuracy on one end and editability on the other. My HTMLifier, for example, sacrifices editability for accuracy; it directly uses (roughly) the same Scratch VM that Scratchers use on the Scratch website, meaning that their project should work exactly the same when HTMLified. However, this is not ideal if the Scratcher wants to see what their project might look like in HTML/JS since all they would see is the large, minified Scratch VM JavaScript and their .sb3 project file as a data URL, neither of which are meant for editing.</p>
+<p>I’m not very familiar with <a href="https://forkphorus.github.io/">Forkphorus</a>, but I believe it compiles Scratch blocks to JavaScript for better performance rather than having JavaScript interpret each block one-by-one. This means that Forkphorus uses a completely rewritten engine for executing Scratch projects, so there are slight differences that could lead to slightly different behaviours in Forkphorus. Regardless, the generated JavaScript isn’t meant to be easily read and edited by a JavaScript learner.</p>
+<pre><code class="language-js">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+S.isPenDown = <span class="hljs-literal">true</span>;
+S.dotPen();
+VISUAL = <span class="hljs-literal">true</span>;
+S.moveTo(S.scratchX + <span class="hljs-number">4</span>, S.scratchY);
+<span class="hljs-keyword">if</span> (S.visible || S.isPenDown) VISUAL = <span class="hljs-literal">true</span>;
+S.isPenDown = <span class="hljs-literal">false</span>;
+queue(<span class="hljs-number">24</span>); })
+</code></pre>
+<p>You can see some resemblance to Scratch blocks, but it’s not exactly intuitive how everything works. For example, setting <code>VISUAL</code> to <code>true</code> twice seems pointless, but there’s probably some internal reason why it’s done (maybe it’s just to make the JavaScript equivalent of a block regular). Thus, I’d say it’d be somewhere in the middle of the spectrum.</p>
+<p>Leopard satisfies the niche of sacrificing accuracy for the usability of the generated JavaScript code. The generated JavaScript is all accessible, neat, and legible, and all the special methods from the library are intuitively named; all the internal details are hidden away by the library.</p>
+<p>Yet in some cases, Leopard seems to prefer native JavaScript APIs, probably to introduce some basic JavaScript to the Scratcher. However, in these cases, the projects often break. For example, at the time of writing, the <code>&lt;[] contains []?&gt;</code> block becomes JavaScript’s <code>.include</code>, but it didn’t explicitly cast the value to a string. Thus, it would throw an error when the value of a variable was a number. Indeed, it seems many errors are because while Scratch automatically casts numbers to strings for string-related blocks, JavaScript doesn’t. <a href="https://scratch.mit.edu/discuss/post/4194496/">PullJosh notes</a> that he could simply add <code>.toString()</code> everywhere, though it isn’t very elegant. All in all, I wouldn’t expect all projects to work exactly the same in Leopard, even when all the more common issues are fixed.</p>
+<p>Leopard also recommends that the <a href="https://leopardjs.now.sh/translations/operators"><code>&lt;[] = []&gt;</code> block become JavaScript’s <code>==</code> operator</a>. Scratch’s <code>&lt;[] = []&gt;</code> block, in reality, has some niche differences, which fortunately do not occur often and are instead used to detect Scratch vs. Forkphorus/Leopard. In addition, however, Leopard’s recommended sandbox’s automatic linter has been noted to <a href="https://scratch.mit.edu/discuss/post/4194073/">complain about the usage of <code>==</code></a>, which raises an excellent point: <code>==</code> isn’t a recommended practice in JavaScript.</p>
+<h2 id="using-leopard-to-learn-javascript"><a class="markdownIt-Anchor" href="#using-leopard-to-learn-javascript">#</a> Using Leopard to learn JavaScript</h2>
+<p>Leopard only boasts that it can be used for extending capabilities that aren’t offered in Scratch; it does not explicitly state that it is for learning JS. I feel, however, that Scratchers will naturally see Leopard as a starting point for learning JavaScript.</p>
+<p>There’s nothing wrong with starting with Leopard. Indeed, it uses new(ish) features such as the obscure generators and ES modules. However, except for the repeat block, common features of JavaScript like <code>let</code> (analogous to script variables in Snap!) aren’t used for variables; Leopard uses a <code>this.vars</code> object instead because they behave more like Scratch variables.</p>
+<p>However, I don’t see it being a problem that all the “real JavaScript” is being hidden behind all of Leopard’s methods. A common criticism of <a href="EEEEEEE">Code.org</a> is that the code it generates is all pseudocode—when run on its own, it throws a ReferenceError. However, I’d argue that these days, in most programming languages, people don’t use native functions and methods on their own. The functions generated by <a href="http://Code.org">Code.org</a> and Leopard could be from a <em>library</em>—a foreign concept to Scratch. (<a href="http://Code.org">Code.org</a> probably has no import statements because, on the web, modules had to be loaded in a separate script tag; also it seems <a href="http://Code.org">Code.org</a>’s “Show code” button is now more verbose, probably in response to this criticism.) Perhaps one could write a project completely from scratch in Leopard (<a href="https://scratch.mit.edu/discuss/post/4196264/">which is possible, but not recommended</a>), using it like one would with p5.js.</p>
+<p>As a final note, when Scratchers use Leopard to move on from Scratch, they’ll still face the same problems they would when moving on to any other programming language. Scratch isn’t merely a programming language; contrary to the claims of certain Scratchers, Scratch is social media. Departing Scratch means departing a world of safety: the community for the Scratch programming language all resides on the website, away from the toxicity of edgy teens (not really) and adults and heavily moderated under the hand of stern but forgiving Scratch Team, allowing parents and schools to allow students access to what on the surface seems to merely be another piece of educational software. Despite claims otherwise, the attractiveness of becoming popular on Scratch is what drives many to Scratch regularly and pursue computer science. Yet moving beyond Scratch proves to be a filter of whether one truly enjoys programming and desires to trek deeper into it, or if they’re only there as a substitute for the other social media and entertainment that their parents have blocked. Leopard seems to aim to overcome this by advertising that converting projects to JavaScript increases “publishing options,” with the ability to post your project as an easily shareable website. This indeed is one of HTML5’s upsides as being the next step beyond Scratch, but without a centralized community like Scratch, there’s nowhere for these websites to be shared, and the Scratch website’s ever-present warmth may draw the beginner JavaScript programmers back.</p>
+
+    </div>
+    <span class="date">Last edited on <a href="https://github.com/SheepTester/longer-tweets/commits/master/_posts/leopard.md">Monday, July 6, 2020 at 22:16</a>.</span>
+    <div class="links">
+  <a href="../">home</a> &middot; <a href="../">main</a> &middot; <a href="../">index</a>
+</div>
+
+  </body>
+</html>
