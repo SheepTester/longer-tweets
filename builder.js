@@ -22,6 +22,8 @@ const md = require('markdown-it')({
     toc: false
   })
   .use(require('markdown-it-katex'));
+const simpleGit = require('simple-git');
+const git = simpleGit();
 
 function completeHTML(template, vars) {
   return template.replace(/{{\s*([a-z]+)\s*}}/g, (m, varName) => templates[varName] ? completeHTML(templates[varName], vars) : vars[varName] || "");
@@ -42,8 +44,7 @@ async function makePost(fileName) {
   let content = await fsPromisify(fs.readFile, postsFolder + fileName, 'utf8'),
   dirName = './' + fileName.slice(0, fileName.indexOf('.')),
   rendered = md.render(content),
-  metadata = md.meta,
-  filestats = await fsPromisify(fs.stat, postsFolder + fileName);
+  metadata = md.meta;
   await fsPromisify(fs.access, dirName).catch(() => fsPromisify(fs.mkdir, dirName));
   const dateObj = metadata.date;
   metadata.date = formatDate(new Date(metadata.date.getTime() + 60000 * metadata.date.getTimezoneOffset()), false); // what was I thinking
@@ -63,7 +64,12 @@ async function makePost(fileName) {
     description: metadata.description,
     root: '..',
     creationdate: metadata.date,
-    lastedit: formatDate(filestats.mtime, true),
+    // https://stackoverflow.com/questions/8611486/how-to-get-the-last-commit-date-for-a-bunch-of-files-in-git
+    lastedit: formatDate(new Date((await git.log({
+      '-1': null,
+      '--format': '%cd',
+      file: postsFolder + fileName
+    })).latest.hash), true),
     tags: metadata.tags.map(t => completeHTML(templates.tag, {tagname: t, root: '..'})).join(''),
     filename: fileName
   }));

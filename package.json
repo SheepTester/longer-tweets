@@ -9,7 +9,8 @@
     "markdown-it": "^8.4.2",
     "markdown-it-katex": "^2.0.3",
     "markdown-it-meta": "0.0.1",
-    "markdown-it-toc-and-anchor": "^4.2.0"
+    "markdown-it-toc-and-anchor": "^4.2.0",
+    "simple-git": "^2.17.0"
   },
   "scripts": {
     "build": "node builder.js"
