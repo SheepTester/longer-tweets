@@ -4,7 +4,7 @@ body {
   padding: 20px;
   color: rgba(255, 255, 255, 0.6);
   font-family: 'Open Sans', sans-serif;
-  background-color: #333;
+  background-color: black;
   box-sizing: border-box;
   word-wrap: break-word;
 }
@@ -19,6 +19,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.8;
 }
 span.date {
   color: rgba(255, 255, 255, 0.4);
