@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {%- include metadata.html -%}
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans%7CInconsolata"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
+    {%- if layout.main -%}
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
+    <script src="{{ '/js/main.js' | relative_url }}" charset="utf-8"></script>
+    <style id="post-filterer"></style>
+    {%- else -%}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/css/tomorrow-night.css' | relative_url }}"
+    />
+    <link rel="stylesheet" href="{{ '/css/content.css' | relative_url }}" />
+    {%- endif -%}
+  </head>
+  <body>
+    {%- include links.html -%}
+    <div class="background"></div>
+    {{ content }} {%- include links.html -%}
+  </body>
+</html>

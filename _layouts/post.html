@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    {{ metadata }}
+---
+layout: default
+---
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CInconsolata" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-    <link rel="stylesheet" href="{{ root }}/css/tomorrow-night.css">
-    <link rel="stylesheet" href="{{ root }}/css/content.css">
-    <link rel="stylesheet" href="{{ root }}/css/styles.css">
-  </head>
-  <body>
-    {{ links }}
-    <div class="background"></div>
-    <span class="date">{{ creationdate }}</span>
-    <h1 class="title">{{ title }}</h1>
-    <div class="tags">{{ tags }}</div>
-    <div class="content">
-      {{ posthtml }}
-    </div>
-    <span class="date">Last edited on <a href="https://github.com/SheepTester/longer-tweets/commits/master/_posts/{{ filename }}">{{ lastedit }}</a>.</span>
-    {{ links }}
-  </body>
-</html>
+<span class="date">{{ page.date }}</span>
+<h1 class="title">{{ page.title }}</h1>
+<div class="tags">
+  {%- for tag in post.tags -%} {%- include tag.html -%} {%- endfor -%}
+</div>
+<div class="content">
+  {{ content }}
+</div>
+<span class="date"
+  >Last edited on
+  <a
+    href="https://github.com/SheepTester/longer-tweets/commits/master/_posts/{{ filename }}"
+    >{{ lastedit }}</a
+  >.</span
+>

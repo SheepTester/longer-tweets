@@ -1,6 +1,8 @@
 <div class="post-entry {{ tagnames }}">
-  <div class="date">{{ postdate }}</div>
-  <a class="title" href="{{ root }}/{{ postpath }}">{{ posttitle }}</a>
-  <div class="desc">{{ postdesc }}</div>
-  <div class="tags">{{ tags }}</div>
+  <div class="date">{{ post.date }}</div>
+  <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <div class="desc">{{ post.description }}</div>
+  <div class="tags">
+    {%- for tag in post.tags -%} {%- include tag.html -%} {%- endfor -%}
+  </div>
 </div>
