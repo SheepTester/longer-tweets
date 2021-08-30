@@ -2,7 +2,8 @@
 layout: post
 title: creating this blog
 description: showing off
-date: 2018-05-05
+# Fake time
+date: 2018-05-05 10:40
 tags:
   - programming
   - html5

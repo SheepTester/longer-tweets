@@ -2,7 +2,7 @@
 layout: post
 title: Sean's flawless new English spelling reform
 description: English has never been spelled better
-date: 2018-05-06
+date: 2018-05-06 14:42
 tags:
   - languages
   - english-hate

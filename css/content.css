@@ -2,32 +2,34 @@
   font-size: 16px;
   line-height: 1.8;
 }
-.content h1, .content h2, .content h3 {
+.content h1,
+.content h2,
+.content h3 {
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
   position: relative;
 }
-.content a:not(.markdownIt-Anchor) {
+.content a:not(.heading-anchor) {
   color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
 }
-.content a:not(.markdownIt-Anchor):hover {
+.content a:not(.heading-anchor):hover {
   color: white;
   border-bottom: 1px solid currentColor;
 }
-.content .markdownIt-Anchor {
+.content .heading-anchor {
   color: rgba(255, 255, 255, 0.1);
   text-decoration: none;
 }
 @media (min-width: 675px) {
-  .content .markdownIt-Anchor {
+  .content .heading-anchor {
     position: absolute;
     right: 100%;
     margin-right: 10px;
   }
 }
-.content .markdownIt-Anchor:hover {
+.content .heading-anchor:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 .content code {
@@ -60,7 +62,8 @@
   text-align: left;
   background-color: rgba(0, 0, 0, 0.05);
 }
-.content td, .content th {
+.content td,
+.content th {
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 10px;
 }
@@ -82,14 +85,16 @@
   max-height: 90vh;
   border-radius: 15px;
 }
-.content ul, .content ol {
+.content ul,
+.content ol {
   list-style: none;
   padding-left: 30px;
 }
 .content li {
   position: relative;
 }
-.content li::before, .content li::before {
+.content li::before,
+.content li::before {
   color: rgba(255, 255, 255, 0.4);
   padding-right: 10px;
   position: absolute;

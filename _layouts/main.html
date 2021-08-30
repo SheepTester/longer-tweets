@@ -8,5 +8,6 @@ main: true
 <span class="date">Welcome to</span>
 <h1 class="title">my longer tweets</h1>
 <div class="post-list">
-  {%- for post in site.posts -%} {%- include postentry.html -%} {%- endfor -%}
+  {%- assign posts = site.posts | sort: 'date' | reverse -%} {%- for post in
+  posts -%} {%- include postentry.html -%} {%- endfor -%}
 </div>

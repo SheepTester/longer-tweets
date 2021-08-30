@@ -2,7 +2,7 @@
 layout: post
 title: your patient soul
 description: yet another afterlife idea
-date: 2018-05-06
+date: 2018-05-06 15:49
 tags:
   - thoughts
   - death

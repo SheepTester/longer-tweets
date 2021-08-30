@@ -1,4 +1,4 @@
-<div class="post-entry {{ tagnames }}">
+<div class="post-entry {{ post.tags | join ' ' }}">
   <div class="date">{{ post.date | date: '%F, a %A' }}</div>
   <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
   <div class="desc">{{ post.description }}</div>

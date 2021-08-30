@@ -2,7 +2,7 @@
 layout: post
 title: l'fonoloj d'm'leng
 description: The phonology of my language.
-date: 2019-01-02
+date: 2019-01-02 14:32
 tags:
   - languages
   - conlang
