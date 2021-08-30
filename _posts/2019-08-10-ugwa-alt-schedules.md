@@ -1,4 +1,5 @@
 ---
+layout: post
 title: hypercomplex UGWA
 description: How UGWA deals with alternate schedules
 date: 2019-08-10
@@ -7,6 +8,7 @@ tags:
   - school
   - html5
 ---
+
 The [Unofficial Gunn Web App (UGWA)](https://orbiit.github.io/gunn-web-app/) is an unofficial progressive web app that shows the schedule for [Henry M. Gunn High School](https://gunn.pausd.org). Gunn’s weekly schedule is already complex, with seemingly arbitrary permutations of periods, but when a single day goes missing from a week or an assembly is required for all grades, the arrangement of the periods shift rather unpredictably. These new arrangements are mostly why students use UGWA; Google search analytics show that searches for UGWA spike slightly higher during weeks with alternate schedules. However, UGWA was not built with these alternate schedules in mind, resulting in an extremely complicated relationship between them.
 
 ## Origins: Gunn Schedule
@@ -25,7 +27,7 @@ The entire schedule-displaying part of UGWA had been built as a component; its w
 
 For some reason, the normal schedule was stored in a different format than the alternate schedules, so UGWA had [two separate scripts that were essentially the same](https://github.com/Orbiit/gunn-web-app/blob/0d9b440082ba043bbb70ffd7f57dc9e4fd392ab4/schedule/app.js#L45-L99), rendering a given schedule, but each was made specifically for their unique format. It wasn’t until [I added SELF support](https://github.com/Orbiit/gunn-web-app/commit/4a0f390ca1798bab5b63d26f69dcb9829a61470f#diff-aa734357f6890895acc756d30f295067) when I finally made the normal schedule format the same as the alternate schedule format, rendering the code duplication redundant.
 
-However, the JSON file of alternate schedules quickly proved to be problematic. The school’s PDF was merely a set of *planned* schedules, and they did not hesitate to announce last-minute changes to the schedule. I had to manually update the JSON file whenever I discovered changes to the schedules, and in lieu of these rapid changes, I did not cache the file offline, meaning that alternate schedules wouldn’t work offline.
+However, the JSON file of alternate schedules quickly proved to be problematic. The school’s PDF was merely a set of _planned_ schedules, and they did not hesitate to announce last-minute changes to the schedule. I had to manually update the JSON file whenever I discovered changes to the schedules, and in lieu of these rapid changes, I did not cache the file offline, meaning that alternate schedules wouldn’t work offline.
 
 ## `altScheduleGenerator.js`
 
@@ -47,7 +49,7 @@ At some point, when pasting in alternate schedules, the school got rid of all th
 
 Then I had to make it treat `<div>` and `<br>` tags like it did for the paragraph tags.
 
-My previous methods for getting the period name had to be redone when the school added text *after* the time range; now it would find and remove the time range, and make the rest of the line the period name. Back to school night also introduced the school’s usage of `pm` for hours after 6 pm, so I had to implement support for that as well.
+My previous methods for getting the period name had to be redone when the school added text _after_ the time range; now it would find and remove the time range, and make the rest of the line the period name. Back to school night also introduced the school’s usage of `pm` for hours after 6 pm, so I had to implement support for that as well.
 
 When identifying the type of periods, the parser also had to consider the word `turkey` as an alias for lunch, and similarly `development` was made a keyword for a no-school day. Using `assembly` as a search string didn’t work for `assemblies`, so I made it look for `assembl` instead. However, using `holiday` to detect holidays became problematic when two innocent events named “Freshman Parents’ Holiday Social” and “Staff Holiday Luncheon” appeared, so for now it only uses events to declare a no-school day when the calendar event’s description is empty. Also, there was a day with an extended lunch, but the event summary only included `lunch` without `extended`, so I made it detect that.
 

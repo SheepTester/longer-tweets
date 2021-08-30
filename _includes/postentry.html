@@ -1,5 +1,5 @@
 <div class="post-entry {{ tagnames }}">
-  <div class="date">{{ post.date }}</div>
+  <div class="date">{{ post.date | date: '%F, a %A' }}</div>
   <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
   <div class="desc">{{ post.description }}</div>
   <div class="tags">

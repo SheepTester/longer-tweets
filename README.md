@@ -6,6 +6,9 @@ I usually post random thoughts on Twitter because they're usually short enough
 for a Tweet, but sometimes I have thoughts that I desire to express in a blog
 post length post, so I'll post them here as longer Tweets.
 
+[tomorrow-night.css](./css/tomorrow-night.css) from
+[mozmorris/tomorrow-pygments](https://github.com/mozmorris/tomorrow-pygments).
+
 ## Development
 
 This starts a local server at http://localhost:4000/.
@@ -45,7 +48,8 @@ ones used a lowercase phrase.
 
 `date` - The creation date of the post. This is used to sort the posts on the
 index page in reverse chronological order. It's also shown in the index and post
-pages.
+pages. You might have to specify the time to disambiguate the post from other
+posts on the same day.
 
 `tags` - Tags are used to categorize posts; they're lowercase and use hyphens as
 a word separator (eg `english-hate`, `gamepro5`). They're shown both on the

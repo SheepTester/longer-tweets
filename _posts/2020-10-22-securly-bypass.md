@@ -1,4 +1,5 @@
 ---
+layout: post
 title: bypassing securly
 description: A little mistake by the student right robbers
 date: 2020-10-22
@@ -6,6 +7,7 @@ tags:
   - school
   - programming
 ---
+
 If your school uses [Securly for Chromebooks](https://chrome.google.com/webstore/detail/securly-for-chromebooks/iheobagjkfklnlikgihanlhcddjoihkg), there's a pretty easy way to bypass some blocked websites like Discord.
 
 **TL;DR**: Add `?suicidepreventionlifeline.org` to the end of the URL.

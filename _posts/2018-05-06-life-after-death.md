@@ -1,14 +1,15 @@
 ---
+layout: post
 title: your patient soul
 description: yet another afterlife idea
 date: 2018-05-06
-id: 3
 tags:
   - thoughts
   - death
 ---
+
 > Religion should be defined by what one believes happens after death, not the belief in a supernatural force
-> 
+>
 > [from my tweet](https://twitter.com/Sheep_tester/status/934652746774454272)
 
 Assume temporarily that souls are a thing. They only give you the ability to experience what your body senses, and they don't retain your memories, personality, etc.

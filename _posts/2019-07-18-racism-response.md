@@ -1,4 +1,5 @@
 ---
+layout: post
 title: radical racism response
 description: Responding to Gamepro5's article about racism.
 date: 2019-07-18
@@ -8,6 +9,7 @@ tags:
   - racism
   - gamepro5
 ---
+
 This longer tweet was made in response to [Gamepro5's article "Modern day Racism."](https://gamepro5.github.io/news#Modern_Day_Racism)
 
 > The issue we have in today's society isn't racism, its racial prejudice, or pre-conceived opinions formed on people by a specific factor like their skin color.
