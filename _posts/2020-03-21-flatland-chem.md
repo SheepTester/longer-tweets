@@ -24,6 +24,10 @@ I wasn't sure how they would deal with obstacles though. If there was a tree in 
 
 A lot of chemistry can be modelled in 2D, but would only two spatial dimensions have any implications on molecular structure? Probably. However, there would still be two electron spin states, and the orbital classes would probably hold the same number of electron pairs (_s_ orbitals hold 1 pair, _p_ holds 3, _d_ holds 5, and so on for each odd number); I don't think they're dependent on a third axis. Electrons can still do probability clouds in 2D, though the orbital arrangements will probably look a bit different. Thus, I think in 2D, all the atoms and elements will be the same.
 
+**UPDATE 2021-08-30**: Though admittedly perhaps there might be some
+complications in atomic nuclei because the nucleons would be spread further
+apart because they can't be clumped together in a ball.
+
 However, I think molecular shapes would be rather different. VSEPR is based on the idea that bonds and lone pairs repel each other, so they distribute themselves as far away from each other as possible. In 2D, bonds and lone pairs can only distribute themselves evenly around a circle---though this might put more stress on an atom with many bonds and lone pairs because they would all be cramped around the molecule, so larger atoms might form less stable molecules than their 3D counterparts, I'm not sure.
 
 ![figure showing $CH_4$ in 3D and 2D](../images/vsepr.svg)

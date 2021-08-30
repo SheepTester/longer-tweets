@@ -10,6 +10,9 @@ tags:
   - node
 ---
 
+**UPDATE 2021-08-30**: This blog has since been rewritten in
+[Jekyll](https://jekyllrb.com/).
+
 I've tried to create a blog multiple times.
 
 1. a WordPress blog while learning web development
