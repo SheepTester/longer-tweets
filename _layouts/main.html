@@ -9,5 +9,6 @@ main: true
 <h1 class="title">my longer tweets</h1>
 <div class="post-list">
   {%- assign posts = site.posts | sort: 'date' | reverse -%} {%- for post in
-  posts -%} {%- include postentry.html -%} {%- endfor -%}
+  posts -%} {%- unless post.hidden -%} {%- include postentry.html -%} {%-
+  endunless -%} {%- endfor -%}
 </div>
