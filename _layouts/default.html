@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {%- include metadata.html -%}
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans%7CInconsolata"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
+    {%- if layout.main -%}
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
+    <script src="{{ '/js/main.js' | relative_url }}" charset="utf-8"></script>
+    <style id="post-filterer"></style>
+    {%- else -%}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+      integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
+      integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body, { delimiters: [{ left: '$', right: '$', display: false }] })"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="{{ '/css/tomorrow-night.css' | relative_url }}"
+    />
+    <link rel="stylesheet" href="{{ '/css/content.css' | relative_url }}" />
+    <script
+      defer
+      src="{{ '/js/post.js' | relative_url }}"
+      charset="utf-8"
+    ></script>
+    {%- endif -%}
+  </head>
+  <body>
+    {%- include links.html -%}
+    <div class="background"></div>
+    {{ content }} {%- include links.html -%}
+  </body>
+</html>

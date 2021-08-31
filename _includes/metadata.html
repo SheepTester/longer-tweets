@@ -1,0 +1,23 @@
+<!-- MADE BY SEAN -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+{%- assign title = page.title | default: layout.title -%} {%- assign description
+= page.description | default: layout.description -%}
+
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}" />
+<meta name="theme-color" content="#0b410e" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+
+<link rel="stylesheet" type="text/css" href="/sheep3.css" />
+<script src="/sheep3.js" charset="utf-8"></script>
