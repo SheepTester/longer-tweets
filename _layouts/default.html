@@ -8,6 +8,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
+    <script
+      defer
+      src="{{ '/js/accessible.js' | relative_url }}"
+      charset="utf-8"
+    ></script>
     {%- if layout.main -%}
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
     <script src="{{ '/js/main.js' | relative_url }}" charset="utf-8"></script>
@@ -44,7 +49,10 @@
     ></script>
     {%- endif -%}
   </head>
-  <body>
+  <body class="normal">
+    <button class="toggle-accessible" id="toggle-accessible">
+      Enable accessible theme
+    </button>
     {%- include links.html -%}
     <div class="background"></div>
     {{ content }} {%- include links.html -%}

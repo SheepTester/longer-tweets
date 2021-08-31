@@ -1,22 +1,29 @@
 .post-entry {
-  background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
   margin: 15px 0;
   border-radius: 20px;
 }
-.post-entry .date {
+.normal .post-entry {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.accessible .post-entry {
+  border: 1px solid currentColor;
+}
+.normal .post-entry .date {
   color: rgba(255, 255, 255, 0.6);
 }
 .post-entry .title {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
   font-size: 50px;
   line-height: 1;
 }
-.post-entry .desc {
-  margin-top: 10px;
+.normal .post-entry .title {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
 }
-.post-entry .title:hover {
+.normal .post-entry .title:hover {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: underline;
+}
+.post-entry .desc {
+  margin-top: 10px;
 }

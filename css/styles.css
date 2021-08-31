@@ -2,13 +2,15 @@ body {
   margin: 0 auto;
   max-width: 600px;
   padding: 20px;
-  color: rgba(255, 255, 255, 0.6);
   font-family: 'Open Sans', sans-serif;
-  background-color: black;
   box-sizing: border-box;
   word-wrap: break-word;
 }
-.background {
+.normal {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: black;
+}
+.normal .background {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,14 +23,14 @@ body {
   background-position: center;
   opacity: 0.8;
 }
-span.date {
+.normal span.date {
   color: rgba(255, 255, 255, 0.4);
 }
-span.date a {
+.normal span.date a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
-span.date a:hover {
+.normal span.date a:hover {
   color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid currentColor;
 }
@@ -40,29 +42,57 @@ h1.title {
 .links {
   margin: 20px;
   text-align: center;
+}
+.normal .links {
   color: rgba(255, 255, 255, 0.6);
 }
-.links a {
+.normal .links a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
-.links a:hover {
+.normal .links a:hover {
   color: white;
   border-bottom: 1px solid currentColor;
 }
 .tags .tag {
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
   padding: 5px 10px;
   border-radius: 1em;
   margin-right: 5px;
   margin-top: 10px;
 }
-.tags .tag:hover {
+.normal .tags .tag {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+.accessible .tags .tag {
+  border: 1px solid currentColor;
+}
+.normal .tags .tag:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-::selection {
+.toggle-accessible {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-bottom-left-radius: 10px;
+}
+.toggle-accessible:hover,
+.toggle-accessible:focus-visible {
+  background-color: white;
+  color: black;
+  opacity: 1;
+  font-size: 1rem;
+}
+.normal ::selection {
   background-color: rgba(0, 0, 0, 0.5);
 }
