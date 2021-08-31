@@ -1,7 +1,7 @@
 ---
 layout: post
 title: colourful accident
-description: When a programming mistake results in a nice-looking range of colours.
+description: When a programming mistake results in a nice-looking range of colours
 date: 2021-08-31
 tags:
   - programming
