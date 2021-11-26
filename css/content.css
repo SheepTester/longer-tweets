@@ -36,8 +36,12 @@
 .normal .content .heading-anchor:hover {
   color: rgba(255, 255, 255, 0.6);
 }
+.content pre,
 .content code {
-  font-family: 'Inconsolata', monospace;
+  font-family: ui-monospace, 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas',
+    'Liberation Mono', monospace;
+}
+.content code {
   padding: 3px 5px;
   line-height: 1;
   border-radius: 5px;
@@ -114,6 +118,11 @@
   margin: 0 auto;
   max-width: 100%;
   max-height: 90vh;
+  border-radius: 15px;
+}
+.content iframe {
+  border: 0;
+  width: 100%;
   border-radius: 15px;
 }
 .normal .content ul,
