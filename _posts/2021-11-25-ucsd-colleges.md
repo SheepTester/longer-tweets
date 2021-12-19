@@ -5,6 +5,7 @@ description: What's the best college?
 date: 2021-11-25
 tags:
   - school
+hidden: true
 ---
 
 This post serves as a text-based supplement to a video I recently made showing
