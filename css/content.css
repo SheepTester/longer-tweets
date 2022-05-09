@@ -32,6 +32,9 @@
     right: 100%;
     margin-right: 10px;
   }
+  .content blockquote .heading-anchor {
+    margin-right: 30px;
+  }
 }
 .normal .content .heading-anchor:hover {
   color: rgba(255, 255, 255, 0.6);
@@ -64,6 +67,9 @@
 }
 .accessible .content pre {
   border: 1px solid currentColor;
+}
+.content li pre {
+  margin-left: 0;
 }
 .content pre code {
   padding: 0;
