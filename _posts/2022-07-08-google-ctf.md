@@ -193,7 +193,7 @@ x = flag => {
 
 [debugger]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 
-However, I noticed that I couldn't simply comment the `for` loop out. It was incrementing the variable `i` a hundred times from zero, which not only is used to annoy devtools users but also later gets used in the last part of the function, which seems to be the actual implementation of `x`. Similarly, in the `if` statement, other than the probably useless `while (1);`, it also runs `i += ((x + '').length + 12513) | 1`. Since this also depends on the original source code string of `x`, I plugged in `(x + '').length`, which came out to be 724.
+However, I noticed that I couldn't simply comment the `for` loop out. It was incrementing the variable `i` a hundred times from zero, which not only is used to annoy devtools users but also later gets used in the last part of the function, which seems to be the actual implementation of `x`. Similarly, in the `if` statement, other than the probably useless `while (1);`, it also runs `i += ((x + '').length + 12513) | 1`. Since this also depends on the unmodified source code of `x`, using the original `x`, I plugged in `(x + '').length` to get 724.
 
 After these two statements, `i` ends up being `13337`. But what about `i‍ = 1337`?
 
@@ -257,6 +257,8 @@ I think the main takeaway, at least for me, were the JavaScript quirks I learned
 1. JavaScript treats line separator characters as new lines, but many text editors don't and will colour the whole line as a comment if it's in a single-line comment.
 
 2. JavaScript allows zero-width joiners in identifiers.
+
+3. There are probably more quirks in their [anti-devtool prevention code](#fnref:6) to explore as well.
 
 Thanks, Google.
 
