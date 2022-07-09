@@ -34,11 +34,11 @@ Of course, the first thing I did was to open the browser devtools. I saw this in
 
 ![Various lines of irrelevant console logs.][console]
 
-For some reason, however, I couldn't inspect the elements on the page. I had seen in the page source that the gift box was made, somewhat impressively (though not [never seen before][css-3d]), out of HTML elements, rotated in 3D using pure CSS, rather than with a canvas as I had originally thought. Knowing this, I thought that maybe the amount of elements and CSS 3D effects crashed the devtools elements panel, so I made a copy of the HTML file and deleted the gift box.
+For some reason, however, I couldn't inspect the elements on the page. I had seen in the page source that the gift box was made, somewhat impressively (though not [never seen before][css-3d]), out of HTML elements, rotated in 3D using pure CSS, rather than with a canvas as I had originally thought. Knowing this, I thought that maybe the large amount of elements and CSS 3D effects crashed the devtools elements panel, so I made a copy of the HTML file and deleted the gift box.
 
 [css-3d]: https://keithclark.co.uk/labs/css-fps/
 
-As it turned out, however, the gift box wasn't the problem. The HTML source mentioned detecting devtools, so I suspected that to discourage CTF participants from using devtools to inspect their code, the page had JS that hung the page when devtools is opened. I could observe this by trying to execute code in the console---nothing would run---or by closing devtools---the page won't rerender, so there'll be a blank white chunk of the screen where devtools was.[^1]
+As it turned out, however, the gift box wasn't the problem. The HTML source mentioned detecting devtools, shown below, so I suspected that to discourage CTF participants from using devtools to inspect their code, the page has code that crashes the page when devtools opens. I could observe this by trying to execute code in the console---nothing would run---or by closing devtools---the page won't rerender, so there'll be a blank white chunk of the screen where devtools was.[^1]
 
 [^1]: In retrospect, the pure CSS rotating gift box was probably intentionally added to hide the fact that the page had hung---after all, if things on screen are moving, the page surely isn't stuck, right?
 
@@ -62,12 +62,12 @@ I tried running the first line of the comments in the console.
 
 ```js
 > eval(`// TODO: Whole document integrity check: \u{2028}if (document.documentElement.outerHTML.length == 23082) //...\u{2028}
-`)
+  `)
 Uncaught SyntaxError: Unexpected end of input
     at <anonymous>:1:1
 ```
 
-_The LSEP character is represented by `\u{2028}` here, its escape sequence in JS._
+_The LSEP character is here represented by its escape sequence in JS, `\u{2028}`._
 
 That's interesting! Had that just been a single line comment, it would've just been ignored, like the comment with the question mark boxes:
 
@@ -76,7 +76,7 @@ That's interesting! Had that just been a single line comment, it would've just b
 undefined
 ```
 
-My hypothesis is that JavaScript, being Unicode aware when it shouldn't, treats these fancy Unicode new line characters as a new line character.[^2] Therefore, in reality, that block of comments I saw is equivalent to the following:
+My hypothesis is that JavaScript, being a bit too Unicode aware, treats these fancy Unicode new line characters like your typical `\n`.[^2] Therefore, in reality, that block of comments I saw is equivalent to the following:
 
 [^2]: I should investigate whether line separators are supported in other programming languages as well.
 
@@ -89,9 +89,9 @@ setTimeout
 
 All the comments around it are just an amusing attempt to disguise the code in a different context.
 
-The code could be simplified further. The `document.documentElement.outerHTML.length == 23082` check is probably to ensure the HTML page remains unmodified, so I can just remove it. The body of the `if` statement runs `setTimeout(checksum(' ' + checksum))` and compares its return value with a string `'...'`, but it doesn't do anything with the result, so I can ignore `== '...'` as well. I'm pretty sure `checksum` returns a string, and `setTimeout` is in the notoriously nasty family of functions (among `eval` and `new Function`) that "casts" a string to a function by parsing and evaluating the string as JavaScript code.
+The code could be simplified further. The `document.documentElement.outerHTML.length == 23082` check is probably to ensure the HTML page remains unmodified. Because I want to modify the page, I removed the check. The body of the `if` statement runs `setTimeout(checksum(' ' + checksum))` and compares its return value with a string `'...'`, but it doesn't do anything with the result, so I can ignore `== '...'` as well. I'm pretty sure `checksum` returns a string, and `setTimeout` is in the notoriously nasty family of JavaScript functions (among `eval` and `new Function`) that "casts" a string to a function by parsing and evaluating the string as JavaScript code.
 
-So presumably, `checksum(' ' + checksum)` returns JavaScript. That's cool. Even though `checksum` itself is a function, `' ' + checksum` casts the function to a string containing its source code, meaning that if I change any code inside `checksum`'s definition, I would change the result of `checksum(' ' + checksum)`. This is pretty cursed, but I remember seeing something like this in [one of LiveOverflow's videos][liveoverflow][^3] a while back, so I stored the original function implementation in a string, `checksumStr`. According to VS Code, there were not only invisible special characters but also a lot of trailing spaces, which I was afraid my editor would remove on save,[^4] so it was a bit annoying escaping everything.
+So presumably, `checksum(' ' + checksum)` returns valid JavaScript that `setTimeout` can execute. That's good. Even though `checksum` itself is a function, `' ' + checksum` casts the function to a string containing its source code, meaning that if I edit anything inside `checksum`'s definition, I would change the result of `checksum(' ' + checksum)`. This is pretty cursed, but I remember seeing something like this in [one of LiveOverflow's videos][liveoverflow][^3] a while back, so I stored the original function implementation in a string, `checksumStr`. According to VS Code, there were not only invisible special characters but also a lot of trailing spaces, which I was afraid my editor would remove on save,[^4] so it was a bit annoying escaping everything.
 
 [liveoverflow]: https://www.youtube.com/watch?v=8yWUaqEcXr4
 
@@ -113,7 +113,7 @@ So then I ran
 " pA:Object.defineProperty(document/*  `+d({*/.body,'className',{get(){/*       `  */return this.getAttribute('class'/*   @*/)||''},set(x){this.setAttribute(/*   7 , @@X(tw  Y */'class',(x!='granted'/*   ,5 @*/||(/*                               s |L Q4 *//*                             s |L M  *//*                              Se` h@*//*                             ( ) N) H  5! =X*//*                      +d   v=A (( *//*                        (*//^CTF{([0-9a-zA-Z_@!?-]+)}$/.exec(/*   * ]#*/keyhole.value)||x)[1].endsWith/*    9 */('Br0w53R_Bu9s_C4Nt_s70p_Y0u'))/*   ? [mRP`+d X*/?x:'denied')}})/*          *///                                    "
 ```
 
-That does look like JavaScript, albeit quite messy. I tossed the output through [Terser][terser] then [Prettier][prettier] to get rid of the extraneous labels and comments, and after cleaning the result up a bit, I got this.
+That does look like JavaScript, albeit quite messy. I tossed the output through [Terser][terser] then [Prettier][prettier] to get rid of the extraneous labels and comments:
 
 [terser]: https://try.terser.org/
 [prettier]: https://prettier.io/playground/
@@ -137,19 +137,19 @@ Object.defineProperty(document.body, 'className', {
 })
 ```
 
-As a quick summary so far, the original HTML file runs this code on start, so I included this code directly in my stripped down copy of the JS Safe. It seems to check the password when `document.body.className` is set to the safe's password, which is the challenge's flag. `Br0w53R_Bu9s_C4Nt_s70p_Y0u` did seem like part of the flag, but unfortunately JS Safe 4.0 did not accept `CTF{Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. I guess life can't be so easy!
+As a quick recap, the original HTML file runs this code immediately when the page loads. I included the code directly in my stripped down copy of the JS Safe. It seems to check the password when `document.body.className` is set to the safe's password, which is the challenge's flag. `Br0w53R_Bu9s_C4Nt_s70p_Y0u` did seem like part of the flag, but unfortunately JS Safe 4.0 did not accept `CTF{Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. Maybe they only included this as a deception. I guess life can't be so easy!
 
 ## Wow, such nice debug skills
 
-I played around with the code near the end of the HTML file, which did funny things like adding a `splice` method to all objects, setting `Error.prepareStackTrace`, and defining `ChecksumError`.
+I played around with the code near the end of the HTML file, which did funny things like adding a `splice` property to all objects, defining a static method `Error.prepareStackTrace`, and creating a function `ChecksumError`.
 
 ![JavaScript code.][no-devtools]
 
-Because devtools kept crashing, I decided that they only had that code to crash devtools, so it wasn't necessary for the JS Safe. I commented it out.[^6]
+Because devtools kept crashing while I fiddled with that part of the code, I decided that they only included it to crash devtools, so it wasn't essential for the safe itself. I commented it out.[^6]
 
 [^6]: It might be worth going back and seeing how they work, but it wasn't relevant for the challenge.
 
-I had only been focusing on the `<script>` tag towards the end of the document, but there was a whole chunk of JavaScript earlier in the HTML that I had been ignoring. It starts by defining `code`, containing what seemed to be JavaScript, and then running `setTimeout` on a string, like I found earlier.[^5]
+I had only been focusing on the `<script>` tag towards the end of the document, but there was a whole chunk of JavaScript earlier in the HTML that I had been ignoring. It starts by defining `code`, containing what seemed to be valid JavaScript, and then running `setTimeout` on a string, like I found earlier.[^5]
 
 [^5]: Google really prefers `setTimeout` over `eval`, I guess.
 
@@ -163,7 +163,7 @@ var code = `\x60
 setTimeout("x = Function('flag', " + code + ")");
 ```
 
-I straight up ran this code in the console, then casted `x` to a string to get its source code, which I pasted into my JS Safe clean version.
+This sets `x` to a function with a parameter `flag` and the value of `code` as the function body. To get `x`, I straight up ran this code in the console, then casted `x` to a string to get its source code, which I pasted into my JS Safe clean version.
 
 ```js
 x = flag => {
