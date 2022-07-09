@@ -139,13 +139,15 @@ Object.defineProperty(document.body, 'className', {
 
 As a quick summary so far, the original HTML file runs this code on start, so I included this code directly in my stripped down copy of the JS Safe. It seems to check the password when `document.body.className` is set to the safe's password, which is the challenge's flag. `Br0w53R_Bu9s_C4Nt_s70p_Y0u` did seem like part of the flag, but unfortunately JS Safe 4.0 did not accept `CTF{Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. I guess life can't be so easy!
 
-## wow
+## Wow, such nice debug skills
 
 I played around with the code near the end of the HTML file, which did funny things like adding a `splice` method to all objects, setting `Error.prepareStackTrace`, and defining `ChecksumError`.
 
 ![JavaScript code.][no-devtools]
 
-Because devtools kept crashing, I decided that they only had that code to crash devtools, so it wasn't necessary for the JS Safe. I commented it out.
+Because devtools kept crashing, I decided that they only had that code to crash devtools, so it wasn't necessary for the JS Safe. I commented it out.[^6]
+
+[^6]: It might be worth going back and seeing how they work, but it wasn't relevant for the challenge.
 
 I had only been focusing on the `<script>` tag towards the end of the document, but there was a whole chunk of JavaScript earlier in the HTML that I had been ignoring. It starts by defining `code`, containing what seemed to be JavaScript, and then running `setTimeout` on a string, like I found earlier.[^5]
 
@@ -203,7 +205,60 @@ As it turns out, the `i‍` in `i‍ = 1337` is _not_ the same as the `i` used e
 
 [zwj]: https://en.wikipedia.org/wiki/Zero-width_joiner
 
-I think this is kind of funny in the JavaScript being dumb sense because I would've expected JavaScript to treat zero-width joiners as whitespace and ignore it, but instead, it seems to treat it as a valid identifier character---valid in variable names---and it makes it unique. The fact that you can have another identical-looking variable name be treated as a different variable by JavaScript isn't uncommon; many programming languages have a distinction between typical Latin `a` and Cyrillic `а`, for example. But I wasn't expecting zero-width joiners to be allowed too.
+I think this is kind of funny in the JavaScript being dumb sense because I would've expected JavaScript to treat zero-width joiners as whitespace and ignore it, but instead, it seems to treat it as a valid identifier character---valid in variable names---and it makes it unique. The fact that you can have another identical-looking variable name be treated as a different variable by JavaScript isn't uncommon; many programming languages have a distinction between typical Latin `a` and Cyrillic `а`, for example. But I wasn't expecting zero-width joiners to be allowed too. Maybe it would make sense that zero-width joiners are allowed at least between characters like emoji to merge them into a single glyph; for example, the rainbow flag emoji `🏳‍🌈` is composed of `🏳️` + a zero-width joiner + `🌈`. But JavaScript doesn't allow emoji in variable names, so I don't know.
+
+Ultimately, since `i‍ = 1337` involves a completely different variable, I can ignore it. So now, I have a simplified version of `x`.
+
+```js
+x = flag => {
+  i = 13337
+  flag = flag.split('')
+  pool = 'c_3L9zKw_l1HusWN_b_U0c3d5_1'.split('')
+  while (pool.length > 0) {
+    const next = flag.shift()
+    i = ((i || 1) * 16807) % 2147483647
+    const removed = pool.splice(i % pool.length, 1)[0]
+    if (next != removed) return false
+  }
+  return true
+}
+```
+
+It seems that, for every character in the input password `flag`, it plucks and removes some arbitrary character in `pool` and ensures that the characters match; `pool` is a scrambled version of the correct flag, and `flag` must match the unscrambled version of `pool`. The characters from `pool` are removed in a consistent yet unintuitive order, but `flag` is processed from left to right. Therefore, I could modify `x` to print out the characters in `pool` as they are plucked out to reveal the unscrambled version of the `flag`.
+
+```js
+> s = ''
+  i = 13337
+  pool = 'c_3L9zKw_l1HusWN_b_U0c3d5_1'.split('')
+  while (pool.length > 0) {
+    i = ((i || 1) * 16807) % 2147483647
+    const removed = pool.splice(i % pool.length, 1)[0]
+    s += removed
+  }
+'W0w_5ucH_N1c3_d3bU9_sK1lLz_'
+```
+
+`W0w_5ucH_N1c3_d3bU9_sK1lLz_` certainly looks like it's part of the flag, but the original safe didn't accept `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_}` or `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz}` either. Weird!
+
+It took me a few moments before I remembered earlier when I had discovered [`Br0w53R_Bu9s_C4Nt_s70p_Y0u`](#browser-bugs-cant-stop-you). Its code checked to ensure that the part between `CTF{...}` _ended_ with `Br0w53R_Bu9s_C4Nt_s70p_Y0u`, using `endsWith`, so I tried `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. It worked!
+
+!["Access granted" shows below the password text field.][granted]
+
+## Wow, such nice debug skills; browser bugs can't stop you
+
+<!-- I started 23:33 and finished 24:26. -->
+
+The challenge took me about an hour at midnight. I tried looking at the web challenges, but they seemed to focus on the backend, and since it was late in the night, I decided to go to bed.
+
+78 teams total solved the challenge, and we got 152 points from it.
+
+I think the main takeaway, at least for me, were the JavaScript quirks I learned from this challenge:
+
+1. JavaScript treats line separator characters as new lines, but many text editors don't and will colour the whole line as a comment if it's in a single-line comment.
+
+2. JavaScript allows zero-width joiners in identifiers.
+
+Thanks, Google.
 
 ---
 
@@ -216,3 +271,4 @@ I think this is kind of funny in the JavaScript being dumb sense because I would
 [checksum-str]: ../images/google-ctf/checksum-str.png
 [no-devtools]: ../images/google-ctf/no-devtools.png
 [i-sus]: ../images/google-ctf/i-sus.png
+[granted]: ../images/google-ctf/granted.png
