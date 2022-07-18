@@ -95,7 +95,7 @@ So presumably, `checksum(' ' + checksum)` returns valid JavaScript that `setTime
 
 [liveoverflow]: https://www.youtube.com/watch?v=8yWUaqEcXr4
 
-[^3]: Hey, looking back on that video, which I found for this article, that's a predecessor of this JS Safe 4.0. Cool!
+[^3]: Hey, looking back on that video, which I found for this article, the video covers a predecessor of this JS Safe 4.0. Cool!
 [^4]: I have my editor set to remove trailing spaces on save because I'm used to Atom doing that.
 
 ![The original `checksum` implementation with trailing spaces and non-ASCII invisible characters demarcated by VS Code.][checksum]
@@ -163,7 +163,7 @@ var code = `\x60
 setTimeout("x = Function('flag', " + code + ")");
 ```
 
-This sets `x` to a function with a parameter `flag` and the value of `code` as the function body. To get `x`, I straight up ran this code in the console, then casted `x` to a string to get its source code, which I pasted into my JS Safe clean version.
+This sets `x` to a function with a parameter `flag` and the value of `code` as the function body. To get `x`, I copypasted and ran the code in the console, then casted `x` to a string to get its source code, which I pasted into my JS Safe clean version.
 
 ```js
 x = flag => {
@@ -189,11 +189,11 @@ x = flag => {
 }
 ```
 
-`for (i = 0; i < 100; i++) setTimeout('debugger')` runs `debugger` 100 times. [`debugger`][debugger] is a fancy JavaScript keyword that, when a debugger like the one in devtools is available, pauses execution. It effectively is another way of JS Safe screwing with devtools users because you'd have to constantly step through each of the hundred `debugger` statements to be able to debug anything.
+`for (i = 0; i < 100; i++) setTimeout('debugger')` runs `debugger` 100 times. [`debugger`][debugger] is a fancy JavaScript keyword that, when a debugger like the one in devtools is available, pauses execution. It effectively is another way of JS Safe screwing with devtools users because it will repeatedly pause everything and you'd have to constantly step through each of the hundred `debugger` statements to be able to debug anything.
 
 [debugger]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 
-However, I noticed that I couldn't simply comment the `for` loop out. It was incrementing the variable `i` a hundred times from zero, which not only is used to annoy devtools users but also later gets used in the last part of the function, which seems to be the actual implementation of `x`. Similarly, in the `if` statement, other than the probably useless `while (1);`, it also runs `i += ((x + '').length + 12513) | 1`. Since this also depends on the unmodified source code of `x`, using the original `x`, I plugged in `(x + '').length` to get 724.
+I couldn't simply comment the `for` loop out, though. It was incrementing the variable `i` a hundred times from zero, and `i` is not only is used to annoy devtools users but also later gets used in the last part of the function, seemingly the relevant implementation of `x`. Similarly, in the `if` statement, other than the probably useless `while (1);`, it also runs `i += ((x + '').length + 12513) | 1`. Since `(x + '').length` depends on the unmodified source code of `x`, like earlier, using the original `x`, I plugged in `(x + '').length` to get 724.
 
 After these two statements, `i` ends up being `13337`. But what about `i‍ = 1337`?
 
@@ -201,11 +201,11 @@ After these two statements, `i` ends up being `13337`. But what about `i‍ = 13
 
 _`i‍` is s-sus??_
 
-As it turns out, the `i‍` in `i‍ = 1337` is _not_ the same as the `i` used elsewhere in `x`. It's a normal Latin lowercase `i` followed by a [ZERO-WIDTH JOINER][zwj]. ???
+As it turns out, the `i‍` in `i‍ = 1337` is _not_ the same as the `i` used elsewhere else in `x`. It's the normal Latin lowercase `i` followed by a [zero-width joiner][zwj]. ???
 
 [zwj]: https://en.wikipedia.org/wiki/Zero-width_joiner
 
-I think this is kind of funny in the JavaScript being dumb sense because I would've expected JavaScript to treat zero-width joiners as whitespace and ignore it, but instead, it seems to treat it as a valid identifier character---valid in variable names---and it makes it unique. The fact that you can have another identical-looking variable name be treated as a different variable by JavaScript isn't uncommon; many programming languages have a distinction between typical Latin `a` and Cyrillic `а`, for example. But I wasn't expecting zero-width joiners to be allowed too. Maybe it would make sense that zero-width joiners are allowed at least between characters like emoji to merge them into a single glyph; for example, the rainbow flag emoji `🏳‍🌈` is composed of `🏳️` + a zero-width joiner + `🌈`. But JavaScript doesn't allow emoji in variable names, so I don't know.
+I think this is kind of funny (in the JavaScript-being-dumb sense) because I would've expected JavaScript to treat zero-width joiners as whitespace and ignore it, but instead, it seems to treat it as a valid character for a unique variable name. The fact that you can have another identical-looking variable name be treated as a different variable by JavaScript isn't uncommon; many programming languages have a distinction between typical Latin `a` and Cyrillic `а`, for example. But I wasn't expecting zero-width joiners to be allowed too! Maybe it would make sense that zero-width joiners are allowed at least between characters like emoji because some emoji can be merged into a single glyph; for example, the rainbow flag emoji `🏳‍🌈` is composed of `🏳️` + a zero-width joiner + `🌈`. But JavaScript doesn't allow emoji in variable names, so I don't know.
 
 Ultimately, since `i‍ = 1337` involves a completely different variable, I can ignore it. So now, I have a simplified version of `x`.
 
@@ -224,7 +224,7 @@ x = flag => {
 }
 ```
 
-It seems that, for every character in the input password `flag`, it plucks and removes some arbitrary character in `pool` and ensures that the characters match; `pool` is a scrambled version of the correct flag, and `flag` must match the unscrambled version of `pool`. The characters from `pool` are removed in a consistent yet unintuitive order, but `flag` is processed from left to right. Therefore, I could modify `x` to print out the characters in `pool` as they are plucked out to reveal the unscrambled version of the `flag`.
+It seems that, for each character in the argument `flag`---presumably, the flag for the CTF challenge---it plucks and removes an arbitrary character in `pool` and ensures that two match: `pool` is a scrambled version of the correct flag, and `flag` must match the unscrambled version of `pool`. The characters from `pool` are removed in a consistent yet unintuitive order, depending on what `i` happens to be, but `flag` is processed from left to right. Therefore, I could modify `x` to print out the characters in `pool` in the order they are plucked out to reveal the unscrambled version of the correct `flag`.
 
 ```js
 > s = ''
@@ -238,9 +238,9 @@ It seems that, for every character in the input password `flag`, it plucks and r
 'W0w_5ucH_N1c3_d3bU9_sK1lLz_'
 ```
 
-`W0w_5ucH_N1c3_d3bU9_sK1lLz_` certainly looks like it's part of the flag, but the original safe didn't accept `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_}` or `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz}` either. Weird!
+`W0w_5ucH_N1c3_d3bU9_sK1lLz_` certainly looks like it's part of the flag, but the original safe didn't accept `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_}` or `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz}` either. Weird! Is this a decoy?
 
-It took me a few moments before I remembered earlier when I had discovered [`Br0w53R_Bu9s_C4Nt_s70p_Y0u`](#browser-bugs-cant-stop-you). Its code checked to ensure that the part between `CTF{...}` _ended_ with `Br0w53R_Bu9s_C4Nt_s70p_Y0u`, using `endsWith`, so I tried `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. It worked!
+It took me a few moments before I remembered earlier when I had discovered [`Br0w53R_Bu9s_C4Nt_s70p_Y0u`](#browser-bugs-cant-stop-you). Its code checked to ensure that the part between `CTF{...}` _ended_ with `Br0w53R_Bu9s_C4Nt_s70p_Y0u`, using `endsWith`, so I put two and two together and tried `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. It worked!
 
 !["Access granted" shows below the password text field.][granted]
 
@@ -248,13 +248,13 @@ It took me a few moments before I remembered earlier when I had discovered [`Br0
 
 <!-- I started 23:33 and finished 24:26. -->
 
-The challenge took me about an hour at midnight. I tried looking at the web challenges, but they seemed to focus on the backend, and since it was late in the night, I decided to go to bed.
+The challenge took me about an hour at midnight. I tried looking at the other web challenges, but they seemed to focus on the backend---not my strong suit---and since it was late in the night, I decided to go to bed.
 
 78 teams total solved the challenge, and we got 152 points from it.
 
 I think the main takeaway, at least for me, were the JavaScript quirks I learned from this challenge:
 
-1. JavaScript treats line separator characters as new lines, but many text editors don't and will colour the whole line as a comment if it's in a single-line comment.
+1. JavaScript treats line separator characters as new lines, but many text editors don't and will colour the whole "line" as a comment if it's in a single-line comment.
 
 2. JavaScript allows zero-width joiners in identifiers.
 
