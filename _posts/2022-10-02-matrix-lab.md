@@ -6,6 +6,7 @@ date: 2022-10-02
 tags:
   - ctf
   - programming
+hidden: true
 ---
 
 A bunch of CTF enjoyers on the [ACM Cyber][acm] Discord server gathered (CS majors touching grass??) at a computer lab in the CSE basement at UCSD. Their AC was set unnecessarily cold to prevent the shower-free CS majors from sweating. We were doing the Project Sekai CTF, which had a pretty based website design. I immediately jumped to [Obligatory Calc][calc], but while stuck on it, I decided to tackle the easier reverse engineering (rev) challenges first.
