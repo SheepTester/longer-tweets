@@ -7,12 +7,12 @@ layout: default
 <div class="tags">
   {%- for tag in page.tags -%} {%- include tag.html -%} {%- endfor -%}
 </div>
-<div class="content">
-  {{ content }}
-</div>
+<div class="content">{{ content }}</div>
 <span class="date"
-  >See source and revision history on
+  >See source and revision history on {% comment %} #github ID is used by
+  sheep.js to get the source URL {% endcomment %}
   <a
+    id="github"
     href="https://github.com/SheepTester/longer-tweets/commits/master/{{ page.path }}"
     >GitHub</a
   >.</span
