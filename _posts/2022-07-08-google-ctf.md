@@ -22,10 +22,9 @@ thought it was in web, but I see now why it's a reversing challenge.)
 
 ## Browser bugs can't stop you
 
-The [attachment][zip] was a ZIP file containing a single HTML file, [js_safe_4.html][html]. If you want to preview the code in your browser, I uploaded it as a [GitHub Gist][gist]. I opened the HTML file directly in my browser.
+The [attachment][zip] was a ZIP file containing a single HTML file, js_safe_4.html. If you want to preview the code in your browser, I uploaded it as a [GitHub Gist][gist]. I opened the HTML file directly in my browser.
 
 [zip]: https://storage.googleapis.com/gctf-2022-attachments-project/8a483f2f7d732e97cd24b1d782f07080ada433014bc3fcbb07576a127de7d94083e877f98cb4e93376eabb9c2234449d7bcb62943abf2af411bd9f0e7926cbf3
-[html]: https://cdn.discordapp.com/attachments/708959477965258793/993349125762453505/js_safe_4.html
 [gist]: https://gist.github.com/SheepTester/e6ab99e84036840babdcf4c71e5b08bb
 
 ![A rotating wrapped gift box with a text field below it prompting for a password.][js-safe-4]
