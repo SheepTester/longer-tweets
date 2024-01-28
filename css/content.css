@@ -118,7 +118,9 @@
 }
 .normal .content hr {
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 100px;
+  margin: 0.5em 0;
 }
 .content img {
   display: block;
