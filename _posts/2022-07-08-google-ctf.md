@@ -261,6 +261,10 @@ I think the main takeaway, at least for me, were the JavaScript quirks I learned
 
 Thanks, Google.
 
+**Update**: This write-up [won the Google CTF write-up competition](https://groups.google.com/g/google-ctf/c/BQG1LP8vuZ4). As a prize, they sent me a free Google CTF shirt. Thanks again, Google!
+
+![Google CTF shirt](../images/google-ctf/shirt.webp)
+
 ---
 
 [challenge]: ../images/google-ctf/challenge.png
