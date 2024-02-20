@@ -3,12 +3,12 @@ let accessible = localStorage.getItem('[longer-tweets] accessible')
 
 function setAccessible (accessible) {
   if (accessible) {
-    document.body.classList.add('accessible')
-    document.body.classList.remove('normal')
+    document.documentElement.classList.add('accessible')
+    document.documentElement.classList.remove('normal')
     toggleBtn.textContent = 'Disable accessible theme'
   } else {
-    document.body.classList.add('normal')
-    document.body.classList.remove('accessible')
+    document.documentElement.classList.add('normal')
+    document.documentElement.classList.remove('accessible')
     toggleBtn.textContent = 'Enable accessible theme'
   }
 }
