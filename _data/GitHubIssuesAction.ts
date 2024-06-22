@@ -1,12 +1,12 @@
-// // https://github.com/SheepTester/longer-tweets/actions/runs/9621482769/job/26541468824
+// https://github.com/SheepTester/longer-tweets/actions/runs/9621482769/job/26541468824
 
-type User = {
+export type User = {
   avatar_url: string
   html_url: string
   login: string
 }
 
-type Action = {
+export type Action = {
   issue: {
     body: string
     created_at: string
@@ -19,7 +19,7 @@ type Action = {
   sender: User
 }
 
-type LongerTweetComment = {
+export type LongerTweetComment = {
   author: string
   content_html: string
   issue_number: number

@@ -2,6 +2,8 @@
   "type": "module",
   "dependencies": {
     "micromark": "^4.0.0",
+    "micromark-extension-gfm-autolink-literal": "^2.0.0",
+    "micromark-extension-gfm-strikethrough": "^2.0.0",
     "yaml": "^2.4.5"
   }
 }

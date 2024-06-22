@@ -1,9 +1,18 @@
 // @ts-check
 
-import YAML from 'yaml'
 import fs from 'fs/promises'
+import { micromark } from 'micromark'
+import {
+  gfmAutolinkLiteral,
+  gfmAutolinkLiteralHtml
+} from 'micromark-extension-gfm-autolink-literal'
+import {
+  gfmStrikethrough,
+  gfmStrikethroughHtml
+} from 'micromark-extension-gfm-strikethrough'
+import YAML from 'yaml'
 
-/** @type {Action} */
+/** @type {import('./GitHubIssuesAction.ts').Action} */
 const action = JSON.parse(process.argv[2])
 const { issue, sender } = action
 
@@ -28,16 +37,21 @@ if (sender.avatar_url !== `https://github.com/${sender.login}`) {
   console.error(JSON.stringify(action, null, 2))
 }
 
-/** @type {LongerTweetComment} */
+/** @type {import('./GitHubIssuesAction.ts').LongerTweetComment} */
 const comment = {
   author: sender.login,
   avatar: sender.avatar_url,
-  content_html: issue.body,
+  // micromark doesn't support comments, presumably requires HTML mode
+  // also can't find extension
+  content_html: micromark(issue.body.replace(/<!--[^]+?-->/g, ''), {
+    extensions: [gfmAutolinkLiteral(), gfmStrikethrough()],
+    htmlExtensions: [gfmAutolinkLiteralHtml(), gfmStrikethroughHtml()]
+  }).replace(/<a /g, '<a rel="nofollow" '),
   issue_number: issue.number,
   timestamp: new Date(issue.updated_at)
 }
 
-/** @type {Record<string, LongerTweetComment[]>} */
+/** @type {Record<string, import('./GitHubIssuesAction.ts').LongerTweetComment[]>} */
 const comments = YAML.parse(await fs.readFile('_data/comments.yml', 'utf-8'))
 
 comments[postId] ??= []
