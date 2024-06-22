@@ -1,2 +1,6 @@
 /test:
-  - content: heyo <h1> hi </h1>
+  - author: SheepTester
+    content_html: <p>heyo <strong>hi</strong></p>
+    issue_number: 6
+    avatar: https://avatars.githubusercontent.com/u/22133785
+    timestamp: 2024-06-22T00:43:21Z

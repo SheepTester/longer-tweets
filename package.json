@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "micromark": "^4.0.0",
+    "yaml": "^2.4.5"
+  }
+}

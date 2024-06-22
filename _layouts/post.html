@@ -20,5 +20,9 @@ layout: default
 
 {%- assign comments = site.data.comments[page.id] -%}
 <div class="comments">
+  <a
+    href="https://github.com/SheepTester/longer-tweets/issues/new?template=comment.md&labels=comment&title=💬 {{ page.id }}"
+    >Add a comment</a
+  >
   {%- for comment in comments -%} {%- include comment.html -%} {%- endfor -%}
 </div>

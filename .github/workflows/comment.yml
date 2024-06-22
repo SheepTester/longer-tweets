@@ -4,22 +4,28 @@ on:
     types: opened
 permissions:
   contents: write
+  issues: write
 jobs:
   comment:
     name: Write comment to comments.yml
+    # https://docs.github.com/en/actions/learn-github-actions/expressions#example-using-an-object-filter
+    if: ${{ contains(github.event.issue.labels.*.name, 'comment') }}
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo '${{ toJson(github.event) }}'
-      # - uses: actions/checkout@v4
-      # - name: Format
-      #   run: |
-      #     npm install
-      #     npx eslint . --fix
-      #     npm run format
-      # - name: Push changes
-      #   run: |
-      #     git config --local user.name 'Github Actions: ${{ github.action }}'
-      #     git config --local user.email 'github-actions[bot]@users.noreply.github.com'
-      #     git commit -am "style: autoformat"
-      #     git push
+      - uses: actions/checkout@v4
+      - name: Write to _data/comments.yml
+        run: |
+          npm install
+          MESSAGE=$(node _data/add-comment.js '${{ toJson(github.event) }}')
+          # https://serverfault.com/questions/7503/how-to-determine-if-a-bash-variable-is-empty#comment628076_7509
+          if [[ -n $MESSAGE ]]
+          then
+            gh issue comment ${{ github.event.issue.number }} --body "$MESSAGE"
+          fi
+      - name: Push changes
+        run: |
+          git config --local user.name 'Github Actions: ${{ github.action }}'
+          git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+          git add _data/comments.yml
+          git commit -m "Add comment from @${{ github.event.sender.login }}"
+          git push
