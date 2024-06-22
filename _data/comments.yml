@@ -1,5 +1,10 @@
 /test:
   - author: SheepTester
+    avatar: https://avatars.githubusercontent.com/u/22133785?v=4
+    content_html: hello there
+    issue_number: 8
+    timestamp: 2024-06-22T01:48:51.000Z
+  - author: SheepTester
     content_html: <p>heyo <strong>hi</strong></p>
     issue_number: 6
     avatar: https://avatars.githubusercontent.com/u/22133785
