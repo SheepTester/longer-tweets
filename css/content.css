@@ -68,6 +68,8 @@
 }
 .accessible .content pre {
   border: 1px solid currentColor;
+  margin-left: -21px;
+  margin-right: -21px;
 }
 .content li pre {
   margin-left: 0;
@@ -172,4 +174,82 @@
 }
 .content .footnote::after {
   content: ']';
+}
+
+.date {
+  margin: 0;
+}
+.normal .date,
+.normal .revisions {
+  color: rgba(255, 255, 255, 0.4);
+}
+.normal .revisions a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+.normal .revisions a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid currentColor;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.add-comment {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.normal .add-comment,
+.normal .comment {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.accessible .add-comment,
+.accessible .comment {
+  border: 1px solid currentColor;
+}
+.comment-header {
+  display: flex;
+}
+.author {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto;
+}
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.normal .time {
+  color: rgba(255, 255, 255, 0.4);
+}
+.author,
+.time,
+.add-comment {
+  text-decoration: none;
+}
+.author:hover,
+.time:hover,
+.add-comment:hover {
+  text-decoration: underline;
+}
+.comment .content {
+  align-self: stretch;
+  margin: -1em 0;
 }

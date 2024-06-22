@@ -1,13 +1,18 @@
 <div class="comment">
-  <a class="author" href="https://github.com/{{ comment.author }}"
-    ><img
-      src="{{ comment.avatar }}"
-      alt="{{ comment.author }}'s GitHub profile picture"
-    />
-    {{ comment.author }}</a
-  >
-  {{ comment.content_html }}
-  <a class="source-link" href="{{ comment.issue_number }}">
-    {{ comment.timestamp | date: '%F, a %A' }}
-  </a>
+  <div class="comment-header">
+    <a class="author" href="https://github.com/{{ comment.author }}">
+      <img
+        src="{{ comment.avatar }}"
+        alt="{{ comment.author }}'s GitHub profile picture"
+      />
+      {{ comment.author }}
+    </a>
+    <a
+      class="time"
+      href="https://github.com/SheepTester/longer-tweets/issues/{{ comment.issue_number }}"
+    >
+      {{ comment.timestamp | date: '%F, a %A' }}
+    </a>
+  </div>
+  <div class="content">{{ comment.content_html }}</div>
 </div>

@@ -2,27 +2,45 @@
 layout: default
 ---
 
-<span class="date">{{ page.date | date: '%F, a %A' }}</span>
+<p class="date">{{ page.date | date: '%F, a %A' }}</p>
 <h1 class="title">{{ page.title }}</h1>
 <div class="tags">
   {%- for tag in page.tags -%} {%- include tag.html -%} {%- endfor -%}
 </div>
 <div class="content">{{ content }}</div>
-<span class="date"
-  >See source and revision history on {% comment %} #github ID is used by
+<p class="revisions">
+  See source and revision history on {% comment %} #github ID is used by
   sheep.js to get the source URL {% endcomment %}
   <a
     id="github"
     href="https://github.com/SheepTester/longer-tweets/commits/master/{{ page.path }}"
     >GitHub</a
-  >.</span
->
+  >.
+</p>
 
 {%- assign comments = site.data.comments[page.id] -%}
 <div class="comments">
   <a
     href="https://github.com/SheepTester/longer-tweets/issues/new?template=comment.md&labels=comment&title=💬 {{ page.id }}"
-    >Add a comment</a
+    class="add-comment"
   >
+    <!-- https://github.com/feathericons/feather/blob/main/icons/edit-3.svg -->
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+    </svg>
+    Write a comment
+  </a>
   {%- for comment in comments -%} {%- include comment.html -%} {%- endfor -%}
 </div>

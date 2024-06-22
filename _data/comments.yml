@@ -29,7 +29,7 @@
     timestamp: 2024-06-22T02:30:43.000Z
   - author: SheepTester
     avatar: https://avatars.githubusercontent.com/u/22133785?v=4
-    content_html: hello there
+    content_html: <p>hello there</p>
     issue_number: 8
     timestamp: 2024-06-22T01:48:51.000Z
   - author: SheepTester

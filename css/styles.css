@@ -13,6 +13,11 @@ body {
     max-width: 600px;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .accessible {
+    color-scheme: dark;
+  }
+}
 .normal {
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.6);
@@ -30,17 +35,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.8;
-}
-.normal span.date {
-  color: rgba(255, 255, 255, 0.4);
-}
-.normal span.date a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
-}
-.normal span.date a:hover {
-  color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid currentColor;
 }
 .title {
   font-size: 48px;

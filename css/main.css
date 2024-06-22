@@ -26,3 +26,10 @@
 .post-entry .desc {
   margin-top: 10px;
 }
+
+.welcome {
+  margin: 0;
+}
+.normal .welcome {
+  color: rgba(255, 255, 255, 0.4);
+}
