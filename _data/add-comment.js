@@ -46,7 +46,9 @@ const comment = {
   content_html: micromark(issue.body.replace(/<!--[^]+?-->/g, ''), {
     extensions: [gfmAutolinkLiteral(), gfmStrikethrough()],
     htmlExtensions: [gfmAutolinkLiteralHtml(), gfmStrikethroughHtml()]
-  }).replace(/<a /g, '<a rel="nofollow" '),
+  })
+    .replace(/<a /g, '<a rel="nofollow" ')
+    .replace(/\r/g, ''),
   issue_number: issue.number,
   timestamp: new Date(issue.updated_at)
 }
