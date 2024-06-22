@@ -30,9 +30,9 @@ if (sender.login !== issue.user.login) {
   )
   console.error(JSON.stringify(action, null, 2))
 }
-if (sender.avatar_url !== `https://github.com/${sender.login}`) {
+if (sender.html_url !== `https://github.com/${sender.login}`) {
   console.log(
-    `@SheepTester Why is the avatar URL different than the login? ${sender.avatar_url} vs https://github.com/${sender.login}`
+    `@SheepTester Why is the profile URL different than the login? ${sender.html_url} vs https://github.com/${sender.login}`
   )
   console.error(JSON.stringify(action, null, 2))
 }
