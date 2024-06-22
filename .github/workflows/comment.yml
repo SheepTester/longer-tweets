@@ -1,7 +1,7 @@
 name: Comment on longer tweet
 on:
-  discussion_comment:
-    types: created
+  issues:
+    types: opened
 permissions:
   contents: write
 jobs:
