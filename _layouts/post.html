@@ -17,3 +17,8 @@ layout: default
     >GitHub</a
   >.</span
 >
+
+{%- assign comments = site.data.comments[page.id] -%}
+<div class="comments">
+  {%- for comment in comments -%} {%- include comment.html -%} {%- endfor -%}
+</div>

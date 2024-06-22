@@ -1,0 +1,25 @@
+name: Comment on longer tweet
+on:
+  discussion_comment:
+    types: created
+permissions:
+  contents: write
+jobs:
+  comment:
+    name: Write comment to comments.yml
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo '${{ toJson(github.event) }}'
+      # - uses: actions/checkout@v4
+      # - name: Format
+      #   run: |
+      #     npm install
+      #     npx eslint . --fix
+      #     npm run format
+      # - name: Push changes
+      #   run: |
+      #     git config --local user.name 'Github Actions: ${{ github.action }}'
+      #     git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+      #     git commit -am "style: autoformat"
+      #     git push
