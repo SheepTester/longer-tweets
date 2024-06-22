@@ -11,7 +11,7 @@
       class="time"
       href="https://github.com/SheepTester/longer-tweets/issues/{{ comment.issue_number }}"
     >
-      {{ comment.timestamp | date: '%F, a %A' }}
+      {{ comment.timestamp | date_to_xmlschema | date: '%F, a %A' }}
     </a>
   </div>
   <div class="content">{{ comment.content_html }}</div>

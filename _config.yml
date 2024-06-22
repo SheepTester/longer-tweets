@@ -6,3 +6,5 @@ permalink: /:title/
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+timezone: America/Los_Angeles
