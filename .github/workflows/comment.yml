@@ -37,11 +37,14 @@ jobs:
 
           Resolves #${{ github.event.issue.number }}"
             git push
+          else
+            gh issue close ${{ github.event.issue.number }} --reason 'not planned'
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Comment on the issue if needed
         run: |
           gh issue comment ${{ github.event.issue.number }} --body "$MESSAGE"
         if: ${{ env.MESSAGE != '' }}
         env:
-          # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
