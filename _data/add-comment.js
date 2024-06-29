@@ -27,7 +27,7 @@ if (!postId) {
   )
   process.exit()
 } else if (!issue.title.startsWith('💬')) {
-  console.log("Don't edit the title!")
+  console.log("Don't edit the title! bruh")
 }
 
 if (sender.login !== issue.user.login) {

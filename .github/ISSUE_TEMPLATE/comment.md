@@ -4,4 +4,4 @@ about: 'Comment on a longer tweet. Please use the prefilled issue link provided 
 labels: comment
 ---
 
-i am stinky and i thought itd be funny if i directly used the issue template but now that i can think i realize its not funny
+i am stinky and i thought itd be funny if i directly used the issue template but i finally learned to think a bit and i realize that its not funny
