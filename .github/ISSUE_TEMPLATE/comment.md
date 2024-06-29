@@ -4,4 +4,4 @@ about: 'Comment on a longer tweet. Please use the prefilled issue link provided 
 labels: comment
 ---
 
-<!-- Write your comment here! Some Markdown features are supported. Do NOT change the issue title. Please be nice. -->
+i am stinky and i thought itd be funny if i directly used the issue template but now that i can think i realize its not funny
