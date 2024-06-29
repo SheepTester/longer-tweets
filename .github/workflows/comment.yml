@@ -2,6 +2,10 @@ name: Comment on longer tweet
 on:
   issues:
     types: opened
+# Avoid "Context access might be invalid"
+# https://github.com/github/vscode-github-actions/issues/67#issuecomment-1646017038
+env:
+  MESSAGE:
 permissions:
   contents: write
   issues: write
@@ -24,20 +28,20 @@ jobs:
           } >> "$GITHUB_ENV"
       - name: Push changes
         run: |
-          git config --local user.name 'Github Actions: ${{ github.action }} (for @${{ github.event.sender.login }})'
-          git config --local user.email '${{ github.event.sender.login }}@users.noreply.github.com'
-          git add _data/comments.yml
-          git commit -m "Add comment from @${{ github.event.sender.login }}
+          # https://stackoverflow.com/a/25149786
+          if [[ `git status --porcelain` ]]; then
+            git config --local user.name 'Github Actions: ${{ github.action }} (for @${{ github.event.sender.login }})'
+            git config --local user.email '${{ github.event.sender.login }}@users.noreply.github.com'
+            git add _data/comments.yml
+            git commit -m "Add comment from @${{ github.event.sender.login }}
 
           Resolves #${{ github.event.issue.number }}"
-          git push
+            git push
+          fi
       - name: Comment on the issue if needed
         run: |
-          # https://serverfault.com/questions/7503/how-to-determine-if-a-bash-variable-is-empty#comment628076_7509
-          if [[ -n $MESSAGE ]]
-          then
-            gh issue comment ${{ github.event.issue.number }} --body "$MESSAGE"
-          fi
+          gh issue comment ${{ github.event.issue.number }} --body "$MESSAGE"
+        if: ${{ env.MESSAGE != '' }}
         env:
           # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
