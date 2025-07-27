@@ -19,26 +19,30 @@ const { issue, sender } = action
 const postId = issue.title.startsWith('💬')
   ? issue.title.replace('💬', '').trim()
   : issue.body.includes('💬')
-  ? issue.body.split('💬')[1]?.split('-->')[0]?.trim()
-  : undefined
+    ? issue.body.split('💬')[1]?.split('-->')[0]?.trim()
+    : undefined
 if (!postId) {
   console.log(
     'Please use the provided prefilled GitHub link on the corresponding longer tweet, and do not edit the title. Or did you mean to [create a new issue](https://github.com/SheepTester/longer-tweets/issues/new)?'
   )
   process.exit()
 } else if (!issue.title.startsWith('💬')) {
-  console.log("Don't edit the title!")
+  console.log(
+    "You shouldn't have edited the title, but thanks for your comment!"
+  )
+} else {
+  console.log('Thanks for commenting!')
 }
 
 if (sender.login !== issue.user.login) {
   console.log(
-    `@SheepTester Why are the sender and issue user different? \`${sender.login}\` vs \`${issue.user.login}\``
+    `Something went wrong.\n\n@SheepTester Why are the sender and issue user different? \`${sender.login}\` vs \`${issue.user.login}\``
   )
   console.error(JSON.stringify(action, null, 2))
 }
 if (sender.html_url !== `https://github.com/${sender.login}`) {
   console.log(
-    `@SheepTester Why is the profile URL different than the login? ${sender.html_url} vs https://github.com/${sender.login}`
+    `Something went wrong.\n\n@SheepTester Why is the profile URL different than the login? ${sender.html_url} vs https://github.com/${sender.login}`
   )
   console.error(JSON.stringify(action, null, 2))
 }

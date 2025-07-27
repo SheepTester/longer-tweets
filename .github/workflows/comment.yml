@@ -20,12 +20,8 @@ jobs:
       - name: Write to _data/comments.yml
         run: |
           npm install
-          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#example-of-a-multiline-string
-          {
-            echo 'MESSAGE<<EOF'
-            node _data/add-comment.js '${{ toJson(github.event) }}'
-            echo EOF
-          } >> "$GITHUB_ENV"
+          node _data/add-comment.js '${{ toJson(github.event) }}' > message.txt
+          cat message.txt
       - name: Push changes
         run: |
           # https://stackoverflow.com/a/25149786
@@ -37,14 +33,9 @@ jobs:
 
           Resolves #${{ github.event.issue.number }}"
             git push
+            gh issue comment ${{ github.event.issue.number }} --body "$(cat message.txt)"
           else
-            gh issue close ${{ github.event.issue.number }} --reason 'not planned'
+            gh issue close ${{ github.event.issue.number }} --reason 'not planned' --comment "$(cat message.txt)"
           fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Comment on the issue if needed
-        run: |
-          gh issue comment ${{ github.event.issue.number }} --body "$MESSAGE"
-        if: ${{ env.MESSAGE != '' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
