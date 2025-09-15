@@ -13,13 +13,13 @@ _Instructions_: Read the passage, and answer the questions that follow .
 
 In this chapter, we will be concerned with a study of the Pexlomb. A
 pexlomb is defined as any Zox with pictanamerals which flotate the Zox into
-five berta Zubs where each Zub is supramatilate to the Rosery of the Ord.
+five berta Zubs where each Zub is supramatilate to the Roserey of the Ord.
 For example, consider the Zox defined by 3 berta Ooz. It is obvious that any
 pictanameral which is Blat must necessarily be Cort to the Ord. This follows
 from our knowledge of the relationship of a dentrex to its voom. However, if
 the Ord is partivasimous then the Zox must be Zubious. Thus, if we Kizate the
 dox pictanameral, our Zox will be flotated into 5 berta zubs. But remember,
-each zub must be supramatilated to the Rosery of the Ord. If any one of the
+each zub must be supramatilated to the Roserey of the Ord. If any one of the
 zubs is not supramatilated, we then have a pixilated Pexlomb which requires a
 completely different procedure.
 
@@ -44,7 +44,7 @@ completely different procedure.
 
 ## What?
 
-This is a faithful transcription of an in-class activity that we received on October 18, 2018 in my high school Chemistry Honors class with Dr. Heather Mellows.
+This is a faithful transcription of an in-class activity that we received on October 18, 2018, in my high school Chemistry Honors class with Dr. Heather Mellows.
 She gave out puzzles like this one in the weeks leading up to our major semester assignment, [Olam](https://sheeptester.github.io/olamreee/), to train our pattern-finding skills.
 In Olam, we were given elements and their properties of a distant planet and had to organize them into a periodic table.
 
@@ -62,7 +62,7 @@ I looked it up now, and Google only gave one result, a [1975 journal article by 
 
 <!-- Smith, D. E. P. _Learning to learn_. New York: Harcourt, Brace and World, 1961. -->
 
-ChatGPT didn't have the passage in its training data, but with a web search, it instead found the passage in [_Secondary Reading - ERIC_ (1978)](https://files.eric.ed.gov/fulltext/ED325820.pdf), which has a truncated reproduction of the passage and cites page 81 from _Learning to learn_.
-I found a [full scan of _Learning to learn_](https://catalog.hathitrust.org/Record/001069105), which had the same passage with the same three symbolic expressions as in the 1975 article above.
+ChatGPT didn't have the passage in its training data, but with a web search, it instead found the passage in [_Secondary Reading - ERIC_ (1978)](https://files.eric.ed.gov/fulltext/ED325820.pdf), which has a truncated reproduction of the passage and cites page 81 from _Learning to Learn_.
+I found a [full scan of _Learning to Learn_](https://catalog.hathitrust.org/Record/001069105), which had the same passage with the same three symbolic expressions as in the 1975 article above.
 
 Unsurprisingly, the passage was written purely for pedagogical purposes, but I think it would be pretty interesting to spin it off into a full-blown fictitious universe of spyloctogy.
