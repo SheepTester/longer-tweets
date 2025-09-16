@@ -6,6 +6,7 @@ date: 2020-08-24
 tags:
   - programming
   - ovinus-linkedin
+  - html5
 ---
 
 _Originally posted on [LinkedIn](https://www.linkedin.com/pulse/why-closing-html-tags-dangerous-practice-ovinus-real/) under my friends' joint account Ovinus Real._

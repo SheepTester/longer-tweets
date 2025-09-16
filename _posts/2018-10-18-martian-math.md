@@ -2,7 +2,7 @@
 layout: post
 title: An Example From Martian Math
 description: Taken From A Text In Spyloctogy
-date: 2025-09-14
+date: 2018-10-18
 tags:
   - school
 ---
@@ -43,6 +43,8 @@ completely different procedure.
    this paper if necessary.
 
 ## What?
+
+_This addendum was written on September 14, 2025._
 
 This is a faithful transcription of an in-class activity that we received on October 18, 2018, in my high school Chemistry Honors class with Dr. Heather Mellows.
 She gave out puzzles like this one in the weeks leading up to our major semester assignment, [Olam](https://sheeptester.github.io/olamreee/), to train our pattern-finding skills.
