@@ -6,6 +6,7 @@ date: 2020-09-06
 tags:
   - programming
   - ovinus-linkedin
+  - html5
 ---
 
 _Originally posted on [LinkedIn](https://www.linkedin.com/pulse/3-tips-javascript-always-use-var-ovinus-real/) under my friends' joint account Ovinus Real._
