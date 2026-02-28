@@ -16,11 +16,8 @@ import YAML from 'yaml'
 const action = JSON.parse(process.argv[2])
 const { issue, sender } = action
 
-const postId = issue.title.startsWith('💬')
-  ? issue.title.split('💬')[1]?.trim()
-  : issue.body.includes('💬')
-    ? issue.body.split('💬')[1]?.trim()
-    : undefined
+const postId =
+  issue.title.split('💬')[1]?.trim() ?? issue.body.split('💬')[1]?.trim()
 if (!postId) {
   console.log(
     'Please use the link on the longer tweet, and do not edit the title. Or did you mean to [create a new issue](https://github.com/SheepTester/longer-tweets/issues/new)?'
