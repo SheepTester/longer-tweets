@@ -17,13 +17,13 @@ const action = JSON.parse(process.argv[2])
 const { issue, sender } = action
 
 const postId = issue.title.startsWith('💬')
-  ? issue.title.replace('💬', '').trim()
+  ? issue.title.split('💬')[1]?.trim()
   : issue.body.includes('💬')
-    ? issue.body.split('💬')[1]?.split('-->')[0]?.trim()
+    ? issue.body.split('💬')[1]?.trim()
     : undefined
 if (!postId) {
   console.log(
-    'Please use the provided prefilled GitHub link on the corresponding longer tweet, and do not edit the title. Or did you mean to [create a new issue](https://github.com/SheepTester/longer-tweets/issues/new)?'
+    'Please use the link on the longer tweet, and do not edit the title. Or did you mean to [create a new issue](https://github.com/SheepTester/longer-tweets/issues/new)?'
   )
   process.exit()
 } else if (!issue.title.startsWith('💬')) {
