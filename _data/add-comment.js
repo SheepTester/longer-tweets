@@ -16,8 +16,10 @@ import YAML from 'yaml'
 const action = JSON.parse(process.argv[2])
 const { issue, sender } = action
 
-const postId =
-  issue.title.split('💬')[1]?.trim() ?? issue.body.split('💬')[1]?.trim()
+const [beforePostId, withPostId, ...afterPostid] = issue.title.split('💬')
+// In case user puts text in title
+const textFromTitle = (beforePostId ?? '') + afterPostid.join('💬')
+const postId = withPostId?.trim() ?? issue.body.split('💬')[1]?.trim()
 if (!postId) {
   console.log(
     'Please use the link on the longer tweet, and do not edit the title. Or did you mean to [create a new issue](https://github.com/SheepTester/longer-tweets/issues/new)?'
@@ -50,10 +52,16 @@ const comment = {
   avatar: sender.avatar_url,
   // micromark doesn't support comments, presumably requires HTML mode
   // also can't find extension
-  content_html: micromark(issue.body.replace(/<!--[^]+?-->/g, ''), {
-    extensions: [gfmAutolinkLiteral(), gfmStrikethrough()],
-    htmlExtensions: [gfmAutolinkLiteralHtml(), gfmStrikethroughHtml()]
-  })
+  content_html: micromark(
+    ((textFromTitle ? textFromTitle + '\n\n' : '') + issue.body).replace(
+      /<!--[^]+?-->/g,
+      ''
+    ),
+    {
+      extensions: [gfmAutolinkLiteral(), gfmStrikethrough()],
+      htmlExtensions: [gfmAutolinkLiteralHtml(), gfmStrikethroughHtml()]
+    }
+  )
     .replace(/<a /g, '<a rel="nofollow" ')
     .replace(/\r/g, ''),
   issue_number: issue.number,
