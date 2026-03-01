@@ -25,7 +25,7 @@ if (!postId) {
     'Please use the link on the longer tweet, and do not edit the title. Or did you mean to [create a new issue](https://github.com/SheepTester/longer-tweets/issues/new)?'
   )
   process.exit()
-} else if (!issue.title.startsWith('💬')) {
+} else if (textFromTitle) {
   console.log(
     "You shouldn't have edited the title, but thanks for your comment!"
   )
