@@ -94,59 +94,209 @@ I didn't pass.
 
 ### Galbraith
 
+The building has running water.
+
+Galbraith has two study rooms; one's allegedly more quiet than the other.
+I personally don't like studying in quiet or dimly lit spaces,
+and these rooms are both.
+But maybe that's perfect for you.
+
+I've heard that one of the rooms is 24-hour, but I've heard mixed information about this.
+It feels like sometimes on weekends or odd hours, it's open, and other times, it's closed.
+
 ### Revelle commuter lounge
 
+The closest bathroom is probably next to Roger's. You can get water at 64°.
+
+Revelle commuter lounge my beloved.
+It's a decent, quiet place to study in or chill at in Revelle,
+and it has outlets.
+
 ### 64°
+
+It's pretty loud, and there's no outlets.
 
 ## Muir
 
 ### MOM's
 
+MOM's always feels really busy, so it's hard to find a table,
+so I usually don't study here.
+
 ### Pines and Roots
 
+The dining halls are pretty calm outside of normal meal hours,
+so they're a decent place to study.
+
+I think it's difficult to access an outlet in Roots,
+while Pines has a table with outlets on it.
+There's bathrooms and water downstairs.
+
+But this information is likely outdated since the dining halls are being renovated at the time of writing.
+
 ### Glacier point
+
+It's a small, quiet, but reliable study room (when not full).
+There's a big, long power strip on the floor, so outlets are easy to access.
 
 ### Tenaya/Tioga common areas
 
 ### McGill break room
 
+In the evenings, the elevator is still unlocked but there's virtually no one in the building,
+so this table I found in some staff break room makes for a nice study space.
+I think there's a wall outlet next to it.
+
 ### Treehouse/Treetop lounge
+
+Every computer has outlets in the desk.
+The closest bathroom is downstairs by Taco Villa or inside Blue Pepper,
+and the closest water is probably in Blue Pepper.
+Some of the sofa chairs are wheeled, and it's fun to zoom around in them.
+At midnight, the lights automatically turn off.
 
 ## Sixth
 
-### Computer lab
+### Sixth computer lab
 
-### Commuter lounge
+This computer lab has Macs with the Adobe suite installed.
+Every computer has outlets in the desk.
+
+The closest bathroom (and water) is in the hallway,
+but the door back to the computer lab locks,
+so you have to walk the long way around outside.
+That's why people prop the door open with a trash bin.
+
+The custodians seem pretty diligent and punctual,
+and immediately kick people out when the computer lab and commuter lounge close at 9 pm.
+
+### Sixth commuter lounge
+
+Since it's a commuter lounge, there's a sink and fridge.
+
+The only outlets are along the walls.
 
 ### RWAC classrooms
 
+RWAC classrooms are nice and new; they have swivel chairs and outlets in the desk I think,
+as well as in the floor.
+Unfortuantely, since my first year,
+most of the classrooms are locked by default,
+except for the classrooms on the ground floor for some reason.
+
+The classroom near Fan-Fan is nice to stop by in the evening.
+
+Because winter 2022 was partially remote due to Covid,
+my friends would camp out in RWAC 0426.
+The classroom suddenly getting locked
+is the reason why I made [my classroom schedule website](https://sheeptester.github.io/ucsd-classrooms/).
+
+RWAC floor 7 has a great view of both the ocean and campus,
+but partly because students kept leaving a mess,
+they've since locked the room up for special events only.
+
 ### RWAC terrace
+
+There's a nice terrace on the fifth floor of RWAC with an ocean view.
+It's pretty well known among students.
+
+You used to be able to access the terrace
+(and the other elevator lobbies in the building)
+24/7
+because the elevators didn't lock.
+On weekends and at night,
+you could take the elevators up from the parking garage.
+I hear that this has now been fixed.
+
+### EDS lounge
+
+There's a study area in the north end of RWAC floor 4.
+It's in an open area next to offices, so it's not as private as a classroom.
 
 ### Wolftown
 
+Wolftown has a quiet side room with plenty of wall and floor outlets.
+At least for the big wooden tall table,
+you'll need a long-ish cable to reach the floor outlet.
+Since it's a dining hall,
+you can get unlimited soda if you keep an HDH cup.
+
 ### Catalyst lecture hall lounge
+
+At some point they finally furnished the lounge for CTL 125
+with a few tables.
+I think I studied there once.
+
+There's a bathroom with a brown trail coming out of it on the floor for some reason.
 
 ### Mosaic common areas
 
+If you stand and wait in the right Mosaic elevator
+(or wait for someone to scan their ID),
+the elevator will get sent up to the apartment floors of Mosaic.
+The common areas of these floors have a bit of ocean view,
+and except for people leaving/entering their dorms,
+it's pretty isolated.
+The room gets pretty hot when the sun is shining in during the afternoon, though,
+and you'd have to go back down for a bathroom.
+
 ### The Jeannie
+
+The Jeannie is the biggest lecture hall on campus,
+and it has cushioned seats, outlets between each seat, and large desks (for a lecture hall).
+
+Sometimes, I stick around after lecture.
+When the next lecture starts,
+the random lecture serves as good background noise.
+And if there's no more lectures for the day,
+the lecture hall continues to be unlocked for the rest of the day,
+and the soundproofing in the room makes it a nice, quiet place to study.
+Plus, the room can be used to watch movies.
 
 ## Marshall
 
 ### Angela's space
 
+I don't really like this study space because the tables are too tall for their seats,
+which makes using a laptop on the table uncomfortable.
+It's also kind of dim.
+
 ### That new Malk study lounge
+
+When I visited UCSD after graduating,
+they had opened Malk Hall in new Marshall,
+where the Marshall Lowers used to be.
+
+I found this study lounge (intended for GPS students IIRC).
+It only has a few tables,
+and there's a random hallway with a cushioned seat next to an outlet.
+Presumably one could nap there.
 
 ## ERC
 
 ### GPS
 
+The common area for the GPS classrooms is a pretty nice study space.
+There are outlets in the tables.
+
 ### ERC computer lab
+
+You could study here,
+but I don't like that there's not really much natural sunlight.
+The lights in this room are really yellow.
 
 ### ERC commuter lounge
 
-### Middle Earth
+ERC's commuter lounge is pretty small I think.
 
 ### Cafe V
+
+Before the renovation,
+I used to study here sometimes.
+But the tables had sticky edges and there were no outlets.
+
+I think new Cafe V has some tall tables with outlets in it,
+which is nice.
 
 ## Seventh
 
