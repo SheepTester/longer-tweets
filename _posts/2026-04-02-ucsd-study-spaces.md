@@ -6,8 +6,9 @@ date: 2026-02-28
 tags:
   - school
   - ucsd
-hidden: true
 ---
+
+(WIP)
 
 In the beginning of my freshman year at UC San Diego, I had plenty of time to acclimate to the campus,
 so I decided to explore every nook and cranny,
@@ -70,6 +71,8 @@ the Pepsi ones have fewer options.
 
 ### Res hall study rooms
 
+![](../images/ucsd-study-spaces/eighth-res-study.jpg)
+
 You have to go to the ground floor for water and bathrooms.
 
 **Caveat**: Eighth stairs will lock you out.
@@ -79,6 +82,8 @@ Maybe that has changed.
 In Eighth College, every floor of the res halls has at least one study room at one end of the hallway.
 
 ### Podemos classrooms
+
+![](../images/ucsd-study-spaces/podem.jpg)
 
 There's water and bathrooms in the interior hallway between classrooms.
 
@@ -94,6 +99,9 @@ I didn't pass.
 
 ### Galbraith
 
+![](../images/ucsd-study-spaces/galbraith-loud.jpg)
+![](../images/ucsd-study-spaces/galbraith-quiet.jpg)
+
 The building has running water.
 
 Galbraith has two study rooms; one's allegedly more quiet than the other.
@@ -105,6 +113,8 @@ I've heard that one of the rooms is 24-hour, but I've heard mixed information ab
 It feels like sometimes on weekends or odd hours, it's open, and other times, it's closed.
 
 ### Revelle commuter lounge
+
+![](../images/ucsd-study-spaces/revelle-cum-outside.jpg)
 
 The closest bathroom is probably next to Roger's. You can get water at 64°.
 
@@ -120,10 +130,15 @@ It's pretty loud, and there's no outlets.
 
 ### MOM's
 
+![](../images/ucsd-study-spaces/moms.jpg)
+
 MOM's always feels really busy, so it's hard to find a table,
 so I usually don't study here.
 
 ### Pines and Roots
+
+![](../images/ucsd-study-spaces/pines.jpg)
+![](../images/ucsd-study-spaces/roots.jpg)
 
 The dining halls are pretty calm outside of normal meal hours,
 so they're a decent place to study.
@@ -141,7 +156,11 @@ There's a big, long power strip on the floor, so outlets are easy to access.
 
 ### Tenaya/Tioga common areas
 
+![](../images/ucsd-study-spaces/tioga.jpg)
+
 ### McGill break room
+
+![](../images/ucsd-study-spaces/mcgill.jpg)
 
 In the evenings, the elevator is still unlocked but there's virtually no one in the building,
 so this table I found in some staff break room makes for a nice study space.
@@ -159,6 +178,8 @@ At midnight, the lights automatically turn off.
 
 ### Sixth computer lab
 
+![](../images/ucsd-study-spaces/sixth-comp-lab.jpg)
+
 This computer lab has Macs with the Adobe suite installed.
 Every computer has outlets in the desk.
 
@@ -172,11 +193,16 @@ and immediately kick people out when the computer lab and commuter lounge close 
 
 ### Sixth commuter lounge
 
+![](../images/ucsd-study-spaces/sixth-cum-lounge.jpg)
+
 Since it's a commuter lounge, there's a sink and fridge.
 
 The only outlets are along the walls.
 
 ### RWAC classrooms
+
+![](../images/ucsd-study-spaces/rwac-7.jpg)
+![](../images/ucsd-study-spaces/rwac-toilet.jpg)
 
 RWAC classrooms are nice and new; they have swivel chairs and outlets in the desk I think,
 as well as in the floor.
@@ -197,6 +223,8 @@ they've since locked the room up for special events only.
 
 ### RWAC terrace
 
+![](../images/ucsd-study-spaces/rwac-terrace.jpg)
+
 There's a nice terrace on the fifth floor of RWAC with an ocean view.
 It's pretty well known among students.
 
@@ -209,6 +237,8 @@ you could take the elevators up from the parking garage.
 I hear that this has now been fixed.
 
 ### EDS lounge
+
+![](../images/ucsd-study-spaces/rwac-eds.jpg)
 
 There's a study area in the north end of RWAC floor 4.
 It's in an open area next to offices, so it's not as private as a classroom.
