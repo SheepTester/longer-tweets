@@ -2,11 +2,26 @@
 layout: post
 title: List of UCSD study spaces
 description: Geisel sucks, and there's so many other places to study on campus. I graduated so I no longer need to gatekeep these.
-date: 2026-02-28
+date: 2026-04-02
 tags:
   - school
   - ucsd
 ---
+
+<style>
+img {
+  aspect-ratio: 4 / 3;
+  max-height: 500px;
+}
+.portrait {
+  aspect-ratio: 3 / 4;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+</style>
 
 (WIP)
 
@@ -22,6 +37,8 @@ Since I graduated, I have no need to gatekeep these study spaces,
 and I want to list them here publicly before I forget.
 Here's my exhaustive list of study spaces,
 organized by college/neighborhood.
+This isn't a list of _good_ study spaces---it's on you to try them for yourself---but
+these are all places I've studied in before.
 
 Also, here's a list of intentionally 24-hour study spaces:
 
@@ -71,7 +88,7 @@ the Pepsi ones have fewer options.
 
 ### Res hall study rooms
 
-![](../images/ucsd-study-spaces/eighth-res-study.jpg)
+<img src="../images/ucsd-study-spaces/eighth-res-study.jpg" alt="TODO" loading="lazy">
 
 You have to go to the ground floor for water and bathrooms.
 
@@ -83,7 +100,7 @@ In Eighth College, every floor of the res halls has at least one study room at o
 
 ### Podemos classrooms
 
-![](../images/ucsd-study-spaces/podem.jpg)
+<img src="../images/ucsd-study-spaces/podem.jpg" alt="TODO" loading="lazy">
 
 There's water and bathrooms in the interior hallway between classrooms.
 
@@ -99,8 +116,10 @@ I didn't pass.
 
 ### Galbraith
 
-![](../images/ucsd-study-spaces/galbraith-loud.jpg)
-![](../images/ucsd-study-spaces/galbraith-quiet.jpg)
+<div class="images">
+<img src="../images/ucsd-study-spaces/galbraith-loud.jpg" alt="TODO" loading="lazy">
+<img src="../images/ucsd-study-spaces/galbraith-quiet.jpg" alt="TODO" loading="lazy">
+</div>
 
 The building has running water.
 
@@ -114,7 +133,7 @@ It feels like sometimes on weekends or odd hours, it's open, and other times, it
 
 ### Revelle commuter lounge
 
-![](../images/ucsd-study-spaces/revelle-cum-outside.jpg)
+<img src="../images/ucsd-study-spaces/revelle-cum-outside.jpg" alt="TODO" loading="lazy">
 
 The closest bathroom is probably next to Roger's. You can get water at 64°.
 
@@ -130,15 +149,17 @@ It's pretty loud, and there's no outlets.
 
 ### MOM's
 
-![](../images/ucsd-study-spaces/moms.jpg)
+<img src="../images/ucsd-study-spaces/moms.jpg" alt="TODO" loading="lazy">
 
 MOM's always feels really busy, so it's hard to find a table,
 so I usually don't study here.
 
 ### Pines and Roots
 
-![](../images/ucsd-study-spaces/pines.jpg)
-![](../images/ucsd-study-spaces/roots.jpg)
+<div class="images">
+<img src="../images/ucsd-study-spaces/pines.jpg" alt="TODO" loading="lazy">
+<img src="../images/ucsd-study-spaces/roots.jpg" alt="TODO" loading="lazy">
+</div>
 
 The dining halls are pretty calm outside of normal meal hours,
 so they're a decent place to study.
@@ -156,11 +177,11 @@ There's a big, long power strip on the floor, so outlets are easy to access.
 
 ### Tenaya/Tioga common areas
 
-![](../images/ucsd-study-spaces/tioga.jpg)
+<img src="../images/ucsd-study-spaces/tioga.jpg" alt="TODO" loading="lazy">
 
 ### McGill break room
 
-![](../images/ucsd-study-spaces/mcgill.jpg)
+<img src="../images/ucsd-study-spaces/mcgill.jpg" alt="TODO" loading="lazy">
 
 In the evenings, the elevator is still unlocked but there's virtually no one in the building,
 so this table I found in some staff break room makes for a nice study space.
@@ -178,7 +199,7 @@ At midnight, the lights automatically turn off.
 
 ### Sixth computer lab
 
-![](../images/ucsd-study-spaces/sixth-comp-lab.jpg)
+<img src="../images/ucsd-study-spaces/sixth-comp-lab.jpg" alt="TODO" loading="lazy">
 
 This computer lab has Macs with the Adobe suite installed.
 Every computer has outlets in the desk.
@@ -193,7 +214,7 @@ and immediately kick people out when the computer lab and commuter lounge close 
 
 ### Sixth commuter lounge
 
-![](../images/ucsd-study-spaces/sixth-cum-lounge.jpg)
+<img src="../images/ucsd-study-spaces/sixth-cum-lounge.jpg" alt="TODO" loading="lazy">
 
 Since it's a commuter lounge, there's a sink and fridge.
 
@@ -201,8 +222,10 @@ The only outlets are along the walls.
 
 ### RWAC classrooms
 
-![](../images/ucsd-study-spaces/rwac-7.jpg)
-![](../images/ucsd-study-spaces/rwac-toilet.jpg)
+<div class="images">
+<img src="../images/ucsd-study-spaces/rwac-7.jpg" alt="TODO" loading="lazy">
+<img src="../images/ucsd-study-spaces/rwac-toilet.jpg" alt="TODO" loading="lazy">
+</div>
 
 RWAC classrooms are nice and new; they have swivel chairs and outlets in the desk I think,
 as well as in the floor.
@@ -223,7 +246,7 @@ they've since locked the room up for special events only.
 
 ### RWAC terrace
 
-![](../images/ucsd-study-spaces/rwac-terrace.jpg)
+<img src="../images/ucsd-study-spaces/rwac-terrace.jpg" alt="TODO" loading="lazy">
 
 There's a nice terrace on the fifth floor of RWAC with an ocean view.
 It's pretty well known among students.
@@ -236,14 +259,20 @@ On weekends and at night,
 you could take the elevators up from the parking garage.
 I hear that this has now been fixed.
 
+Since it's outdoor,
+it's bright and windy,
+so it's not a great place for neither paper nor online homework.
+
 ### EDS lounge
 
-![](../images/ucsd-study-spaces/rwac-eds.jpg)
+<img src="../images/ucsd-study-spaces/rwac-eds.jpg" alt="TODO" loading="lazy">
 
 There's a study area in the north end of RWAC floor 4.
 It's in an open area next to offices, so it's not as private as a classroom.
 
 ### Wolftown
+
+<img src="../images/ucsd-study-spaces/wolftown.jpg" alt="TODO" loading="lazy">
 
 Wolftown has a quiet side room with plenty of wall and floor outlets.
 At least for the big wooden tall table,
@@ -253,6 +282,11 @@ you can get unlimited soda if you keep an HDH cup.
 
 ### Catalyst lecture hall lounge
 
+<div class="images">
+<img src="../images/ucsd-study-spaces/ctl-lobby.jpg" alt="TODO" loading="lazy">
+<img src="../images/ucsd-study-spaces/ctl-poop.jpg" alt="TODO" loading="lazy" class="portrait">
+</div>
+
 At some point they finally furnished the lounge for CTL 125
 with a few tables.
 I think I studied there once.
@@ -260,6 +294,8 @@ I think I studied there once.
 There's a bathroom with a brown trail coming out of it on the floor for some reason.
 
 ### Mosaic common areas
+
+<img src="../images/ucsd-study-spaces/mosaic.jpg" alt="TODO" loading="lazy" class="portrait">
 
 If you stand and wait in the right Mosaic elevator
 (or wait for someone to scan their ID),
@@ -271,6 +307,8 @@ The room gets pretty hot when the sun is shining in during the afternoon, though
 and you'd have to go back down for a bathroom.
 
 ### The Jeannie
+
+<img src="../images/ucsd-study-spaces/jeannie.jpg" alt="TODO" loading="lazy">
 
 The Jeannie is the biggest lecture hall on campus,
 and it has cushioned seats, outlets between each seat, and large desks (for a lecture hall).
@@ -287,11 +325,15 @@ Plus, the room can be used to watch movies.
 
 ### Angela's space
 
+<img src="../images/ucsd-study-spaces/angelas-space.jpg" alt="TODO" loading="lazy">
+
 I don't really like this study space because the tables are too tall for their seats,
 which makes using a laptop on the table uncomfortable.
 It's also kind of dim.
 
 ### That new Malk study lounge
+
+<img src="../images/ucsd-study-spaces/malk.jpg" alt="TODO" loading="lazy" class="portrait">
 
 When I visited UCSD after graduating,
 they had opened Malk Hall in new Marshall,
@@ -306,10 +348,14 @@ Presumably one could nap there.
 
 ### GPS
 
+<img src="../images/ucsd-study-spaces/gps.jpg" alt="TODO" loading="lazy">
+
 The common area for the GPS classrooms is a pretty nice study space.
 There are outlets in the tables.
 
 ### ERC computer lab
+
+<img src="../images/ucsd-study-spaces/erc-comp-lab.jpg" alt="TODO" loading="lazy">
 
 You could study here,
 but I don't like that there's not really much natural sunlight.
@@ -317,9 +363,16 @@ The lights in this room are really yellow.
 
 ### ERC commuter lounge
 
+<img src="../images/ucsd-study-spaces/erc-cum-lounge.jpg" alt="TODO" loading="lazy" class="portrait">
+
 ERC's commuter lounge is pretty small I think.
 
 ### Cafe V
+
+<div class="images">
+<img src="../images/ucsd-study-spaces/cafe-v-old.jpg" alt="TODO" loading="lazy">
+<img src="../images/ucsd-study-spaces/cafe-v-new.jpg" alt="TODO" loading="lazy">
+</div>
 
 Before the renovation,
 I used to study here sometimes.
@@ -332,9 +385,15 @@ which is nice.
 
 ### North Break
 
+<img src="../images/ucsd-study-spaces/north-break.jpg" alt="TODO" loading="lazy">
+
 ### Seventh East Tower terrace
 
+<img src="../images/ucsd-study-spaces/7th-east-terrace.jpg" alt="TODO" loading="lazy">
+
 ### RIMAC annex
+
+<img src="../images/ucsd-study-spaces/rimac-annex.jpg" alt="TODO" loading="lazy">
 
 ## Warren
 
