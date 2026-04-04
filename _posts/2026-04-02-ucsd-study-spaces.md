@@ -82,7 +82,7 @@ and the morning custodians will blame the night custodians for not cleaning prop
 
 ### Res halls
 
-Res halls are technically 24 hour.
+One could argue that res halls are 24-hour.
 
 If you're a non resident,
 you have to trespass by tailing someone entering the building.
@@ -151,6 +151,8 @@ It feels like sometimes on weekends or odd hours, it's open, and other times, it
 
 <img src="../images/ucsd-study-spaces/revelle-cum-outside.jpg" alt="TODO" loading="lazy">
 
+_I don't have a good photo of the interior, so here's a photo outside._
+
 The closest bathroom is probably next to Roger's. You can get water at 64°.
 
 Revelle commuter lounge my beloved.
@@ -204,6 +206,8 @@ so this table I found in some staff break room makes for a nice study space.
 I think there's a wall outlet next to it.
 
 ### Treehouse/Treetop lounge
+
+TODO: photo
 
 Every computer has outlets in the desk.
 The closest bathroom is downstairs by Taco Villa or inside Blue Pepper,
