@@ -46,6 +46,21 @@ Also, here's a list of intentionally 24-hour study spaces:
 - JK Wood lounge
 - CSE basement
 
+## Colleges and neighborhoods
+
+- [University Center](#university-center)
+- [Revelle](#revelle)
+- [Muir](#muir)
+- [Marshall](#marshall)
+- [Warren](#warren)
+- [ERC](#erc)
+- [Sixth](#sixth)
+- [Seventh](#seventh)
+- [Eighth](#eighth)
+- [Pepper Canyon](#pepper-canyon)
+- [Med campus](#medical-campus)
+- [SIO](#sio)
+
 ## Notes for all study spaces
 
 UCSD (and most places in general) won't let you sleep anywhere outside of a suite or apartment.
