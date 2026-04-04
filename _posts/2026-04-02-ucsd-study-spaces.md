@@ -9,12 +9,12 @@ tags:
 ---
 
 <style>
-img {
+.content img {
   aspect-ratio: 4 / 3;
   max-height: 350px;
   margin: 0;
 }
-.portrait {
+.content .portrait {
   aspect-ratio: 3 / 4;
 }
 .images {
@@ -43,8 +43,8 @@ these are all places I've studied in before.
 
 Also, here's a list of intentionally 24-hour study spaces:
 
-- JK Wood lounge
-- CSE basement
+- [JK Wood lounge](#jk-wood-lounge--cv)
+- [CSE basement](#cse-basement)
 
 ## Colleges and neighborhoods
 
@@ -262,7 +262,7 @@ they've since locked the room up for special events only.
 
 ### RWAC terrace
 
-<img src="../images/ucsd-study-spaces/rwac-terrace.jpg" alt="TODO" loading="lazy">
+<img src="../images/ucsd-study-spaces/rwac-terrace.jpg" alt="TODO" loading="lazy" class="portrait">
 
 There's a nice terrace on the fifth floor of RWAC with an ocean view.
 It's pretty well known among students.
@@ -381,6 +381,8 @@ The lights in this room are really yellow.
 
 <img src="../images/ucsd-study-spaces/erc-cum-lounge.jpg" alt="TODO" loading="lazy" class="portrait">
 
+_This is the only photo I have of the lounge, which is behind the flyer._
+
 ERC's commuter lounge is pretty small I think.
 
 ### Cafe V
@@ -394,7 +396,7 @@ Before the renovation,
 I used to study here sometimes.
 But the tables had sticky edges and there were no outlets.
 
-I think new Cafe V has some tall tables with outlets in it,
+The new Cafe V has some tall tables with outlets in it,
 which is nice.
 
 ## Seventh
