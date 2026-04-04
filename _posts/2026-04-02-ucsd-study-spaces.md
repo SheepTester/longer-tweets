@@ -11,7 +11,8 @@ tags:
 <style>
 img {
   aspect-ratio: 4 / 3;
-  max-height: 500px;
+  max-height: 350px;
+  margin: 0;
 }
 .portrait {
   aspect-ratio: 3 / 4;
