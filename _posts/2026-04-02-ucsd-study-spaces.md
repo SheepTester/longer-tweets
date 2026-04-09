@@ -1,12 +1,14 @@
 ---
 layout: post
-title: List of UCSD study spaces
+title: list of UCSD study spaces
 description: Geisel sucks, and there's so many other places to study on campus. I graduated so I no longer need to gatekeep these.
 date: 2026-04-02
 tags:
   - school
   - ucsd
 ---
+
+TODO: add preview image
 
 <style>
 .content img {
@@ -36,12 +38,12 @@ I recommend every new student to explore campus before classes get busy.
 
 Since I graduated, I have no need to gatekeep these study spaces,
 and I want to list them here publicly before I forget.
-Here's my exhaustive list of study spaces,
+Here's my hopefully exhaustive dump of study spaces,
 organized by college/neighborhood.
-This isn't a list of _good_ study spaces---it's on you to try them for yourself---but
+This isn't a list of _good_ study spaces---that's on you to try for yourself---but
 these are all places I've studied in before.
 
-Also, here's a list of intentionally 24-hour study spaces:
+Also, here's a list of intentionally 24/7 study spaces for students:
 
 - [JK Wood lounge](#jk-wood-lounge--cv)
 - [CSE basement](#cse-basement)
@@ -464,3 +466,10 @@ which is nice.
 ### Eckart building
 
 ### Sumner auditorium
+
+---
+
+All my photos are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+because I don't care what you do with them,
+but people should know where they came from.
