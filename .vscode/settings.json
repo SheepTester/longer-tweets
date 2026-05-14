@@ -2,6 +2,10 @@
   "prettier.prettierPath": "./node_modules/prettierx",
   "[markdown]": {
     "editor.wordWrapColumn": 80,
-    "editor.wordWrap": "bounded"
+    "editor.wordWrap": "bounded",
+    // This font reminds me of early 2010s websites, like Scratch forums, so I
+    // think it's the most legible sans serif font
+    "editor.fontFamily": "Verdana",
+    "editor.rulers": []
   }
 }
