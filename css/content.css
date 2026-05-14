@@ -26,6 +26,7 @@
 .normal .content .heading-anchor {
   color: rgba(255, 255, 255, 0.1);
   text-decoration: none;
+  user-select: none;
 }
 @media (min-width: 675px) {
   .content .heading-anchor {
