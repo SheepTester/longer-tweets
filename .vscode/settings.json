@@ -1,3 +1,7 @@
 {
-  "prettier.prettierPath": "./node_modules/prettierx"
+  "prettier.prettierPath": "./node_modules/prettierx",
+  "[markdown]": {
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "bounded"
+  }
 }

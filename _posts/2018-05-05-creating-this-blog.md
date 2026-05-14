@@ -8,6 +8,7 @@ tags:
   - programming
   - html5
   - node
+  - meta
 ---
 
 **UPDATE 2021-08-30**: This blog has since been rewritten in
