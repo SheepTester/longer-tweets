@@ -11,10 +11,10 @@ post length post, so I'll post them here as longer Tweets.
 
 ## Development
 
-This starts a local server at http://localhost:4000/.
+This starts a local server at http://127.0.0.1:4000/longer-tweets/.
 
 ```sh
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --drafts
 ```
 
 ## Writing new posts

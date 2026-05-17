@@ -2,9 +2,7 @@
 layout: post
 title: merge commits better than squash commits
 description: ''
-date: 2025-10-23
 tags: []
-hidden: true
 ---
 
 todo: update date when written out

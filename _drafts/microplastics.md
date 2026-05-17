@@ -1,11 +1,9 @@
 ---
 layout: post
 title: microplastics are not harmful
-description: ""
-date: 2025-10-23
+description: ''
 tags:
-- conspiracy
-hidden: true
+  - conspiracy
 ---
 
 Todo: update date
@@ -14,4 +12,4 @@ if microplastics are everywhere then surely we'd notice its effects by now. like
 
 like compared to sunlight or whatever microplastics are safer right
 
-or maybe it explains unexplained trends 
+or maybe it explains unexplained trends

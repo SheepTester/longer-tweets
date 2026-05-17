@@ -2,10 +2,8 @@
 layout: post
 title: JavaScript.
 description: a list of quirks from \#n-building
-date: 2022-08-06
 tags:
   - school
-hidden: true
 ---
 
 In somewhat reverse chronological order, (and not necessarily about JavaScript)
