@@ -19,10 +19,8 @@ TODO: add preview image
 .content .portrait {
   aspect-ratio: 3 / 4;
 }
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
+.content .images {
+  justify-content: flex-start;
 }
 </style>
 

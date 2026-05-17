@@ -170,6 +170,20 @@
 .normal .content sup {
   font-size: 80%;
 }
+.content figcaption {
+  text-align: center;
+  font-style: italic;
+}
+/* keyword: gallery (for when I'm searching for class names) */
+.content .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.content .images img {
+  margin: 0;
+}
 .content .footnote::before {
   content: '[';
 }
