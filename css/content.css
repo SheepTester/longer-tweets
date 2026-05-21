@@ -180,6 +180,7 @@
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
+  align-items: center;
 }
 .content .images img {
   margin: 0;

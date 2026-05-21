@@ -17,6 +17,8 @@ This starts a local server at http://127.0.0.1:4000/longer-tweets/.
 $ bundle exec jekyll serve --drafts
 ```
 
+You can optionally prefix it with `JEKYLL_GITHUB_TOKEN=$(gh auth token)`, but this site currently does not use [`site.github`](https://jekyll.github.io/github-metadata/site.github/).
+
 ## Writing new posts
 
 Posts are Markdown files in the `_posts` directory that starts with a YAML
