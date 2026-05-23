@@ -10,7 +10,10 @@
       charset="utf-8"
     ></script>
     {%- if layout.main -%}
-    <meta property="og:image" content="https://sheeptester.github.io/img/longtweets-smaller.png" />
+    <meta
+      property="og:image"
+      content="https://sheeptester.github.io/img/longtweets-smaller.png"
+    />
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
     <script src="{{ '/js/main.js' | relative_url }}" charset="utf-8"></script>
     <style id="post-filterer"></style>
@@ -48,7 +51,7 @@
   </head>
   <body>
     <button class="toggle-accessible" id="toggle-accessible">
-      Enable accessible theme
+      <span class="toggle-accessible-badge">Enable accessible theme</span>
     </button>
     {%- include links.html -%}
     <div class="background"></div>

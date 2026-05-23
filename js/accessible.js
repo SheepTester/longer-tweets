@@ -5,11 +5,11 @@ function setAccessible (accessible) {
   if (accessible) {
     document.documentElement.classList.add('accessible')
     document.documentElement.classList.remove('normal')
-    toggleBtn.textContent = 'Disable accessible theme'
+    toggleBtn.firstElementChild.textContent = 'Disable accessible theme'
   } else {
     document.documentElement.classList.add('normal')
     document.documentElement.classList.remove('accessible')
-    toggleBtn.textContent = 'Enable accessible theme'
+    toggleBtn.firstElementChild.textContent = 'Enable accessible theme'
   }
 }
 
