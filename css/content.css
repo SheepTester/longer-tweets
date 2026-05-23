@@ -12,16 +12,15 @@
 .normal .content h1,
 .normal .content h2,
 .normal .content h3 {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 }
 .normal .content a:not(.heading-anchor) {
-  color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 .normal .content a:not(.heading-anchor):hover {
   color: white;
-  border-bottom: 1px solid currentColor;
+  text-decoration-color: currentColor;
 }
 .normal .content .heading-anchor {
   color: rgba(255, 255, 255, 0.1);
@@ -158,14 +157,15 @@
   counter-reset: item;
 }
 .normal .content ol > li::before {
-  content: counter(item);
+  content: counter(item) '.';
   counter-increment: item;
+  padding-right: 6px;
 }
 .normal .content strong {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 }
-.normal .content s {
-  color: rgba(255, 255, 255, 0.4);
+.normal .content del {
+  color: rgba(255, 255, 255, 0.5);
 }
 .normal .content sup {
   font-size: 80%;

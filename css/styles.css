@@ -20,7 +20,7 @@ body {
 }
 .normal {
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   background-color: black;
 }
 .normal .background {
@@ -45,6 +45,9 @@ h1.title {
   margin: 0;
   margin-top: 5px;
   margin-bottom: 10px;
+}
+.normal h1.title {
+  color: rgba(255, 255, 255, 0.9);
 }
 .links {
   margin: 20px;
