@@ -7,20 +7,21 @@
   border-radius: 20px;
 }
 .normal .post-entry {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .accessible .post-entry {
   border: 1px solid currentColor;
 }
 .normal .post-entry .date {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
+  padding-bottom: 5px;
 }
 .normal .post-entry .title {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 }
 .normal .post-entry .title:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: underline;
 }
 .post-entry .desc {
