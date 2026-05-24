@@ -95,6 +95,7 @@ So presumably, `checksum(' ' + checksum)` returns valid JavaScript that `setTime
 [liveoverflow]: https://www.youtube.com/watch?v=8yWUaqEcXr4
 
 [^3]: Hey, looking back on that video, which I found for this article, the video covers a predecessor of this JS Safe 4.0. Cool!
+
 [^4]: I have my editor set to remove trailing spaces on save because I'm used to Atom doing that.
 
 ![The original `checksum` implementation with trailing spaces and non-ASCII invisible characters demarcated by VS Code.][checksum]

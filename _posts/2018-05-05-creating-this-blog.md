@@ -18,7 +18,6 @@ I've tried to create a blog multiple times.
 
 1. a WordPress blog while learning web development
 2. [the Box of Sean](https://boxofsean.blogspot.com/) (a Blogger blog): I actually put content on there, but I stopped mainly because of the editor:
-
    - it is light theme
    - it's not very easy to use for me
 

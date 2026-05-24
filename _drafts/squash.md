@@ -55,13 +55,11 @@ git and github are made for merge commits. rebases and squash merges are a hack 
 why people use squash commits
 
 - easy to view high level overview of changes via merged PR titles
-
   - valid, github UI can't do this (outside of network view)
   - but can use CLI `git log --first-parent` or better git UI
   - can configure default merge message to be PR title in github repo settings
 
 - easy to undo a damaging PR
-
   - github has a button for generating a PR revert
   - in git: `git revert -m 1 HEAD~1`
 

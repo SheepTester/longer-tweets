@@ -47,6 +47,7 @@ I reused this functionality to count users every ten minutes. Everyone using the
 Later, when I shut down UGWA because I was leaving my high school[^3], I wanted to know which links people clicked on[^4] and also to see if there were still people using my app.
 
 [^3]: Because I was graduating.
+
 [^4]: I linked to schedule apps that then-sophomores made, inspired by my app.
 
 This time, I added code to POST to a Discord webhook whenever a user opened the app or clicked on a link. Each entry would be a Discord message in a private channel.
