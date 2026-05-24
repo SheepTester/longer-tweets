@@ -16,7 +16,7 @@
 }
 .normal .content a:not(.heading-anchor) {
   color: rgba(255, 255, 255, 0.9);
-  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 .normal .content a:not(.heading-anchor):hover {
   color: white;
@@ -191,6 +191,11 @@
 }
 .content .footnote::after {
   content: ']';
+}
+.content .reversefootnote {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
 }
 
 .date {
