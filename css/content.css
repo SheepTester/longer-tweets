@@ -84,7 +84,7 @@
 .accessible .content pre code {
   border: none;
 }
-.accessible .content pre span {
+.accessible .highlighter-rouge span {
   color: inherit !important;
 }
 .content table {
