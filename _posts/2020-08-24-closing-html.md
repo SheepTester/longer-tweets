@@ -38,7 +38,7 @@ For example, consider this:
 
 This is a typical command used to bring up an interactive text editor from the command line.
 
-However, even among those who prefer to close their HTML tags like XML, they choose to ignore their XML-biased convention for an arbitrary set of tags, like `<input>` and `<meta>`. These arbitrary conventions make the language harder to learn for beginners, which is why it is now recommended practice to simply omit closing tags for all elements.
+However, even among those who prefer to close their HTML tags like XML, they choose to ignore their XML-biased convention for an arbitrary set of tags, like `<input>`{:.language-html} and `<meta>`{:.language-html}. These arbitrary conventions make the language harder to learn for beginners, which is why it is now recommended practice to simply omit closing tags for all elements.
 
 ## The code looks cleaner.
 
@@ -74,7 +74,7 @@ This declarative approach to HTML results in much cleaner code that focuses more
 
 ## It encourages proper element hierarchy.
 
-Sometimes, new HTML programmers are tempted to put block elements like `<p>` and `<div>` inside inline elements like `<span>`. However, by omitting closing tags, you are forced to consider good practices for HTML element hierarchies, like only putting inline elements inside block elements.
+Sometimes, new HTML programmers are tempted to put block elements like `<p>`{:.language-html} and `<div>`{:.language-html} inside inline elements like `<span>`{:.language-html}. However, by omitting closing tags, you are forced to consider good practices for HTML element hierarchies, like only putting inline elements inside block elements.
 
 For example, the following HTML code will not compile correctly:
 
@@ -107,7 +107,7 @@ A novice HTML programmer may try to do
 </plaintext>
 ```
 
-However, this results in "`</plaintext>`" being included in the output, which can be a security vulnerability as it reveals that the file was written in HTML.
+However, this results in "`</plaintext>`{:.language-html}" being included in the output, which can be a security vulnerability as it reveals that the file was written in HTML.
 
 By following good practice, however, this can never happen.
 

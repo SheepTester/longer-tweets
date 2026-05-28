@@ -14,7 +14,7 @@ I'm working on a glTF parser for a game engine I'm making as part of a [class at
 [.WebGL-0x128007a3800] GL_INVALID_OPERATION: Vertex buffer is not big enough for the draw call
 ```
 
-_**TL;DR**: For me, it was because the offset parameter for `gl.vertexAttribPointer` was too big._
+_**TL;DR**: For me, it was because the offset parameter for `gl.vertexAttribPointer`{:.language-js} was too big._
 
 [I don't seem to be the only one that experienced this issue](https://discourse.threejs.org/t/vertex-buffer-is-not-big-enough-for-the-draw-call-only-on-mac-computers/43628), but Googling around, there wasn't much else. People tended to experience this issue when updating vertices, but I was just drawing a static model. In fact, I was drawing two glTF models, but only the one I exported from Blender worked.
 
@@ -45,9 +45,9 @@ These in turn are referenced by "accessors," which define how to interpret the b
 }
 ```
 
-Notice how both of these have their own `byteOffset`! This is because accessors themselves can define a range of bytes within a buffer view. In other words, accessors are a range of bytes in a range of bytes.
+Notice how both of these have their own `byteOffset`{:.language-js}! This is because accessors themselves can define a range of bytes within a buffer view. In other words, accessors are a range of bytes in a range of bytes.
 
-In my glTF parser, I used these ranges to create a `TypedArray` view into the binary file's `ArrayBuffer`:
+In my glTF parser, I used these ranges to create a `TypedArray`{:.language-js} view into the binary file's `ArrayBuffer`{:.language-js}:
 
 ```ts
 const data = new Uint8Array(
@@ -72,10 +72,10 @@ gl.vertexAttribPointer(
 
 There were various tricks I did here that I thought were a bit suspicious, so I tried changing them first:
 
-- I wanted to slice into an `ArrayBuffer` without copying the data (so I couldn't use `slice`), so I needed to use a `TypedArray`. I used a `Uint8Array` for all data types, even if the data was actually composed of other data types, like floats.
-- I wasn't sure if "stride" meant the number of bytes between the last byte of one value and the first byte of the next value, or between the first bytes of both values. Usually I see `0` passed to `vertexAttribPointer`'s stride parameter, so I thought it was the former, but the few resources online suggested it was the latter. It was hard to get clarification whether, for example, 0 and 12 were equivalent for a `vec3`.
+- I wanted to slice into an `ArrayBuffer`{:.language-js} without copying the data (so I couldn't use `slice`{:.language-js}), so I needed to use a `TypedArray`{:.language-js}. I used a `Uint8Array`{:.language-js} for all data types, even if the data was actually composed of other data types, like floats.
+- I wasn't sure if "stride" meant the number of bytes between the last byte of one value and the first byte of the next value, or between the first bytes of both values. Usually I see `0`{:.language-js} passed to `vertexAttribPointer`{:.language-js}'s stride parameter, so I thought it was the former, but the few resources online suggested it was the latter. It was hard to get clarification whether, for example, 0 and 12 were equivalent for a `vec3`{:.language-glsl}.
 
-So I tried using the appropriate `TypedArray` and passing
+So I tried using the appropriate `TypedArray`{:.language-js} and passing
 
 After some more 3 am Googling, I managed to find where the error came from. In [Chromium's cross-platform WebGL implementation](https://chromium.googlesource.com/angle/angle/+/0844f2db017f42f50105e85fb7e7acfdc62ddca9/src/libANGLE/validationES.cpp#136), it throws the error after checking the size of the attribute data.
 
@@ -93,7 +93,7 @@ if (attribDataSizeWithOffset > static_cast<uint64_t>(buffer->getSize()))
 
 This is weird, though, because this code is supposed to work across platforms (nothing in the file path suggested it was MacOS-specific), yet it somehow only throws an error on Macs.
 
-Still, though, the code gave a hint. Maybe on Macs, there's an issue with how they compute `attribDataSizeWithOffset`, which is defined in the previous line:
+Still, though, the code gave a hint. Maybe on Macs, there's an issue with how they compute `attribDataSizeWithOffset`{:.language-cpp}, which is defined in the previous line:
 
 ```cpp
 // An overflow can happen when adding the offset, check for it.
@@ -102,12 +102,12 @@ uint64_t attribOffset = attrib.offset;
 uint64_t attribDataSizeWithOffset = attribDataSizeNoOffset + attribOffset;
 ```
 
-I printed out the arguments I passed to `gl.vertexAttribPointer`, and compared the output from the two models. My Blender model, which worked on all devices, had 0 for both the stride and offset. Meanwhile, the stride and offset for [the model I found online](https://sketchfab.com/3d-models/red-finned-fish-caba782285704b339dcc552b5455d2f6) were both nonzero. I already knew that making the stride 0 didn't change anything.
+I printed out the arguments I passed to `gl.vertexAttribPointer`{:.language-js}, and compared the output from the two models. My Blender model, which worked on all devices, had 0 for both the stride and offset. Meanwhile, the stride and offset for [the model I found online](https://sketchfab.com/3d-models/red-finned-fish-caba782285704b339dcc552b5455d2f6) were both nonzero. I already knew that making the stride 0 didn't change anything.
 
-Look again at my code above. When constructing my `Uint8Array` view, I set the `byteOffset` to `(bufferView.byteOffset ?? 0) + (accessor.byteOffset ?? 0)`. And when calling `gl.vertexAttribPointer`, I pass `accessor.byteOffset ?? 0` as the offset.
+Look again at my code above. When constructing my `Uint8Array`{:.language-js} view, I set the `byteOffset`{:.language-js} to `(bufferView.byteOffset ?? 0) + (accessor.byteOffset ?? 0)`{:.language-js}. And when calling `gl.vertexAttribPointer`{:.language-js}, I pass `accessor.byteOffset ?? 0`{:.language-js} as the offset.
 
 ??
 
-I accidentally applied `accessor.byteOffset` twice. Replacing the second value with 0 fixed it. 🎉
+I accidentally applied `accessor.byteOffset`{:.language-js} twice. Replacing the second value with 0 fixed it. 🎉
 
-But what's very curious is that applying `accessor.byteOffset` twice _didn't_ break on other devices. On Windows and Android, the models rendered fine. I guess it's because they're more lenient about it and modulo or ignore the parameter if the offset is out of bounds, while MacOS doesn't do this.
+But what's very curious is that applying `accessor.byteOffset`{:.language-js} twice _didn't_ break on other devices. On Windows and Android, the models rendered fine. I guess it's because they're more lenient about it and modulo or ignore the parameter if the offset is out of bounds, while MacOS doesn't do this.

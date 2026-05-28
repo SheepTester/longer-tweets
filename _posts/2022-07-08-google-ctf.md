@@ -55,7 +55,7 @@ _Chrome's view source page highlighting LSEP characters._
 
 _VS Code highlighting non-ASCII characters in yellow._
 
-The line separator characters were a pretty clear red flag for me. They were different from the question mark squares around `intuitive`. I remembered vaguely from reading about Unicode that Unicode had tried to add line and paragraph separator characters for representing new lines and paragraphs (`<br>` vs `<p>` in HTML, or shift+enter vs enter in Google Docs) because line feed `\n` and carriage return `\r` weren't enough. VS Code rendered the entire line as a grey comment, but Google surely included the line separator characters for a reason, right?
+The line separator characters were a pretty clear red flag for me. They were different from the question mark squares around `intuitive`. I remembered vaguely from reading about Unicode that Unicode had tried to add line and paragraph separator characters for representing new lines and paragraphs (`<br>`{:.language-html} vs `<p>`{:.language-html} in HTML, or shift+enter vs enter in Google Docs) because line feed `\n` and carriage return `\r` weren't enough. VS Code rendered the entire line as a grey comment, but Google surely included the line separator characters for a reason, right?
 
 I tried running the first line of the comments in the console.
 
@@ -88,9 +88,9 @@ setTimeout
 
 All the comments around it are just an amusing attempt to disguise the code in a different context.
 
-The code could be simplified further. The `document.documentElement.outerHTML.length == 23082` check is probably to ensure the HTML page remains unmodified. Because I want to modify the page, I removed the check. The body of the `if` statement runs `setTimeout(checksum(' ' + checksum))` and compares its return value with a string `'...'`, but it doesn't do anything with the result, so I can ignore `== '...'` as well. I'm pretty sure `checksum` returns a string, and `setTimeout` is in the notoriously nasty family of JavaScript functions (among `eval` and `new Function`) that "casts" a string to a function by parsing and evaluating the string as JavaScript code.
+The code could be simplified further. The `document.documentElement.outerHTML.length == 23082`{:.language-js} check is probably to ensure the HTML page remains unmodified. Because I want to modify the page, I removed the check. The body of the `if`{:.language-js} statement runs `setTimeout(checksum(' ' + checksum))`{:.language-js} and compares its return value with a string `'...'`{:.language-js}, but it doesn't do anything with the result, so I can ignore `== '...'`{:.language-js} as well. I'm pretty sure `checksum`{:.language-js} returns a string, and `setTimeout`{:.language-js} is in the notoriously nasty family of JavaScript functions (among `eval`{:.language-js} and `new Function`{:.language-js}) that "casts" a string to a function by parsing and evaluating the string as JavaScript code.
 
-So presumably, `checksum(' ' + checksum)` returns valid JavaScript that `setTimeout` can execute. That's good. Even though `checksum` itself is a function, `' ' + checksum` casts the function to a string containing its source code, meaning that if I edit anything inside `checksum`'s definition, I would change the result of `checksum(' ' + checksum)`. This is pretty cursed, but I remember seeing something like this in [one of LiveOverflow's videos][liveoverflow][^3] a while back, so I stored the original function implementation in a string, `checksumStr`. According to VS Code, there were not only invisible special characters but also a lot of trailing spaces, which I was afraid my editor would remove on save,[^4] so it was a bit annoying escaping everything.
+So presumably, `checksum(' ' + checksum)`{:.language-js} returns valid JavaScript that `setTimeout`{:.language-js} can execute. That's good. Even though `checksum`{:.language-js} itself is a function, `' ' + checksum`{:.language-js} casts the function to a string containing its source code, meaning that if I edit anything inside `checksum`{:.language-js}'s definition, I would change the result of `checksum(' ' + checksum)`{:.language-js}. This is pretty cursed, but I remember seeing something like this in [one of LiveOverflow's videos][liveoverflow][^3] a while back, so I stored the original function implementation in a string, `checksumStr`{:.language-js}. According to VS Code, there were not only invisible special characters but also a lot of trailing spaces, which I was afraid my editor would remove on save,[^4] so it was a bit annoying escaping everything.
 
 [liveoverflow]: https://www.youtube.com/watch?v=8yWUaqEcXr4
 
@@ -137,11 +137,11 @@ Object.defineProperty(document.body, 'className', {
 })
 ```
 
-As a quick recap, the original HTML file runs this code immediately when the page loads. I included the code directly in my stripped down copy of the JS Safe. It seems to check the password when `document.body.className` is set to the safe's password, which is the challenge's flag. `Br0w53R_Bu9s_C4Nt_s70p_Y0u` did seem like part of the flag, but unfortunately JS Safe 4.0 did not accept `CTF{Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. Maybe they only included this as a deception. I guess life can't be so easy!
+As a quick recap, the original HTML file runs this code immediately when the page loads. I included the code directly in my stripped down copy of the JS Safe. It seems to check the password when `document.body.className`{:.language-js} is set to the safe's password, which is the challenge's flag. `Br0w53R_Bu9s_C4Nt_s70p_Y0u` did seem like part of the flag, but unfortunately JS Safe 4.0 did not accept `CTF{Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. Maybe they only included this as a deception. I guess life can't be so easy!
 
 ## Wow, such nice debug skills
 
-I played around with the code near the end of the HTML file, which did funny things like adding a `splice` property to all objects, defining a static method `Error.prepareStackTrace`, and creating a function `ChecksumError`.
+I played around with the code near the end of the HTML file, which did funny things like adding a `splice`{:.language-js} property to all objects, defining a static method `Error.prepareStackTrace`{:.language-js}, and creating a function `ChecksumError`{:.language-js}.
 
 ![JavaScript code.][no-devtools]
 
@@ -149,9 +149,9 @@ Because devtools kept crashing while I fiddled with that part of the code, I dec
 
 [^6]: It might be worth going back and seeing how they work, but it wasn't relevant for the challenge.
 
-I had only been focusing on the `<script>` tag towards the end of the document, but there was a whole chunk of JavaScript earlier in the HTML that I had been ignoring. It starts by defining `code`, containing what seemed to be valid JavaScript, and then running `setTimeout` on a string, like I found earlier.[^5]
+I had only been focusing on the `<script>`{:.language-html} tag towards the end of the document, but there was a whole chunk of JavaScript earlier in the HTML that I had been ignoring. It starts by defining `code`{:.language-js}, containing what seemed to be valid JavaScript, and then running `setTimeout`{:.language-js} on a string, like I found earlier.[^5]
 
-[^5]: Google really prefers `setTimeout` over `eval`, I guess.
+[^5]: Google really prefers `setTimeout`{:.language-js} over `eval`{:.language-js}, I guess.
 
 <!-- prettier-ignore -->
 ```js
@@ -163,7 +163,7 @@ var code = `\x60
 setTimeout("x = Function('flag', " + code + ")");
 ```
 
-This sets `x` to a function with a parameter `flag` and the value of `code` as the function body. To get `x`, I copypasted and ran the code in the console, then casted `x` to a string to get its source code, which I pasted into my JS Safe clean version.
+This sets `x`{:.language-js} to a function with a parameter `flag`{:.language-js} and the value of `code`{:.language-js} as the function body. To get `x`{:.language-js}, I copypasted and ran the code in the console, then casted `x`{:.language-js} to a string to get its source code, which I pasted into my JS Safe clean version.
 
 ```js
 x = flag => {
@@ -189,25 +189,25 @@ x = flag => {
 }
 ```
 
-`for (i = 0; i < 100; i++) setTimeout('debugger')` runs `debugger` 100 times. [`debugger`][debugger] is a fancy JavaScript keyword that, when a debugger like the one in devtools is available, pauses execution. It effectively is another way of JS Safe screwing with devtools users because it will repeatedly pause everything and you'd have to constantly step through each of the hundred `debugger` statements to be able to debug anything.
+`for (i = 0; i < 100; i++) setTimeout('debugger')`{:.language-js} runs `debugger`{:.language-js} 100 times. [`debugger`{:.language-js}][debugger] is a fancy JavaScript keyword that, when a debugger like the one in devtools is available, pauses execution. It effectively is another way of JS Safe screwing with devtools users because it will repeatedly pause everything and you'd have to constantly step through each of the hundred `debugger`{:.language-js} statements to be able to debug anything.
 
 [debugger]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 
-I couldn't simply comment the `for` loop out, though. It was incrementing the variable `i` a hundred times from zero, and `i` is not only is used to annoy devtools users but also later gets used in the last part of the function, seemingly the relevant implementation of `x`. Similarly, in the `if` statement, other than the probably useless `while (1);`, it also runs `i += ((x + '').length + 12513) | 1`. Since `(x + '').length` depends on the unmodified source code of `x`, like earlier, using the original `x`, I plugged in `(x + '').length` to get 724.
+I couldn't simply comment the `for`{:.language-js} loop out, though. It was incrementing the variable `i`{:.language-js} a hundred times from zero, and `i`{:.language-js} is not only is used to annoy devtools users but also later gets used in the last part of the function, seemingly the relevant implementation of `x`{:.language-js}. Similarly, in the `if`{:.language-js} statement, other than the probably useless `while (1);`{:.language-js}, it also runs `i += ((x + '').length + 12513) | 1`{:.language-js}. Since `(x + '').length`{:.language-js} depends on the unmodified source code of `x`{:.language-js}, like earlier, using the original `x`{:.language-js}, I plugged in `(x + '').length`{:.language-js} to get 724.
 
-After these two statements, `i` ends up being `13337`. But what about `i‍ = 1337`?
+After these two statements, `i`{:.language-js} ends up being `13337`{:.language-js}. But what about `i‍ = 1337`{:.language-js}?
 
 ![VS Code highlights the `i` in `i = 1337` as a non-ASCII character.][i-sus]
 
-_`i‍` is s-sus??_
+_`i‍`{:.language-js} is s-sus??_
 
-As it turns out, the `i‍` in `i‍ = 1337` is _not_ the same as the `i` used elsewhere else in `x`. It's the normal Latin lowercase `i` followed by a [zero-width joiner][zwj]. ???
+As it turns out, the `i‍`{:.language-js} in `i‍ = 1337`{:.language-js} is _not_ the same as the `i`{:.language-js} used elsewhere else in `x`{:.language-js}. It's the normal Latin lowercase `i`{:.language-js} followed by a [zero-width joiner][zwj]. ???
 
 [zwj]: https://en.wikipedia.org/wiki/Zero-width_joiner
 
 I think this is kind of funny (in the JavaScript-being-dumb sense) because I would've expected JavaScript to treat zero-width joiners as whitespace and ignore it, but instead, it seems to treat it as a valid character for a unique variable name. The fact that you can have another identical-looking variable name be treated as a different variable by JavaScript isn't uncommon; many programming languages have a distinction between typical Latin `a` and Cyrillic `а`, for example. But I wasn't expecting zero-width joiners to be allowed too! Maybe it would make sense that zero-width joiners are allowed at least between characters like emoji because some emoji can be merged into a single glyph; for example, the rainbow flag emoji `🏳‍🌈` is composed of `🏳️` + a zero-width joiner + `🌈`. But JavaScript doesn't allow emoji in variable names, so I don't know.
 
-Ultimately, since `i‍ = 1337` involves a completely different variable, I can ignore it. So now, I have a simplified version of `x`.
+Ultimately, since `i‍ = 1337`{:.language-js} involves a completely different variable, I can ignore it. So now, I have a simplified version of `x`{:.language-js}.
 
 ```js
 x = flag => {
@@ -224,7 +224,7 @@ x = flag => {
 }
 ```
 
-It seems that, for each character in the argument `flag`---presumably, the flag for the CTF challenge---it plucks and removes an arbitrary character in `pool` and ensures that two match: `pool` is a scrambled version of the correct flag, and `flag` must match the unscrambled version of `pool`. The characters from `pool` are removed in a consistent yet unintuitive order, depending on what `i` happens to be, but `flag` is processed from left to right. Therefore, I could modify `x` to print out the characters in `pool` in the order they are plucked out to reveal the unscrambled version of the correct `flag`.
+It seems that, for each character in the argument `flag`{:.language-js}---presumably, the flag for the CTF challenge---it plucks and removes an arbitrary character in `pool`{:.language-js} and ensures that two match: `pool`{:.language-js} is a scrambled version of the correct flag, and `flag`{:.language-js} must match the unscrambled version of `pool`{:.language-js}. The characters from `pool`{:.language-js} are removed in a consistent yet unintuitive order, depending on what `i`{:.language-js} happens to be, but `flag`{:.language-js} is processed from left to right. Therefore, I could modify `x`{:.language-js} to print out the characters in `pool`{:.language-js} in the order they are plucked out to reveal the unscrambled version of the correct `flag`{:.language-js}.
 
 ```js
 > s = ''
@@ -240,7 +240,7 @@ It seems that, for each character in the argument `flag`---presumably, the flag 
 
 `W0w_5ucH_N1c3_d3bU9_sK1lLz_` certainly looks like it's part of the flag, but the original safe didn't accept `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_}` or `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz}` either. Weird! Is this a decoy?
 
-It took me a few moments before I remembered earlier when I had discovered [`Br0w53R_Bu9s_C4Nt_s70p_Y0u`](#browser-bugs-cant-stop-you). Its code checked to ensure that the part between `CTF{...}` _ended_ with `Br0w53R_Bu9s_C4Nt_s70p_Y0u`, using `endsWith`, so I put two and two together and tried `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. It worked!
+It took me a few moments before I remembered earlier when I had discovered [`Br0w53R_Bu9s_C4Nt_s70p_Y0u`](#browser-bugs-cant-stop-you). Its code checked to ensure that the part between `CTF{...}` _ended_ with `Br0w53R_Bu9s_C4Nt_s70p_Y0u`, using `endsWith`{:.language-js}, so I put two and two together and tried `CTF{W0w_5ucH_N1c3_d3bU9_sK1lLz_Br0w53R_Bu9s_C4Nt_s70p_Y0u}`. It worked!
 
 !["Access granted" shows below the password text field.][granted]
 
@@ -265,8 +265,6 @@ Thanks, Google.
 **Update**: This write-up [won the Google CTF write-up competition](https://groups.google.com/g/google-ctf/c/BQG1LP8vuZ4). As a prize, they sent me a free Google CTF shirt. Thanks again, Google!
 
 ![Google CTF shirt](../images/google-ctf/shirt.webp)
-
----
 
 [challenge]: ../images/google-ctf/challenge.png
 [js-safe-4]: ../images/google-ctf/js-safe-4.png

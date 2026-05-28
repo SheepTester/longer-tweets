@@ -52,7 +52,7 @@ In Olam, we were given elements and their properties of a distant planet and had
 
 I remember trying to find the source of this passage to see if there was really a longer version of _A Text in Spyloctogy_ from which this passage was taken, but beyond a mention on one or two websites,[^1] I didn't find anything useful.
 
-[^1] The [_Math Projects Journal's Ultimate Math Lessons_](https://blythevillemath.weebly.com/uploads/1/3/3/0/13301969/masons-secret.pdf) has the same passage with the first seven follow-up questions as above, but it didn't cite the original source of the passage beyond another high school teacher.
+[^1]: The [_Math Projects Journal's Ultimate Math Lessons_](https://blythevillemath.weebly.com/uploads/1/3/3/0/13301969/masons-secret.pdf) has the same passage with the first seven follow-up questions as above, but it didn't cite the original source of the passage beyond another high school teacher.
 
 Looking it up now, Google found a [1975 journal article by Bernice Bragstad](https://www.jstor.org/stable/40011420). They say the passage is part of an exercise in _Learning to Learn_ (1961) by Donald E. P. Smith, and they allegedly read it aloud; they refer to "spyloctogy" as the Martian equivalent of geometry. The article has the original passage word-for-word, but rather than the questions above, it was followed by symbols that make me doubt the passage was really read aloud.
 

@@ -275,3 +275,23 @@
   align-self: stretch;
   margin: -1em 0;
 }
+.footnotes {
+  border-top: 1px solid transparent;
+  position: relative;
+}
+.footnotes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+}
+.normal .footnotes::before {
+  width: 100px;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.accessible .footnotes::before {
+  width: 100%;
+  background-color: currentColor;
+}

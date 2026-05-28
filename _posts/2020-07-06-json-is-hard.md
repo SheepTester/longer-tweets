@@ -14,7 +14,8 @@ As everyone knows, Java Serializable Object-oriented Notation (JSON for short) i
 
 For example, many languages allow the usage of either single or double quotes. However, JSON requires that all quotes are double quotes.
 
-```
+<!-- prettier-ignore -->
+```json
 [
   'bad example ❌',
   "good example ✔"

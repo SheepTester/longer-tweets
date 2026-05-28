@@ -21,7 +21,7 @@ The school published a PDF containing all the alternate schedules, but I struggl
 
 By then, I realized that Gunn Schedule was not made for alternate schedules, so I rewrote the app from scratch, making what is now known as UGWA.
 
-## `scheduleApp`
+## `scheduleApp`{:.language-js}
 
 The entire schedule-displaying part of UGWA had been built as a component; its wrapper, the period styles, the normal 5-day schedule, and the JSON file with alternate schedules were passed into a function that took care of rendering it all.
 
@@ -47,7 +47,7 @@ My method of getting rid of HTML tags was too primitive, and soon the school int
 
 At some point, when pasting in alternate schedules, the school got rid of all the newline characters, so the parser now had to intelligently insert new ones after the time range parentheses.
 
-Then I had to make it treat `<div>` and `<br>` tags like it did for the paragraph tags.
+Then I had to make it treat `<div>`{:.language-html} and `<br>`{:.language-html} tags like it did for the paragraph tags.
 
 My previous methods for getting the period name had to be redone when the school added text _after_ the time range; now it would find and remove the time range, and make the rest of the line the period name. Back to school night also introduced the school’s usage of `pm` for hours after 6 pm, so I had to implement support for that as well.
 
