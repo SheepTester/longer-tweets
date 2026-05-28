@@ -8,6 +8,7 @@ tags:
   - chemistry
   - physics
   - biology
+math: true
 ---
 
 I was reminded about something I heard a while ago regarding [_Flatland_](https://en.wikipedia.org/wiki/Flatland), a book which I have not yet read, but I have heard of. I don't remember who said this---probably the author of the book---but they said that in _Flatland_, the characters couldn't have a digestive tube from their mouth to their anus because it would split their body into two separate pieces. However, I thought that such a being could still be split into multiple pieces if some attraction held them together like a magnetic clamp. Our cells are semipermeable, according to biology class; perhaps the _Flatland_ creatures could absorb nutrients somehow though selective pores in their membrane. I briefly pondered a different style of cuisine for these nutrient-absorbing [unicellular organisms](https://en.wikipedia.org/wiki/Valonia_ventricosa). This wouldn't be very different from Agar<span></span>.io.
