@@ -200,6 +200,8 @@ need to research:
 
 - why are high school GPAs inflated? what encourages teachers to pass students?
 
+- is it known that the California affirmative action ban has been easily skirted?
+
 arguments:
 
 - that standardized testing bad and is necessary, their arguments are not incompatible
@@ -207,17 +209,18 @@ arguments:
 
 outline:
 
-- sparked by professor letter
-- emphasize ucsd's purpose
+- sparked by professor letter: recently, several hundred professors signed a joint letter demanding the UC system re adopt their sat requirement . this was in response to an ongoing trend of whatever, quantified by UCSD math report, which identified a combination of two factors...
+- emphasize ucsd's purpose: one might think, oh, a university is just a learning thing, so it should just accept the best people, why care about diversity yada yada
 - background
   - why standardized testing is bad (a review)
   - why standardized testing is necessary
 - argument
   - these arguments are not contradictory
   - propose caaspp
-- justify caaspp
-  - explain how UC admissions work
-  - valid counterarguments
+- justify caaspp: break the STTF arguments into three parts:
+  - low stakes: problems that only arise when the exam is high stakes (eg easy to cheat, systemic disadvantages, intended to be measured in aggregate)
+  - addressable: problems that are still relevant, but can be addressed (eg family emergencies)
+  - valid concerns: eg that smarter balanced is reused across states and federally funded by Obama, so it may be hard to change
 
 misc thoughts:
 
