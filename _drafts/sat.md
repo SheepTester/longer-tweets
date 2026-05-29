@@ -210,6 +210,7 @@ arguments:
 outline:
 
 - sparked by professor letter: recently, several hundred professors signed a joint letter demanding the UC system re adopt their sat requirement . this was in response to an ongoing trend of whatever, quantified by UCSD math report, which identified a combination of two factors...
+  - and mention my main argument: CAASPP should be used for in-state applicants
 - emphasize ucsd's purpose: one might think, oh, a university is just a learning thing, so it should just accept the best people, why care about diversity yada yada
 - background
   - why standardized testing is bad (a review)
@@ -218,9 +219,10 @@ outline:
   - these arguments are not contradictory
   - propose caaspp
 - justify caaspp: break the STTF arguments into three parts:
-  - low stakes: problems that only arise when the exam is high stakes (eg easy to cheat, systemic disadvantages, intended to be measured in aggregate)
-  - addressable: problems that are still relevant, but can be addressed (eg family emergencies)
+  - low stakes: problems that only arise when the exam is high stakes (eg easy to cheat, intended to be measured in aggregate)
+  - addressable: problems that are still relevant, but can be addressed (eg family emergencies, out of state, systemic disadvantages (where i can briefly begin how admissions work here))
   - valid concerns: eg that smarter balanced is reused across states and federally funded by Obama, so it may be hard to change
+- proposal: reclarify my proposed solution (how it should be factored into admissions, and how to handle OOS) as closing
 
 misc thoughts:
 
