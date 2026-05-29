@@ -100,11 +100,11 @@ So presumably, `checksum(' ' + checksum)`{:.language-js} returns valid JavaScrip
 
 ![The original `checksum` implementation with trailing spaces and non-ASCII invisible characters demarcated by VS Code.][checksum]
 
-_The original `checksum` implementation._
+_The original `checksum`{:.language-js} implementation._
 
 ![The `checksum` implementation in a string, safely escaped][checksum-str]
 
-_`checksumStr`, containing the original `checksum` implementation._
+_`checksumStr`{:.language-js}, containing the original `checksum`{:.language-js} implementation._
 
 So then I ran
 
