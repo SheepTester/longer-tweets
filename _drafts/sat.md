@@ -166,7 +166,39 @@ sources:
 need to research:
 
 - summarize arguments against SAT/ACT with data, ideally from UC and other universities (e.g. MIT) that would otherwise want to use SAT/ACT
+  - UC STTF report, section 4
+    - acknowledges correlation between SAT/ACT and dropping URM from high school to UCs, cites SAT and ACT reports (page 67 (pdf page))
+      - section 3 talks about score rescaling to mitigate group differences
+
+    - table of avg SAT score by race (page 68)
+      - not great evidence since it can be caused by external factors
+
+    - quarter of final decision based on SAT/ACT score (page 69), less than high school GPA
+
+    - low SAT score likely discourages them from applying in the first place, but they need more data
+
+    - section 3 shows URM students more likely to be admitted with high GPA, low SAT
+
+    - they use it to select students most likely to succeed (so that dropout rates for URMs wont be worse ig)
+
+    - has University mission on page 78
+
+  - UC STTF report, introduction (section 1)
+    - scandal about wealthy people getting fraudulent test scores (page 12)
+
+    - cites these:
+      - <https://enewspaper.latimes.com/infinity/article_share.aspx?guid=9beea923-a501-48a2-a4df-2b8eec0173b4>
+      - Douglass, J.A. (2004). The Conditions of Admission. Access, Equity and the Social Contract of Public
+        Universities. Palo Alto: Stanford University Press
+
+    - according to _Kidder, W. & Gándara, P. (2015). Two Decades After the Affirmative Action Ban: Evaluating the University of
+      California’s Race-Neutral Efforts. Princeton, NJ: Educational Testing Service._, UC has never fully recovered from affirmative action ban
+
 - impact of extracurricular requirements on underprivileged applicants (in UCs specifically)
+
+- how other countries handle family emergencies
+
+- why are high school GPAs inflated? what encourages teachers to pass students?
 
 arguments:
 
@@ -175,6 +207,8 @@ arguments:
 
 outline:
 
+- sparked by professor letter
+- emphasize ucsd's purpose
 - background
   - why standardized testing is bad (a review)
   - why standardized testing is necessary
