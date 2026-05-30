@@ -13,15 +13,17 @@ layout: default
     </p>
   </header>
   <div class="content">{{ content }}</div>
-  <p class="revisions">
-    See source and revision history on {% comment %} #github ID is used by
-    sheep.js to get the source URL {% endcomment -%}
-    <a
-      id="github"
-      href="https://github.com/SheepTester/longer-tweets/commits/master/{{ page.path }}"
-      >GitHub</a
-    >.
-  </p>
+  <footer>
+    <p class="revisions">
+      See source and revision history on {% comment %} #github ID is used by
+      sheep.js to get the source URL {% endcomment -%}
+      <a
+        id="github"
+        href="https://github.com/SheepTester/longer-tweets/commits/master/{{ page.path }}"
+        >GitHub</a
+      >.
+    </p>
+  </footer>
 
   {%- assign comments = site.data.comments[page.id] -%}
   <div class="comments">
