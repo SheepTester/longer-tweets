@@ -39,10 +39,10 @@ body {
 .title {
   font-size: 48px;
   line-height: 1;
-}
-h1.title {
   font-weight: normal;
   margin: 0;
+}
+h1.title {
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -64,6 +64,9 @@ h1.title {
   color: white;
   border-bottom: 1px solid currentColor;
 }
+.tags {
+  margin: 0;
+}
 .tags .tag {
   display: inline-block;
   text-decoration: none;
@@ -81,6 +84,9 @@ h1.title {
 }
 .normal .tags .tag:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.date {
+  display: block;
 }
 .toggle-accessible {
   position: absolute;

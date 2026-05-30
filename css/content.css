@@ -198,9 +198,6 @@
     Arial, sans-serif;
 }
 
-.date {
-  margin: 0;
-}
 .normal .date,
 .normal .revisions {
   color: rgba(255, 255, 255, 0.4);
@@ -247,11 +244,15 @@
   display: flex;
 }
 .author {
+  font: inherit;
+  margin: 0;
+  margin-right: auto;
+}
+.author a {
   color: inherit;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: auto;
 }
 .author img {
   width: 30px;
@@ -261,12 +262,12 @@
 .normal .time {
   color: rgba(255, 255, 255, 0.4);
 }
-.author,
+.author a,
 .time,
 .add-comment {
   text-decoration: none;
 }
-.author:hover,
+.author a:hover,
 .time:hover,
 .add-comment:hover {
   text-decoration: underline;
