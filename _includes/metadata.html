@@ -39,16 +39,23 @@ endcomment -%}
   content="{{ post.last_modified_at | default: page.date | date_to_xmlschema }}"
 />
 
-{%- assign image = page.slug | prepend: "/images/generated-thumbnails/" |
-append: ".jpg" | absolute_url -%}
-<meta property="og:image" content="{{ image }}" />
-<meta name="twitter:image" content="{{ image }}" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+{%- assign image = page.image | default: site.empty_hash -%} {%- assign
+default_image = page.slug | prepend: "/images/generated-thumbnails/" | append:
+".jpg" -%}
+<meta
+  property="og:image"
+  content="{{ image.src | default: default_image | absolute_url }}"
+/>
+<meta
+  name="twitter:image"
+  content="{{ image.src | default: default_image | absolute_url }}"
+/>
 <meta
   property="og:image:alt"
-  content="Post title shown over a blurred photo of leaves in rain"
+  content="{{ image.alt | default: 'Post title shown over a blurred photo of leaves in rain' | escape}}"
 />
+<meta property="og:image:width" content="{{ image.width | default: 1200}}" />
+<meta property="og:image:height" content="{{ image.height | default: 630}}" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <script type="application/ld+json">

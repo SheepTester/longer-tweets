@@ -36,6 +36,11 @@ tags:
   - tag2
   - tag3
 unlisted: true
+image:
+  src: /images/whatever.jpg
+  width: 1200
+  height: 630
+  alt: alt text
 ---
 
 Begin post here.

@@ -6,6 +6,11 @@ date: 2020-07-06
 tags:
   - programming
   - ovinus-linkedin
+image:
+  src: /images/ovinus-cover-slop/json-is-hard.jpg
+  alt: Stock photo of code
+  width: 1280
+  height: 720
 ---
 
 _Originally posted on [LinkedIn](https://www.linkedin.com/pulse/why-json-hard-programming-language-ovinus-real/) under my friends' joint account Ovinus Real._

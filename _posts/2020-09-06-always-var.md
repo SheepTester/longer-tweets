@@ -7,6 +7,11 @@ tags:
   - programming
   - ovinus-linkedin
   - html5
+image:
+  src: /images/ovinus-cover-slop/always-var.jpg
+  alt: Stock photo of code
+  width: 849
+  height: 565
 ---
 
 _Originally posted on [LinkedIn](https://www.linkedin.com/pulse/3-tips-javascript-always-use-var-ovinus-real/) under my friends' joint account Ovinus Real._

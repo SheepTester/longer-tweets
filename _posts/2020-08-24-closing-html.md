@@ -7,6 +7,11 @@ tags:
   - programming
   - ovinus-linkedin
   - html5
+image:
+  src: /images/ovinus-cover-slop/closing-html.jpg
+  alt: Stock photo of code
+  width: 1280
+  height: 720
 ---
 
 _Originally posted on [LinkedIn](https://www.linkedin.com/pulse/why-closing-html-tags-dangerous-practice-ovinus-real/) under my friends' joint account Ovinus Real._

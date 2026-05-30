@@ -11,3 +11,6 @@ timezone: America/Los_Angeles
 exclude:
   - scripts/
   - node_modules/
+
+# for convenience
+empty_hash: {}
