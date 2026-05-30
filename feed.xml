@@ -2,8 +2,8 @@
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- https://github.com/jekyll/jekyll-feed/blob/master/lib/jekyll-feed/feed.xml -->
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  {%- comment -%} https://github.com/jekyll/jekyll-feed/blob/master/lib/jekyll-feed/feed.xml {%- endcomment -%}
   <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">
     {{- "Jekyll" -}}
   </generator>
