@@ -19,7 +19,7 @@
   leading: px(25)
 )
 #set text(
-  font: "Inter",
+  font: "Inter 28pt",
 )
 
 #set align(bottom)

@@ -4,6 +4,7 @@
     "micromark": "^4.0.0",
     "micromark-extension-gfm-autolink-literal": "^2.0.0",
     "micromark-extension-gfm-strikethrough": "^2.0.0",
+    "sharp": "^0.34.5",
     "yaml": "^2.4.5"
   },
   "devDependencies": {

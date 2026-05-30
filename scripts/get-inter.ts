@@ -24,8 +24,11 @@ const {
   .then(r => r.text())
   .then(json => JSON.parse(json.replace(")]}'", '')))
 
-const { url, filename } =
-  fileRefs.find(file => file.filename.includes('VariableFont')) ?? {}
+const collator = new Intl.Collator([], { numeric: true })
+const [{ url, filename } = {}] = fileRefs
+  .filter(file => file.filename.includes('Regular'))
+  // get largest font size
+  .toSorted((a, b) => collator.compare(b.filename, a.filename))
 
 if (!url) {
   console.error(fileRefs.map(file => file.filename))
@@ -38,5 +41,7 @@ if (!response.body) {
 }
 
 await finished(
-  Readable.fromWeb(response.body).pipe(createWriteStream(`scripts/${filename}`))
+  Readable.fromWeb(response.body).pipe(
+    createWriteStream(`scripts/${filename?.split('/').at(-1)}`)
+  )
 )

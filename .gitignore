@@ -7,3 +7,4 @@ vendor
 node_modules/
 
 scripts/*.ttf
+images/generated-thumbnails/*.png

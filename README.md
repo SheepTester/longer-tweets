@@ -70,6 +70,12 @@ index and post pages.
 
 1. Install [Typst CLI](https://typst.app/open-source/#download).
 
+1. Install sharp:
+
+   ```sh
+   npm install
+   ```
+
 1. Run Jekyll locally, with `--drafts`, as above.
 
 1. Run the thumbnail generation script.
