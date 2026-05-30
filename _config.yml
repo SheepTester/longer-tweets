@@ -7,3 +7,6 @@ plugins:
   - jekyll-sitemap
 
 timezone: America/Los_Angeles
+
+exclude:
+  - scripts/

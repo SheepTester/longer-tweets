@@ -1,0 +1,18 @@
+---
+layout: null
+unlisted: true
+permalink: posts.json
+---
+
+{%- assign posts = site.posts -%}
+{%- assign posts = posts | where_exp: "post", "post.unlisted != true" -%}
+{%- assign posts = posts | where_exp: "post", "post.draft != true" -%}
+
+[
+{%- for post in posts -%}
+  {
+    "title": {{ post.title | strip_html | smartify | normalize_whitespace | jsonify }}
+  }
+  {%- unless forloop.last -%}, {%- endunless -%}
+{%- endfor -%}
+]

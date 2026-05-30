@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^3.4.2",
-    "@sheeptester/prettier": "^3.9.0"
+    "@sheeptester/prettier": "^3.9.0",
+    "@types/node": "^25.9.1"
   }
 }
