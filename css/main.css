@@ -27,6 +27,9 @@
 .post-entry .desc {
   margin-top: 10px;
 }
+.draft {
+  opacity: 0.5;
+}
 
 .welcome {
   margin: 0;

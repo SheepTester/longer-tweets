@@ -61,8 +61,27 @@
     <button class="toggle-accessible" id="toggle-accessible">
       <span class="toggle-accessible-badge">Enable accessible theme</span>
     </button>
-    {%- include links.html -%}
+    <header class="links">
+      <a href="{{ '/' | relative_url }}">home</a> &middot;
+      <a href="{{ '/' | relative_url }}">main</a> &middot;
+      <a href="{{ '/' | relative_url }}">index</a>
+    </header>
     <div class="background"></div>
-    {{ content }} {%- include links.html -%}
+    <main>{{- content -}}</main>
+    <footer class="links">
+      {%- if layout.main -%}
+      <a href="/">root</a>
+      {%- else -%}
+      <a href="{{ '/' | relative_url }}">back</a>
+      {%- endif %} &middot; {% if layout.main -%}
+      <a href="https://github.com/SheepTester/longer-tweets/">repo</a>
+      {%- else -%}
+      <a
+        href="https://github.com/SheepTester/longer-tweets/blob/master/{{ page.path }}?plain=1"
+        >source</a
+      >
+      {%- endif %} &middot;
+      <a href="{{ '/feed.xml' | relative_url }}">feed</a>
+    </footer>
   </body>
 </html>
