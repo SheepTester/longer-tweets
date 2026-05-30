@@ -20,11 +20,8 @@ endcomment -%}
 <meta name="twitter:creator" content="@Sheep_tester" />
 
 <meta name="description" content="{{ description }}" />
-<meta
-  name="twitter:description"
-  property="og:description"
-  content="{{ description }}"
-/>
+<meta property="og:description" content="{{ description }}" />
+<meta name="twitter:description" content="{{ description }}" />
 
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
 <link property="og:url" href="{{ page.url | absolute_url }}" />
@@ -32,6 +29,7 @@ endcomment -%}
 {%- if page.date -%}
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Longer Tweets" />
+
 <meta
   property="article:published_time"
   content="{{ page.date | date_to_xmlschema }}"
@@ -40,6 +38,19 @@ endcomment -%}
   property="article:modified_time"
   content="{{ post.last_modified_at | default: page.date | date_to_xmlschema }}"
 />
+
+{%- assign image = page.slug | prepend: "/images/generated-thumbnails/" |
+append: ".jpg" | absolute_url -%}
+<meta property="og:image" content="{{ image }}" />
+<meta name="twitter:image" content="{{ image }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:image:alt"
+  content="Post title shown over a blurred photo of leaves in rain"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,6 +84,23 @@ endcomment -%}
 {%- else -%}
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="SheepTester" />
+
+<meta
+  property="og:image"
+  content="https://sheeptester.github.io/img/longtweets-smaller.png"
+/>
+<meta
+  name="twitter:image"
+  content="https://sheeptester.github.io/img/longtweets-smaller.png"
+/>
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="400" />
+<meta
+  property="og:image:alt"
+  content="Screenshot of Longer Tweets blog listing page"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,7 +133,6 @@ endcomment -%}
 <meta name="theme-color" content="#396226" />
 
 <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
-<meta name="twitter:card" content="summary" />
 
 <link rel="stylesheet" type="text/css" href="/sheep3.css" />
 <script src="/sheep3.js" charset="utf-8"></script>

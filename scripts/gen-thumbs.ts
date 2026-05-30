@@ -9,8 +9,7 @@ const URL = 'http://127.0.0.1:4000/longer-tweets/posts.json'
 
 type PostEntry = {
   title: string
-  /** starts with / */
-  id: string
+  slug: string
 }
 
 const posts = await fetch(URL)
@@ -27,9 +26,7 @@ const posts = await fetch(URL)
 const OUT_DIR = 'images/generated-thumbnails'
 await mkdir(OUT_DIR, { recursive: true })
 
-for (const { id: slashedId, title } of posts) {
-  const id = slashedId.replace('/', '')
-
+for (const { slug, title } of posts) {
   const child = spawn(
     'typst',
     [
@@ -43,24 +40,24 @@ for (const { id: slashedId, title } of posts) {
       '--root',
       '.',
       'scripts/thumbnail.typ',
-      join(OUT_DIR, `${id}.png`)
+      join(OUT_DIR, `${slug}.png`)
     ],
     { stdio: 'inherit' }
   )
   child.on('error', error => {
-    console.error(`[${id}] typst error`, error)
+    console.error(`[${slug}] typst error`, error)
   })
   child.on('close', code => {
     if (code) {
-      console.error(`[${id}] received nonzero exit code ${code} from typst`)
+      console.error(`[${slug}] received nonzero exit code ${code} from typst`)
       return
     }
-    sharp(join(OUT_DIR, `${id}.png`))
+    sharp(join(OUT_DIR, `${slug}.png`))
       .jpeg()
-      .toFile(join(OUT_DIR, `${id}.jpg`))
+      .toFile(join(OUT_DIR, `${slug}.jpg`))
       .catch(cause =>
         Promise.reject(
-          new Error(`[${id}] failed to convert to jpeg`, { cause })
+          new Error(`[${slug}] failed to convert to jpeg`, { cause })
         )
       )
   })
