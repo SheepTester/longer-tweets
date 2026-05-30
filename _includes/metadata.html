@@ -31,6 +31,7 @@ endcomment -%}
 
 {%- if page.date -%}
 <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Longer Tweets" />
 <meta
   property="article:published_time"
   content="{{ page.date | date_to_xmlschema }}"
@@ -71,6 +72,7 @@ endcomment -%}
 </script>
 {%- else -%}
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="SheepTester" />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -99,9 +101,8 @@ endcomment -%}
 </script>
 {%- endif -%}
 
-<meta property="og:site_name" content="Longer Tweets" />
 <meta property="og:locale" content="en-US" />
-<meta name="theme-color" content="#0b410e" />
+<meta name="theme-color" content="#396226" />
 
 <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
 <meta name="twitter:card" content="summary" />
