@@ -4,7 +4,6 @@ permalink: /:title/
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
 timezone: America/Los_Angeles

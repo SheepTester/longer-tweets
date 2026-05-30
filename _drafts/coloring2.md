@@ -3,6 +3,7 @@ layout: post
 title: colored functions, 2
 description: ''
 tags: []
+unlisted: true
 ---
 
 this discussion: <https://news.ycombinator.com/item?id=48281515>
