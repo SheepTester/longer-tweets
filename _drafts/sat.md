@@ -211,6 +211,7 @@ outline:
 
 - sparked by professor letter: recently, several hundred professors signed a joint letter demanding the UC system re adopt their sat requirement . this was in response to an ongoing trend of whatever, quantified by UCSD math report, which identified a combination of two factors...
   - and mention my main argument: CAASPP should be used for in-state applicants
+  - link the caaspp sound test video
 - emphasize ucsd's purpose: one might think, oh, a university is just a learning thing, so it should just accept the best people, why care about diversity yada yada
 - background
   - why standardized testing is bad (a review)

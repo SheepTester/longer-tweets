@@ -6,7 +6,7 @@ date: 2022-10-02
 tags:
   - ctf
   - programming
-hidden: true
+unlisted: true
 math: true
 ---
 

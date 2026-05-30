@@ -5,7 +5,7 @@ description: Brainstorming solutions to colored functions.
 date: 2025-07-26
 tags:
   - programming
-hidden: true
+unlisted: true
 ---
 
 "Colored functions" refers to ["What Color is Your Function?"](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/), which describes an allegory for async functions in programming languages. The blog post was written with Node.js callbacks in mind, before promises were commonplace in JavaScript, but `async`/`await` was already a feature in other programming languages like C#.
