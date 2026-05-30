@@ -10,3 +10,4 @@ timezone: America/Los_Angeles
 
 exclude:
   - scripts/
+  - node_modules/

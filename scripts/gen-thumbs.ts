@@ -1,7 +1,11 @@
+// usage: node scripts/gen-thumbs.ts
+
 const URL = 'http://127.0.0.1:4000/longer-tweets/posts.json'
 
 type PostEntry = {
   title: string
+  /** starts with / */
+  id: string
 }
 
 const posts = await fetch(URL)
@@ -14,3 +18,5 @@ const posts = await fetch(URL)
       )
     )
   )
+
+console.log(posts)

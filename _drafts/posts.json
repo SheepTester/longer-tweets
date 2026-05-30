@@ -11,6 +11,7 @@ permalink: posts.json
 [
 {%- for post in posts -%}
   {
+    "id": {{ post.id | jsonify }},
     "title": {{ post.title | strip_html | smartify | normalize_whitespace | jsonify }}
   }
   {%- unless forloop.last -%}, {%- endunless -%}

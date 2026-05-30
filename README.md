@@ -35,6 +35,7 @@ tags:
   - tag1
   - tag2
   - tag3
+unlisted: true
 ---
 
 Begin post here.
@@ -56,3 +57,23 @@ posts on the same day.
 `tags` - Tags are used to categorize posts; they're lowercase and use hyphens as
 a word separator (eg `english-hate`, `gamepro5`). They're shown both on the
 index and post pages.
+
+`unlisted` - Whether to hide the post from the home page and Atom feed.
+
+## Thumbnail generation
+
+1. Get Inter:
+
+   ```sh
+   node scripts/get-inter.ts
+   ```
+
+1. Install [Typst CLI](https://typst.app/open-source/#download).
+
+1. Run Jekyll locally, with `--drafts`, as above.
+
+1. Run the thumbnail generation script.
+
+   ```sh
+   node scripts/gen-thumbs.ts
+   ```
