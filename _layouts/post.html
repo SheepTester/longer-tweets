@@ -26,7 +26,7 @@ layout: default
   </footer>
 
   {%- assign comments = site.data.comments[page.id] -%}
-  <div class="comments">
+  <section class="comments" aria-label="Comments">
     <a
       href="https://github.com/SheepTester/longer-tweets/issues/new?template=comment.md&labels=comment&title=💬{{ page.id }}💬&body=&lt;!-- Write your comment here! You can use Markdown. Do NOT change the issue title. 💬{{ page.id }}💬 --&gt;%0A%0A"
       class="add-comment"
@@ -50,5 +50,5 @@ layout: default
       Write a comment
     </a>
     {%- for comment in comments -%} {%- include comment.html -%} {%- endfor -%}
-  </div>
+  </section>
 </article>
