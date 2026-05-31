@@ -108,6 +108,21 @@ While the comments feature hasn't seen much usage, I ended up pulling the implem
 [md-script]: https://spec.commonmark.org/0.31.2/#example-170
 [yaml-rce]: https://ctf.support/web/python/yaml-deserialization/
 
+## SEO
+
+Similar to the Atom feed, I copied the [Jekyll SEO Tag plugin's template][seo-template] and customized it for my blog. The template is allegedly battle-tested for SEO, but I made the change too recently to see how Google handles it.
+
+[seo-template]: https://github.com/jekyll/jekyll-seo-tag/blob/master/lib/template.html
+
+I also wanted to add Open Graph preview image support to my blog posts, but most of my blog posts don't need or have any images to use for a preview image. I decided to generate a default preview image using [Typst CLI][typst-cli], which is what [Cargo uses for its preview images][cargo-typst].
+
+[typst-cli]: https://typst.app/open-source/#download
+[cargo-typst]: https://blog.rust-lang.org/2025/07/11/crates-io-development-update-2025-07/#opengraph-images
+
+TODO: preview image
+
+Unfortunately, this requires me to run a build command to generate the preview image, so in a way, I've circled back where I started.
+
 ## Writing posts
 
 I author these posts in Markdown in VS Code, but I personally find monospace prose difficult to read. Since VS Code supports proportional fonts, I've set the following settings for this workspace:
@@ -124,6 +139,8 @@ I author these posts in Markdown in VS Code, but I personally find monospace pro
   "workbench.colorTheme": "Dark 2026"
 }
 ```
+
+TODO: screenshot
 
 - I set the text to wrap at 80 characters[^ch] because long lines of text, especially for a narrower font like Verdana, are hard to read.
 
