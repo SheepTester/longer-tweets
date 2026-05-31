@@ -54,6 +54,11 @@
     {%- endif -%}
   </head>
   <body>
+    <img
+      aria-hidden="true"
+      src="{{ '/images/blur.png' | relative_url }}"
+      id="background"
+    />
     <button class="toggle-accessible" id="toggle-accessible">
       <span class="toggle-accessible-badge">Enable accessible theme</span>
     </button>
@@ -62,7 +67,6 @@
       <a href="{{ '/' | relative_url }}">main</a> &middot;
       <a href="{{ '/' | relative_url }}">index</a>
     </header>
-    <div class="background"></div>
     <main>{{- content -}}</main>
     <footer class="links">
       {%- if layout.main -%}
@@ -79,5 +83,14 @@
       {%- endif %} &middot;
       <a href="{{ '/feed.xml' | relative_url }}">feed</a>
     </footer>
+    <script>
+      const background = document.getElementById('background')
+      if (!background.complete) {
+        background.classList.add('loading')
+        background.addEventListener('load', () => {
+          background.classList.remove('loading')
+        })
+      }
+    </script>
   </body>
 </html>
