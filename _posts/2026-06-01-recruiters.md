@@ -9,11 +9,11 @@ tags:
 image: auto
 ---
 
-After I started working at Tesla, I started getting unsolicited emails on my personal email. Not that it's hard to find—it's alluded to on my website, and I don't hide it in my git commits—but I was curious on how they got my email, so I replied to all of them asking where they got my email from. That's probably a bad idea since it shows my email address is real, but whatever.
+After I started working at Tesla, I started getting unsolicited emails on my personal email. Not that it's hard to find—it's in my resume, and I don't hide it in my git commits—but I was still curious how they got my email, so I replied to all of them asking where they got my email from. That's probably a bad idea since it shows my email address is real, but whatever.
 
-Shoutout to a recruiter Greylock, who was the only one who answered my question and let me know that it was related to my LinkedIn's "Open To Work" status. I guess I turned it on out of desperation looking for internships, but recruiters didn't care until I got a big tech company on my profile. Turning it off or asking recruiters to remove my email didn't help, probably because the list is decentralized.
+Shoutout to a recruiter at Greylock, who was the only one who answered my question and let me know that it was related to my LinkedIn "Open To Work" status. I guess I turned it on out of desperation looking for internships, but recruiters didn't care until after I got a big tech company on my profile. Turning it off or asking recruiters to remove my email didn't help, probably because the list is decentralized.
 
-I'm not looking for a job, but maybe you are! These companies are clearly looking for talent, after all.
+I'm not looking for a job right now, but maybe you are! These companies are clearly looking for talent, after all.
 
 My LLM has advised against including the recruiters' names and emails here because I'm in California, so I'll just summarize their pitch.
 
@@ -23,11 +23,11 @@ randomly shared a "body update" (😳??) with me. here's one of their "public st
 
 [job post](https://jobs.lightsource.ai/jobs/senior-software-eng-gen)
 
-## Somewear Labs / Knoll Ventures
+## Somewear Labs
 
-they want new members for their polycule in sf or chicago. they will pay under two hundred thousand bases, and four days a week can be at home. foreigners prohibited. they have TEN million dollars. this is considered "exciting"
+they want new members for their polycule in sf or chicago. they will pay under two hundred thousand bases, and for four days a week you are permitted to be at home. foreigners prohibited. they have TEN million dollars. this is considered "exciting"
 
-you will need to be resposible and do networks stuff. i think they are sending you into the mariana trench and you will need to be reliable and secure
+you will need to be resposible and do networks stuff. i think they are sending you into the mariana trench (BIG water pressure down there) and you will need to be reliable and secure
 
 ## Formation
 
@@ -37,11 +37,11 @@ if you google "formation apply" you can find the link they sent me. and if you c
 
 ## Altara
 
-they think functional software is "outdated" and must be broken. they are funded by angelic creatures and the demons at openai
+they think functional software is "outdated" and must be broken. they are funded by angelic creatures and the demons at openai. yet they are desparate enough to plead thrice
 
 you must pay SF rent to work for them. they believe they have unlocked a new level of research n development... research and development SQUARED. during lunch they slurp on data into their esophagi
 
-just imagine: you are trying to find cancer. they want to be your annoying lab partner that only speaks in chatgpt
+just imagine: you are trying to solve cancer. they want to be your annoying lab partner that only speaks in chatgpt
 
 ## Pallet
 
@@ -53,7 +53,7 @@ they make tech companies big. apparently after talking to engineers they can sel
 
 ## Vos Consultants
 
-they allegedly have a "start up" with money yet are too timid to reveal its name. they euphemistically refer to it with exclusively ai buzzwords
+they allegedly have a "start up" with money yet are too timid to reveal its name. they euphemistically refer to it with exclusively ai buzzwords across three emails
 
 not only will you get two hundred thousand bases but they will grant you equity they deem "generous"
 
@@ -65,7 +65,7 @@ someone somewhere is looking for someone who knows how to type "make me a react 
 
 ## Citadel
 
-hedge fund. selling points are "small team" and "we are making it not a small team." the people you will be working with enjoy messes... just imagine the stench
+hedge fund. selling points are "small team" and "we are making it not a small team." the people you will be working with enjoy messes... just imagine the stench. unlike the other recruiters, this fellow had the time to send FOUR successive emails
 
 they do not have a "formal application process" which grants them the power to do anything, like exclude certain populations they disfavor
 
@@ -73,7 +73,7 @@ they do not have a "formal application process" which grants them the power to d
 
 <span lang="zh-TW">會說中文嗎？</span> they want a "vue/next.js" dev (is that not nuxt? or is their codebase a result of two highly opiniated engineers) who can draw rectangles in figma. the worst part? it's in palo alto
 
-in follow up emails they silently rebranded from metantz to zettabyte
+in follow up emails they silently rebranded from metantz to zettabyte. but each time they reemphasize chinese is "preferred"
 
 ## Arbital Health
 
@@ -89,11 +89,13 @@ this guy is an interview dealer. he says many nameless companies are looking for
 
 ## DevSignal
 
-an ai startup that's just an uninspired mern app for AIPAC and the like. it is AI because they use claude (for writing code not part of the app)
+an ai startup that's just an uninspired mern app for AIPAC and the like. it is AI because they use claude (just for writing code)
 
 ## Prophecy Gov
 
-twenty towns have fallen victim to this chatgpt wrapper. they have nine half million dollar
+twenty U.S. towns have fallen victim to this chatgpt wrapper. they have nine halves million dollar
+
+<!-- three emails -->
 
 ## VoiceAdmin
 
