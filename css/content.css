@@ -242,6 +242,8 @@
 }
 .comment-header {
   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .author {
   font: inherit;
@@ -258,6 +260,10 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+.time {
+  display: flex;
+  align-items: center;
 }
 .normal .time {
   color: rgba(255, 255, 255, 0.4);
