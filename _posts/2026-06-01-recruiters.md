@@ -1,6 +1,6 @@
 ---
 layout: post
-title: these people are looking for employees
+title: these people(?) are looking for employees
 description: Sharing recruiter pitches for others who might need them.
 tags:
   - ai
