@@ -5,6 +5,10 @@ description: ''
 tags: []
 ---
 
+https://news.ycombinator.com/item?id=48356702
+
+rebase allows you to granularly test each commit when integrating
+
 todo: update date when written out
 
 people use squash commits and rebases because they want their commit history to be clean. is this just for vanity?
