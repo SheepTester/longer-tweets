@@ -6,6 +6,7 @@ date: 2018-05-06 15:49
 tags:
   - thoughts
   - death
+image: auto
 ---
 
 This blog post is an expansion on [my

@@ -5,6 +5,7 @@ description: It's for my résumé!
 date: 2023-04-29
 tags:
   - programming
+image: auto
 ---
 
 Apparently employers like seeing numbers on a résumé. I'd like to add projects, such as my [UCSD classrooms website][classrooms], to my résumé. However, I currently have no idea how many people use them.

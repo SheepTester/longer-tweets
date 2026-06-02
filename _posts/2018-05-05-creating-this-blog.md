@@ -9,6 +9,7 @@ tags:
   - html5
   - node
   - meta
+image: auto
 ---
 
 **UPDATE 2021-08-30**: This blog has since been rewritten in

@@ -8,6 +8,7 @@ tags:
   - thoughts
   - racism
   - gamepro5
+image: auto
 ---
 
 This longer tweet was made in response to [Gamepro5's article "Modern day Racism."](https://gamepro5.github.io/blog#Modern_Day_Racism)

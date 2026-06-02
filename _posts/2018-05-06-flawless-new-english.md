@@ -7,6 +7,7 @@ tags:
   - languages
   - english-hate
   - sarcasm
+image: auto
 ---
 
 English is a very irregular language when it comes to spelling. Many people thought that they would be able to solve this problem by creating their own spelling reforms that they for some reason believed everyone would accept. [That never happened.](https://xkcd.com/927/) The only spelling reform that one could call successful was made by [Webster's _A Compendious Dictionary of the English Language_](https://www.merriam-webster.com/about-us/spelling-reform), which introduced _color_ and _humor_, but even that didn't work very well because only the United States listened to that nonsense.

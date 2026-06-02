@@ -4,7 +4,7 @@ title: pronouns
 description: 'he/him for Sean, they/them for SheepTester'
 tags: []
 # list later if you want
-unlisted: true
+# unlisted: true
 ---
 
 I don't mind what pronouns you use to refer to me, but thanks for checking!

@@ -6,6 +6,7 @@ date: 2024-04-18
 tags:
   - programming
   - bug
+image: auto
 ---
 
 I'm working on a glTF parser for a game engine I'm making as part of a [class at my university](https://cse125.ucsd.edu/), and while it worked on my Windows laptop and later my Android phone, it crashed whenever it was opened on a Macbook, regardless of browser, with an `INVALID_OPERATION` error. In the console, it said,

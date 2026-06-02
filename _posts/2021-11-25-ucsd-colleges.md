@@ -6,6 +6,7 @@ date: 2021-11-25
 tags:
   - school
 unlisted: true
+image: auto
 ---
 
 This post serves as a text-based supplement to a video I recently made showing

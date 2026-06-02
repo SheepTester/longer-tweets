@@ -5,6 +5,7 @@ description: Taken From A Text In Spyloctogy
 date: 2018-10-18
 tags:
   - school
+image: auto
 ---
 
 (Taken From _A Text In Spyloctogy_)

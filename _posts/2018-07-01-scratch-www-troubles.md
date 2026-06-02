@@ -7,6 +7,7 @@ tags:
   - programming
   - node
   - scratch
+image: auto
 ---
 
 One day, I decided to see if I could see the progress on the project page redesign.

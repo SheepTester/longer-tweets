@@ -6,6 +6,7 @@ date: 2019-01-02 14:32
 tags:
   - languages
   - conlang
+image: auto
 ---
 
 Tables in any markup language are a pain. Markdown's tables are certainly better than HTML's.

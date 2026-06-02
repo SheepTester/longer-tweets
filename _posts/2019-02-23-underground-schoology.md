@@ -8,6 +8,7 @@ tags:
   - html5
   - userscripts
   - school
+image: auto
 ---
 
 Schoology is a dumb wannabe Facebook for schools where teachers and staff can post resources, events, updates, and places for students to upload assignments. When I found out that one could still comment on courses (apparently disabling commenting only hides the comment box) and obstructed a course update page with an embed (apparently Schoology posts can use some HTML and can also use Schoology’s CSS classes), we lost faith in Schoology and sought other ways to break it.

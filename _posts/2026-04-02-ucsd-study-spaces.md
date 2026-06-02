@@ -6,6 +6,7 @@ date: 2026-04-02
 tags:
   - school
   - ucsd
+image: auto
 ---
 
 TODO: add preview image

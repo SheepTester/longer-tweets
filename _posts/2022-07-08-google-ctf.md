@@ -7,6 +7,7 @@ tags:
   - ctf
   - html5
   - programming
+image: auto
 ---
 
 The [ACM Cyber][acm] Discord server was doing Google CTF, so I

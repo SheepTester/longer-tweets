@@ -7,6 +7,7 @@ tags:
   - thoughts
   - english-hate
   - vocabulary
+image: auto
 ---
 
 In all subjects, we learn vocabulary terms: math (contrapositive), science (gastrocnemius), social studies (appeasement), and English (equivocate). In the first three subjects, learning the terms is useful; our teachers often use them rather than redundantly repeating its definition, and since they are used enough in class, it isn't too hard to memorize their meanings.

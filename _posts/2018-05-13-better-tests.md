@@ -8,6 +8,7 @@ tags:
   - stress
   - tests
   - school
+image: auto
 ---
 
 I've always believed that studying (for a test) is cheating. Tests are supposed to test you on what you normally know to make sure you didn't forget everything you just learned. However, studying artificially makes you seem like you know a bit more about a subject than you usually do, and it is temporary. It skews the results of the test, making you seem smarter than you really are.

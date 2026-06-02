@@ -7,6 +7,7 @@ tags:
   - programming
   - html5
   - art
+image: auto
 ---
 
 Four years ago, I came across the following set of six colours while working on UGWA. It is the product of two bugs mischievously colluding together.

@@ -88,3 +88,5 @@ index and post pages.
    ```sh
    node scripts/gen-thumbs.ts
    ```
+
+1. Then add `image: auto` to posts that need it.

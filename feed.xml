@@ -64,18 +64,22 @@ layout: null
       <uri>https://sheeptester.github.io/</uri>
     </author>
 
-    {%- assign image = post.image | default: site.empty_hash -%}
+    {%- assign image_src = post.image.src -%}
+    {%- if post.image == "auto" -%}
     {%- assign
-    default_image = post.slug | prepend: "/images/generated-thumbnails/" | append: ".jpg" -%}
+    image_src = post.slug | prepend: "/images/generated-thumbnails/" | append: ".jpg" -%}
+    {%- endif -%}
+    {%- if image_src -%}
     <media:thumbnail
-      url="{{ image.src | default: default_image | absolute_url | xml_escape }}"
+      url="{{ image_src | absolute_url | xml_escape }}"
       xmlns:media="http://search.yahoo.com/mrss/"
     />
     <media:content
       medium="image"
-      url="{{ image.src | default: default_image | absolute_url | xml_escape }}"
+      url="{{ image_src | absolute_url | xml_escape }}"
       xmlns:media="http://search.yahoo.com/mrss/"
     />
+    {%- endif -%}
 
     {%- for tag in post.tags -%}
     <category term="{{ tag | xml_escape }}" />

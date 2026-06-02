@@ -7,6 +7,7 @@ tags:
   - languages
   - gamepro5
   - conlang
+image: auto
 ---
 
 Today, we will analyze the following text:

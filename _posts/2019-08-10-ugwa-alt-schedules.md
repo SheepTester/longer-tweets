@@ -7,6 +7,7 @@ tags:
   - programming
   - school
   - html5
+image: auto
 ---
 
 The [Unofficial Gunn Web App (UGWA)](https://orbiit.github.io/gunn-web-app/) is an unofficial progressive web app that shows the schedule for [Henry M. Gunn High School](https://gunn.pausd.org). Gunn’s weekly schedule is already complex, with seemingly arbitrary permutations of periods, but when a single day goes missing from a week or an assembly is required for all grades, the arrangement of the periods shift rather unpredictably. These new arrangements are mostly why students use UGWA; Google search analytics show that searches for UGWA spike slightly higher during weeks with alternate schedules. However, UGWA was not built with these alternate schedules in mind, resulting in an extremely complicated relationship between them.
