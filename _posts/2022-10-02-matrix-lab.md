@@ -6,7 +6,6 @@ date: 2022-10-02
 tags:
   - ctf
   - programming
-unlisted: true
 math: true
 image: auto
 ---
@@ -304,8 +303,6 @@ produces `M47L4B154W3S0M3!`, which looks like it was written by a human, so it's
 
 The remaining rev challenges seemed to be written in C or Scheme compiled to C with Chicken Scheme. Alas, I wasn't really sure how to tackle these. Am I supposed to decompile them, or do I reverse engineer the assembly directly? I think I need more practice with rev challenges written in C.
 
-<!--
-
 ## Obligatory Calc
 
 I first started working on this challenge because it involved JavaScript, but I wasn't able to figure it out. Here is what I did find out, though.
@@ -325,4 +322,4 @@ I first started working on this challenge because it involved JavaScript, but I 
 >
 > **obligatory-calc.zip**
 
--->
+(unfinished)
