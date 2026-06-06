@@ -108,3 +108,7 @@ their pay is "competitive"
 ## Thunderbird
 
 they want to take the fun out of video games
+
+## Applied Intuition
+
+they are farming tesla employees for self driving secrets
