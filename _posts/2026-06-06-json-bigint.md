@@ -1,12 +1,12 @@
 ---
 layout: post
-title: TODO
-description: TODO
+title: json stringify a bigint as a number in javascript
+description: (Ab)using revivers and replacers to serialize 64-bit integers, infinities, and dates.
 date: 2026-06-06T11:59
 tags:
   - html5
   - programming
-# image: auto
+image: auto
 ---
 
 By now, in JavaScript, all major browsers[^major] have supported [`JSON.parse`{:.language-js}'s `context.source`{:.language-js} parameter][parse-context] and [raw JSON][raw-json] for more than a year. This means that JavaScript can easily and losslessly stringify and parse 64-bit integers in JSON:
@@ -30,7 +30,9 @@ JSON.stringify(object, (_key, value) =>
 
 ## 64-bit integers
 
-Both raw JSON and parse source were largely motivated by the need to serialize and deserialize 64-bit integers in JavaScript.
+Both raw JSON and parse source were [largely motivated][motivation] by the need to serialize and deserialize 64-bit integers in JavaScript.
+
+[motivation]: https://github.com/tc39/proposal-json-parse-with-source#motivation
 
 For example, Discord IDs (i.e. snowflakes) are 64-bit integers, so if you naively parse an object like
 
@@ -151,11 +153,11 @@ console.log(json) // -> '{"positive":2e308,"negative":-2e308}'
 console.log(JSON.parse(json)) // -> { positive: Infinity, negative: -Infinity }
 ```
 
-I'm not sure if anything in JSON naturally deserializes to `NaN`{:.language-js}, but if not, you could still represent `NaN` using a similar technique to dates that I'm about to show below.
+I'm not sure if anything in JSON naturally deserializes to `NaN`{:.language-js}, but if not, you could still represent `NaN`{:.language-js} using a similar technique to dates that I'm about to show below.
 
 ## Dates
 
-YAML, among [more cursed data types][yaml-tags], has first-class support for timestamps.
+YAML, among [other cursed data types][yaml-tags], has first-class support for timestamps.
 
 ```yaml
 canonical: 2001-12-15T02:59:43.1Z
@@ -200,7 +202,8 @@ const object = {
   spaced: new Date('2001-12-14 21:59:43.10 -5'),
   date: new Date('2002-12-14')
 }
-// `value` represents the value after calling `toJSON`, so need to get original value from `this`
+// `value` represents the string after calling `Date#toJSON`, so need to get
+// original value from `this`
 const json = JSON.stringify(object, function (key, value) {
   return this[key] instanceof Date
     ? JSON.rawJSON(`0e${this[key].toISOString().replace(/\D/g, '')}`)
@@ -228,7 +231,7 @@ console.log(
 
 ## Is this a good idea?
 
-No. In general, you shouldn't need to encode data types in an interchange format. If both parties know that the data is in JSON, then they should also already know what data types to expect for each key and how they should be interpreted in order to make any meaningful use out of it. If you really want to encode data type, you should use YAML, which is expressive enough to let you perform [remote code execution][yaml-rce].
+No! In general, you shouldn't need to encode data types in an interchange format. If both parties know that the data is in JSON, then they should also already know what data types to expect for each key and how they should be interpreted in order to make any meaningful use out of it. If you really want to encode data type, you should use YAML, which is expressive enough to let you perform [remote code execution][yaml-rce].
 
 [yaml-rce]: https://ctf.support/web/python/yaml-deserialization/
 
