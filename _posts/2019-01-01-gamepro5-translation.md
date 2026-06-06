@@ -2,7 +2,7 @@
 layout: post
 title: analysis of gamepro5's server history translation
 description: I recently made an alarming development in my dumb conlang.
-date: 2019-01-01
+date: 2019-01-01T23:59
 tags:
   - languages
   - gamepro5

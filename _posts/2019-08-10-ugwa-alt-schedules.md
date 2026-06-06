@@ -2,7 +2,7 @@
 layout: post
 title: hypercomplex UGWA
 description: How UGWA deals with alternate schedules
-date: 2019-08-10
+date: 2019-08-10T14:03
 tags:
   - programming
   - school

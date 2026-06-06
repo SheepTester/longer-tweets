@@ -2,7 +2,7 @@
 layout: post
 title: thinking about colored functions
 description: Brainstorming solutions to colored functions.
-date: 2025-07-26
+date: 2025-07-26T20:37
 tags:
   - programming
 unlisted: true

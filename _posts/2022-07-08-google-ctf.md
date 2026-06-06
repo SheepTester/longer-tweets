@@ -2,7 +2,7 @@
 layout: post
 title: 'google ctf: js safe 4.0'
 description: Cursed JavaScript, fresh from Google's oven.
-date: 2022-07-08
+date: 2022-07-08T23:59
 tags:
   - ctf
   - html5

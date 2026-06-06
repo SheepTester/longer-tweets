@@ -2,7 +2,7 @@
 layout: post
 title: matrix labs
 description: Writeups for the two easiest Matrix Lab reverse engineering challenges from Project Sekai CTF 2022.
-date: 2022-10-02
+date: 2022-10-02T15:53
 tags:
   - ctf
   - programming

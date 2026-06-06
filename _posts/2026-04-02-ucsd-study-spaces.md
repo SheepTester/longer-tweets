@@ -2,7 +2,7 @@
 layout: post
 title: list of UCSD study spaces
 description: Geisel sucks, and there's so many other places to study on campus. I graduated so I no longer need to gatekeep these.
-date: 2026-04-02
+date: 2026-04-02T23:01
 tags:
   - school
   - ucsd

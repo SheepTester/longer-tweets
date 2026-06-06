@@ -2,7 +2,7 @@
 layout: post
 title: fyi, I'm letting Google track you now
 description: It's for my résumé!
-date: 2023-04-29
+date: 2023-04-29T18:33
 tags:
   - programming
 image: auto

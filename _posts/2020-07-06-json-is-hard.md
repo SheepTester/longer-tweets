@@ -2,7 +2,7 @@
 layout: post
 title: Why JSON is a hard programming language
 description: Everyone knows what JSON is, but we can all attest to it being a difficult programming language.
-date: 2020-07-06
+date: 2020-07-06T00:15
 tags:
   - programming
   - ovinus-linkedin

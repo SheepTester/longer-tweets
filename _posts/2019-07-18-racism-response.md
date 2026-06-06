@@ -2,7 +2,7 @@
 layout: post
 title: radical racism response
 description: Responding to Gamepro5's article about racism.
-date: 2019-07-18
+date: 2019-07-18T20:33
 tags:
   - politics
   - thoughts

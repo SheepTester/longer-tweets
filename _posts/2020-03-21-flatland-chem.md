@@ -2,7 +2,7 @@
 layout: post
 title: flatland chemistry
 description: What if the world were 2D?
-date: 2020-03-21
+date: 2020-03-21T19:37
 tags:
   - dimensions
   - chemistry

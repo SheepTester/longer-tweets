@@ -2,7 +2,7 @@
 layout: post
 title: Vertex buffer is not big enough on Mac only
 description: A weird bug that only occurred on Mac computers.
-date: 2024-04-18
+date: 2024-04-18T18:21
 tags:
   - programming
   - bug

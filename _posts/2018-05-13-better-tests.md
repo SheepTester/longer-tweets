@@ -2,6 +2,8 @@
 layout: post
 title: studying is cheating
 description: a different testing system
+# time unknown
+# https://github.com/SheepTester/longer-tweets/commit/250d308fc762a2d06245e92505fef40e7651983e
 date: 2018-05-13
 tags:
   - thoughts

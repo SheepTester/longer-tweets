@@ -2,7 +2,7 @@
 layout: post
 title: colourful accident
 description: When a programming mistake results in a nice-looking range of colours
-date: 2021-08-31
+date: 2021-08-31T12:40
 tags:
   - programming
   - html5

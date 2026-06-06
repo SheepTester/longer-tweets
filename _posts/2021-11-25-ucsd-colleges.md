@@ -2,7 +2,7 @@
 layout: post
 title: UCSD Colleges Ranked
 description: What's the best college?
-date: 2021-11-25
+date: 2021-11-25T19:06
 tags:
   - school
 unlisted: true

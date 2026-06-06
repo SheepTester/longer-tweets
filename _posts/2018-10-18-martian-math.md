@@ -2,7 +2,10 @@
 layout: post
 title: An Example From Martian Math
 description: Taken From A Text In Spyloctogy
-date: 2018-10-18
+# thursday
+# according to https://orbiit.github.io/gunn-web-app/schedule/ (which is based on the 2017 schedule), E period starts 8:25. i think chem H was during E period
+# this appears to have still been true at https://github.com/Orbiit/gunn-web-app/blob/e11834c1cd5afdd10eb02d7dd6d4022bf53139a4/lite/data.js and it ended at 9:50
+date: 2018-10-18T09:50
 tags:
   - school
 image: auto

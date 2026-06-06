@@ -2,7 +2,7 @@
 layout: post
 title: fancy vocabulary is bad
 description: prioritise communication
-date: 2018-06-17
+date: 2018-06-17T14:06
 tags:
   - thoughts
   - english-hate

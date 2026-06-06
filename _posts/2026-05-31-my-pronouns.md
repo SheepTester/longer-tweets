@@ -2,7 +2,9 @@
 layout: post
 title: pronouns
 description: 'he/him for Sean, they/them for SheepTester'
-tags: []
+date: 2026-05-31T17:59
+tags:
+  - self
 # list later if you want
 unlisted: true
 ---

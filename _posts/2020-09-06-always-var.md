@@ -2,7 +2,7 @@
 layout: post
 title: '3 Tips for JavaScript​: Always use var'
 description: 'Best practices for JavaScript: Always use var!'
-date: 2020-09-06
+date: 2020-09-06T14:10
 tags:
   - programming
   - ovinus-linkedin

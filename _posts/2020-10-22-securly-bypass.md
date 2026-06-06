@@ -2,7 +2,7 @@
 layout: post
 title: bypassing securly
 description: A little mistake by the student right robbers
-date: 2020-10-22
+date: 2020-10-22T19:11
 tags:
   - school
   - programming

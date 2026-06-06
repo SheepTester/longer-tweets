@@ -2,6 +2,7 @@
 layout: post
 title: these people(?) are looking for employees
 description: Sharing recruiter pitches for others who might need them.
+date: 2026-06-01T23:25
 tags:
   - ai
   - programming

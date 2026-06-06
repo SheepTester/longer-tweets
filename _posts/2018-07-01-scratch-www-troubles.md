@@ -2,7 +2,7 @@
 layout: post
 title: scratch-www troubles
 description: I tried and kind of succeeded in building Scratch WWW.
-date: 2018-07-01
+date: 2018-07-01T05:52
 tags:
   - programming
   - node

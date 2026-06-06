@@ -2,7 +2,7 @@
 layout: post
 title: Why closing HTML tags is dangerous practice
 description: Closing your HTML tags can be dangerous! Here's why.
-date: 2020-08-24
+date: 2020-08-24T18:14
 tags:
   - programming
   - ovinus-linkedin
