@@ -113,3 +113,9 @@ they want to take the fun out of video games
 ## Applied Intuition
 
 they are farming tesla employees for self driving secrets
+
+## Zip
+
+b2b saas slop that opts NOT to waste billions. victims include stripe, openai, lyft, databricks. they wish to obtain Ninety One engineers this year.
+
+guy who emailed me has his google pfp set to a screenshot from a flash photo with someones arm wrapped around his neck
