@@ -8,6 +8,8 @@
     "editor.fontFamily": "Verdana",
     "editor.rulers": []
   },
+  // Doesn't work with liquid syntax
+  "css.validate": false,
   // tomorrow night doesn't italicize/bold markdown or color `inline code`
   // differently, and for whatever reason the non official themes were made read
   // only in 2024
