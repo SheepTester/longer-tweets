@@ -35,3 +35,9 @@ My hypothesis is that while most traditional style guides prescribe spaceless em
 >  -->
 
 <!-- actually Wikipedia allows en dashes, which is interesting -->
+
+<!--
+
+use the list of style guides in the sidebar of this:
+https://en.wikipedia.org/wiki/List_of_style_guides
+ -->
