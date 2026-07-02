@@ -119,3 +119,9 @@ they are farming tesla employees for self driving secrets
 b2b saas slop that opts NOT to waste billions. victims include stripe, openai, lyft, databricks. they wish to obtain Ninety One engineers this year.
 
 guy who emailed me has his google pfp set to a screenshot from a flash photo with someones arm wrapped around his neck
+
+## Ambra
+
+three people in a trenchcoat promise to automate ambulence insurance charges. only now are they trying to find an engineer.
+
+they cannot be contacted because the sender address is not real.
