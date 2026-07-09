@@ -125,3 +125,7 @@ guy who emailed me has his google pfp set to a screenshot from a flash photo wit
 three people in a trenchcoat promise to automate ambulence insurance charges. only now are they trying to find an engineer.
 
 they cannot be contacted because the sender address is not real.
+
+## Zeki Talent Market
+
+thinks that job applicants want a project template for slop coding interviews. they have an exclusive in-group (the exclusivity makes it "private") for collecting your data.
