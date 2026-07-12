@@ -128,4 +128,4 @@ they cannot be contacted because the sender address is not real.
 
 ## Zeki Talent Market
 
-thinks that job applicants want a project template for slop coding interviews. they have an exclusive in-group (the exclusivity makes it "private") for collecting your data.
+thinks that job applicants want a project template for slop coding interviews. they have an exclusive in-group (the exclusivity makes it "private") for collecting your data. _they_ get to choose what companies you apply for.
