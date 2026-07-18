@@ -77,6 +77,11 @@ Therefore, you cannot assume that all meetings occur in the same year, much less
 
 At least they got the day of the week correct: November 9, 2009 is indeed a Monday (November 9, 2006 is a Thursday).
 
+<!-- exam wrong year:
+
+// almost always the term year, except when there's a typo, like FA06 page
+// 164, CSE 290, F00 MU, which is scheduled in 2009 -->
+
 ## Professor Error
 
 <!-- // instructor named 'Error, 243' in FA06 page 235 ERTH 40 -->
@@ -87,7 +92,18 @@ At least they got the day of the week correct: November 9, 2009 is indeed a Mond
 
 ## Section code typos
 
-As mentioned above,
+As mentioned above, section codes usually look like A00 or 001. However, I've encountered a variety of section codes that don't match this format. My guess is that these are typos, and ISIS doesn't have any validation to prevent this.
+
+[lexico]: https://en.wikipedia.org/wiki/Lexicographic_order
+
+| Screenshot                                                                                      | Section code               | Notes                                                                                                                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![IRGN 499 sections are sorted 022, 024, 025, 23](../images/ucsd-soc/23.png)                    | `23 ` (trailing space)     | [Spring 2006's IRGN 499](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP06&tabNum=tabs-crs&courses=IRGN%20499&page=3) has a trailing space in its section code. Without the leading zero, it gets [lexicographically sorted][lexico] out of order.                |
+| ![BISP 190 has a cancelled section A0 and regular section A00](../images/ucsd-soc/A0.png)       | `A0 ` (trailing space)     | They must've realized they forgot a zero in [Fall 2008's BISP 190](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA08&tabNum=tabs-crs&courses=BISP%20190), so they cancelled it and recreated the section.                                                         |
+| ![MED 296 has sections J00, K00, L00, M00, N00, OOO, POO, QOO, ROO](../images/ucsd-soc/OOO.png) | `OOO`, `POO`, `QOO`, `ROO` | Starting at O, [Fall 2008's MED 296](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA08&tabNum=tabs-crs&courses=MED%20296&page=2) started using the letter O instead of zero, resulting in a section code `POO`. This has happened several times to other courses. |
+| ![NEU 296 has sections 00?, 010, 011](../images/ucsd-soc/00q.png)                               | `00?`                      | [Spring 2019's NEU 296](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP19&tabNum=tabs-crs&courses=NEU%20296&page=2) has a cancelled `00?` section, which got placed between `009` and `010`.                                                                      |
+
+TODO
 
 // two-digit second codes are usually typos i think
 // SP06 page 274 IRGN section '23 ', which follows 022, 024, 025
@@ -108,17 +124,14 @@ As mentioned above,
 
 ## Section IDs overflowed in 2020
 
+![CSE 299 with sections 999997 (001), 999998 (002), 1 (004), 2 (005)](../images/ucsd-soc/sec1.png)
+
 Every course in the schedule of classes has a 6-digit section ID. My guess is that this originates from the course enrollment process back in the days before the internet, where the Schedule of Classes was a booklet that had to be purchased each quarter from the Bookstore.
 
-Starting around Fall 2019 into 2020,
+Starting around Fall 2019 into 2020, sections started getting section IDs with fewer than 6 digits. I initially thought this was bad data, but it turned out that the section IDs overflowed in [Winter 2020's CSE 299](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI20&tabNum=tabs-crs&courses=CSE%20299), with its [section 004 having ID 1](https://courses.ucsd.edu/coursemain.aspx?section=1). One must assume that section 003 was 999999, but they deleted it—perhaps it caused issues because the value was used as a placeholder.
 
-// oh ok that's because their section IDs overflowed
-// yeah this is section 1: https://courses.ucsd.edu/coursemain.aspx?section=1 (WI20 page 232, CSE 299)
-
-<!-- exam wrong year:
-
-// almost always the term year, except when there's a typo, like FA06 page
-// 164, CSE 290, F00 MU, which is scheduled in 2009 -->
+<!-- // oh ok that's because their section IDs overflowed
+// yeah this is section 1: https://courses.ucsd.edu/coursemain.aspx?section=1 (WI20 page 232, CSE 299) -->
 
 ## Weird course catalog links
 
@@ -129,7 +142,7 @@ In a few cases, it seems scheduling staff must've tried to hide or delete the co
 - Winter 2011's [MED 265](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI11&tabNum=tabs-crs&courses=MED%20265) links to [EXLUDE](https://catalog.ucsd.edu/courses/EXLUDE.html#med265).
 - Spring 2019's [RMAS 199](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP19&tabNum=tabs-crs&courses=RMAS%20199) links to [EXCULDE](https://catalog.ucsd.edu/courses/EXCULDE.html#rmas199).
 
-It's possible that `EXCLUDE` is indeed the correct special keyword to use to indicate no course catalog link, which makes the software hide the link on the website, and explains why only the misspellings show up on the website.
+It's possible that `EXCLUDE` is indeed the correct special keyword to use to indicate no course catalog link and make the software hide the link on the website, which could explain why only the misspellings show up on the website.
 
 Meanwhile, Summer 2010's [HIEU 106GS](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SA10&tabNum=tabs-crs&courses=HIEU%20106GS) links to [SP18](https://catalog.ucsd.edu/courses/SP18.html#hieu106gs), which looks like the term code for Spring 2018. My hypothesis is that they meant to type the term code in a different field but accidentally typed it into the catalog URL slot, but it's beyond me why anyone from 2010 would be thinking about 2018.
 
@@ -140,13 +153,13 @@ https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?select
 // WI11 page 366 is the one with EXLUDE
 https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI11&tabNum=tabs-crs&courses=MED%20265 -->
 
-# shocking
+<!-- # shocking -->
 
-exam day is inconsistent:
+## The exam day can be wrong
 
 // Can be inconsistent with date, see LIIT 1BX, WI97 page 257
 
-accidental enrollable discussion:
+## Accidentally enrollable discussion
 
 // or in between, see FA05 page 68, BIBC 102, where they seemed to have accidentally made a discussion enrollable
 
@@ -165,7 +178,7 @@ switching from 001 to A00
 // thus there are courses with both numeric and letter sections): SP00
 // page 421 PHYS 1A accidentally created an 001 then switched to A00
 
-skipping numbers:
+<!-- skipping numbers:
 
 // WI95 page 188 ECE 121B skips A50
 // WI95 page 276 HUM 4 skips A06
@@ -173,7 +186,7 @@ skipping numbers:
 A50 means nothing
 
 // SP95 page 447 PEDS 232 has A51 DI
-// WI10 page 529 TDPR 1 has A50 LE
+// WI10 page 529 TDPR 1 has A50 LE -->
 
 annoying SOMI heading:
 
@@ -199,12 +212,12 @@ mojibake:
 // 'Hyperk\"ahler manifolds' MATH 206A, FA18 page 363
 // 'Machine Learning forÿRobotics' SP22 page 204 CSE 291
 
-no instructors, not even staff:
+<!-- no instructors, not even staff:
 
 // instructors may or may not be mentioned for unenrollable sections
-// or enrollable, see PHYS 1AL, SA04 page 31
+// or enrollable, see PHYS 1AL, SA04 page 31 -->
 
-# boring
+<!-- # boring
 
 meetings are not sorted by either section id or code:
 
@@ -228,14 +241,14 @@ duplicate extra meeting:
 // whatever..
 
 // - SP13 page 100 CAT 124 has three extra meetings, though it seems to be a
-// duplicate pair
+// duplicate pair -->
 
 detached:
 
 // - WI06 page 422 PHYS 2A has two extra C00 lectures attached to.. nothing
 // ... followed by a regular unenrollable meeting
 
-extra meeting location TBA:
+<!-- extra meeting location TBA:
 
 // assume location of extra meeting will never be TBA
 // nvm they apparently can be, SA05 page 46, MGT 111.
@@ -248,4 +261,4 @@ duplicate enrollable with same section code:
 lab can be A00 or A01:
 
 // WI95 page 41 BGGN 271 has lab a00
-// WI95 page 1 AMES 5 has lab A01
+// WI95 page 1 AMES 5 has lab A01 -->
