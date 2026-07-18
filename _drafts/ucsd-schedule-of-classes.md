@@ -41,7 +41,7 @@ Just imagine what UCSD staff had to contend with the past few decades.
 [isis]: https://blink.ucsd.edu/technology/help-desk/applications/mainframe/ISIS/print.html
 [request]: https://www.reddit.com/r/UCSD/comments/qxzde2/i_got_my_ucsd_admissions_file_heres_how_you_can/
 
-[^gen-cat]: Here's the [1990–91 General Catalog](https://library.ucsd.edu/dc/object/bb8978765z); the Schedule of Classes is mentioned on PDF page 53.
+[^gen-cat]: The [1990–91 General Catalog](https://library.ucsd.edu/dc/object/bb8978765z) mentions the Schedule of Classes on PDF page 53.
 
 Anyways, at a glance, you can tell ISIS's UI makes it relatively easy for humans to make data entry errors. That's why I made my scraper's HTML parser a state machine, to see how complex course schedule data really is.
 
@@ -72,7 +72,7 @@ With that out of the way, let's get on to the quirks! Also, you might notice tha
 
 ![MU 11/09/2009 M 4:00p-4:50p EBU3B 2109; CSE 290 F00 class meetings are cancelled on two dates, 10/31/06 and 11/06/06.](../images/ucsd-soc/exam2009.png)
 
-In fall 2006, [CSE 290](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA06&tabNum=tabs-crs&courses=CSE%20290) has a make-up session scheduled three years later, in 2009.
+In Fall 2006, [CSE 290](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA06&tabNum=tabs-crs&courses=CSE%20290) has a make-up session scheduled three years later, in 2009.
 Therefore, you cannot assume that all meetings occur in the same year, much less the same term.
 
 At least they got the day of the week correct: November 9, 2009 is indeed a Monday (November 9, 2006 is a Thursday).
@@ -164,7 +164,7 @@ https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?select
 
 // Can be inconsistent with date, see LIIT 1BX, WI97 page 257
 
-# Mojibake
+## Mojibake
 
 Some courses with variable topics will include the topic as a subtitle for the course. Perhaps because they were submitted directly by professors, they probably saw less oversight, and non-ASCII characters snuck through.
 
@@ -182,6 +182,8 @@ Who knows what text encoding ISIS uses—it might not even care, and just treats
 | ![Topics in Algebraic Geometry ( 4 Units) Hyperk\\"ahler manifolds](../images/ucsd-soc/image-5.png)           | Hyperk\\"ahler manifolds (30)      | [Fall 2018's MATH 206A](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA18&tabNum=tabs-crs&courses=MATH%20206A) is probably referring to _hyperkähler_ manifolds. That said, instead of mojibake, I wonder if the `\"a` sequence was intentionally written because the professor couldn't type the umlaut properly. |
 | ![Top/Computer Sci & Engineering ( 1 -4 Units) Machine Learning forÿRobotics](../images/ucsd-soc/image-6.png) | Machine Learning forÿRobotics (30) | [Spring 2022's CSE 291](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP22&tabNum=tabs-crs&courses=CSE%20291)                                                                                                                                                                                                       |
 
+### How?
+
 I wonder what text encoding caused this to happen. ISIS likely uses fixed-length strings, which is why you'll often see course names crushed to fit a character limit, and in code, the server often right-pads strings with spaces. In the HTML, the topics are right-padded to exactly 30 characters long[^entity]. When looking at the raw bytes served from the server, the non-ASCII characters are rendered in _UTF-8_. For example, the Û in _MoliÛre_ was encoded as two bytes. This means that the mojibake occurred upstream on the server side, rather than being a decoding issue in the browser.
 
 Because all topics have the same length of 30 characters, consistent with normal, pure ASCII topics, my hypothesis is that the topics were encoded and stored in ISIS with one text encoding, and read and decoded as another text encoding. The storage encoding could not have been UTF-8 because the non-ASCII character would've taken multiple bytes, and we would've seen the total length be less than 30 characters. The decoder could not have used UTF-8 either because the non-ASCII character should've been decoded as the [replacement character � (U+FFFD)][replacement], or merged with the following character and brought the total length down. Both text encodings thus likely have fixed length encoding and have incompatible extended ASCII sets. Then, the string was encoded as UTF-8, perhaps by the HTTP server, and served to me.
@@ -198,7 +200,7 @@ So what pair of encodings could map è to Û? Gemini Flash kept hallucinating an
 
 [replacement]: https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character
 
-[^entity]: The quotation mark in _Hyperk\\"ahler manifolds_ was escaped as {:.language-html}`&#034;`. Resolving it makes the length 30 characters.
+[^entity]: The quotation mark in _Hyperk\\"ahler manifolds_ was escaped as `&#034;`{:.language-html}, but resolving it makes the length 30 characters.
 
 <!-- // 'What=Algebra, What=Analysis' SP09 page 340 MATH 87
 // 'MoliÛre et les conflits' WI11 page 318 LTFR 122
@@ -217,9 +219,11 @@ So what pair of encodings could map è to Û? Gemini Flash kept hallucinating an
 // 'Hyperk\"ahler manifolds' MATH 206A, FA18 page 363
 // 'Machine Learning forÿRobotics' SP22 page 204 CSE 291 -->
 
-Honorable mention: [Fall 2012's ERC 87](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA12&tabNum=tabs-crs&courses=ERC%2087), which puts the fee for the course in the topic name.
+### Honorable mention
 
 ![Freshman Seminar ( 1 Units) God,Satan,& the Desert *$95fee; This course includes a weekend overnight trip to the desert (a $95 fee is required). The dates of the Anza-Borrego Freshmen Seminar trips will be: Saturday, October 20 or Saturday Oct. 27.](../images/ucsd-soc/image-7.png)
+
+[Fall 2012's ERC 87](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA12&tabNum=tabs-crs&courses=ERC%2087) puts the fee for the course in the topic name, which is pretty unusual.
 
 ## Accidentally enrollable discussion
 
