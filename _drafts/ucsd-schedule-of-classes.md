@@ -98,14 +98,19 @@ As mentioned above, section codes usually look like A00 or 001. However, I've en
 
 | Screenshot                                                                                      | Section code               | Notes                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![IRGN 499 sections are sorted 022, 024, 025, 23](../images/ucsd-soc/23.png)                    | `23 ` (trailing space)     | [Spring 2006's IRGN 499](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP06&tabNum=tabs-crs&courses=IRGN%20499&page=3) has a trailing space in its section code. Without the leading zero, it gets [lexicographically sorted][lexico] out of order.                |
-| ![BISP 190 has a cancelled section A0 and regular section A00](../images/ucsd-soc/A0.png)       | `A0 ` (trailing space)     | They must've realized they forgot a zero in [Fall 2008's BISP 190](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA08&tabNum=tabs-crs&courses=BISP%20190), so they cancelled it and recreated the section.                                                         |
+| ![IRGN 499 sections are sorted 022, 024, 025, 23](../images/ucsd-soc/23.png)                    | `23` (trailing space)      | [Spring 2006's IRGN 499](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP06&tabNum=tabs-crs&courses=IRGN%20499&page=3) has a trailing space in its section code. Without the leading zero, it gets [lexicographically sorted][lexico] out of order.                |
+| ![BISP 190 has a cancelled section A0 and regular section A00](../images/ucsd-soc/A0.png)       | `A0` (trailing space)      | They must've realized they forgot a zero in [Fall 2008's BISP 190](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA08&tabNum=tabs-crs&courses=BISP%20190), so they cancelled it and recreated the section.                                                         |
 | ![MED 296 has sections J00, K00, L00, M00, N00, OOO, POO, QOO, ROO](../images/ucsd-soc/OOO.png) | `OOO`, `POO`, `QOO`, `ROO` | Starting at O, [Fall 2008's MED 296](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA08&tabNum=tabs-crs&courses=MED%20296&page=2) started using the letter O instead of zero, resulting in a section code `POO`. This has happened several times to other courses. |
 | ![NEU 296 has sections 00?, 010, 011](../images/ucsd-soc/00q.png)                               | `00?`                      | [Spring 2019's NEU 296](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP19&tabNum=tabs-crs&courses=NEU%20296&page=2) has a cancelled `00?` section, which got placed between `009` and `010`.                                                                      |
+| ![Sections 10, 001, 002, 003](../images/ucsd-soc/image-8.png)                                   | `10` (leading space)       | The leading space in [Fall 2014's NANO 299](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA14&tabNum=tabs-crs&courses=NANO%20299)'s section 10 sorts it before all other section codes.                                                                           |
+| ![Sections 001, 002, A00, 6, 7, 001, 002, 003, 004, 005, A01](../images/ucsd-soc/image-9.png)   | `6`, `7` (leading space)   | [Summer 2001's PSYC 199](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SA01&tabNum=tabs-crs&courses=PSYC%20199) is, generally speaking, quite an oddball, but it also has sections 6 and 7 with two leading spaces.                                                |
+| ![Section AA0, time and location TBA](../images/ucsd-soc/image-10.png)                          | `AA0`                      | [Winter 2002's ANPR 195](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI02&tabNum=tabs-crs&courses=ANPR%20195) did not cancel its AA0 section, but also didn't make it enrollable.                                                                                |
+| ![Sections 035, 036, 037, 038, 039, 040, A00 (cancelled), AAA](../images/ucsd-soc/image-11.png) | `AAA`                      | [Spring 2002's BGGN 271](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP02&tabNum=tabs-crs&courses=BGGN%20271) must've tried to switch from letter to number sections but in doing so accidentally created a screaming section code.                              |
+| ![Section XXX, time and location TBA](../images/ucsd-soc/image-12.png)                          | `XXX`                      | [Spring 2002's COGS 190C](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP02&tabNum=tabs-crs&courses=COGS%20190C), like `AA0` above, was not cancelled, but also remained indefinitely unenrollable.                                                               |
+| ![DSC 500 and 599 each have sections 0AC (cancelled) and A00](../images/ucsd-soc/image-13.png)  | `0AC`                      | [Spring 2020's DSC 500 and 599](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP20&tabNum=tabs-crs&courses=DSC%20500,%20DSC%20599) accidentally created an `0AC` section, cancelled it, and replaced it with `A00`, _twice_.                                       |
+| ![Sections :00 (cancelled), A00, B00](../images/ucsd-soc/image-14.png)                          | `:00`                      | [Winter 2025's COGS 190B](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI25&tabNum=tabs-crs&courses=COGS%20190B) has an accidental, cancelled `:00` section code that put it listed above all the normal sections.                                                |
 
-TODO
-
-// two-digit second codes are usually typos i think
+<!-- // two-digit second codes are usually typos i think
 // SP06 page 274 IRGN section '23 ', which follows 022, 024, 025
 // or FA08 page 65 BISP 190 cancelled section 'A0 '
 // FA08 page 332 MAE 299 '50 ' (it is a bit more frequent than once in a blue moon)
@@ -120,7 +125,7 @@ TODO
 // SP02 page 31 BGGN 271 has 'AAA'
 // SP02 page 115 COGS 190C has 'XXX'
 // SP20 page 228 DSC 500 and 599 have '0AC'
-// WI25 page 182 COGS 190B has :00 (cancelled)
+// WI25 page 182 COGS 190B has :00 (cancelled) -->
 
 ## Section IDs overflowed in 2020
 
@@ -128,7 +133,7 @@ TODO
 
 Every course in the schedule of classes has a 6-digit section ID. My guess is that this originates from the course enrollment process back in the days before the internet, where the Schedule of Classes was a booklet that had to be purchased each quarter from the Bookstore.
 
-Starting around Fall 2019 into 2020, sections started getting section IDs with fewer than 6 digits. I initially thought this was bad data, but it turned out that the section IDs overflowed in [Winter 2020's CSE 299](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI20&tabNum=tabs-crs&courses=CSE%20299), with its [section 004 having ID 1](https://courses.ucsd.edu/coursemain.aspx?section=1). One must assume that section 003 was 999999, but they deleted it—perhaps it caused issues because the value was used as a placeholder.
+Starting around Fall 2019 into 2020, sections started getting section IDs with fewer than 6 digits. I initially thought this was bad data, but it turned out that the section IDs overflowed in [Winter 2020's CSE 299](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI20&tabNum=tabs-crs&courses=CSE%20299), with its [section 004 having ID 1](https://courses.ucsd.edu/coursemain.aspx?section=1). One must assume that section 003 was 999999, but they deleted it—perhaps it caused issues because the value had traditionally been used as a placeholder.
 
 <!-- // oh ok that's because their section IDs overflowed
 // yeah this is section 1: https://courses.ucsd.edu/coursemain.aspx?section=1 (WI20 page 232, CSE 299) -->
@@ -159,20 +164,77 @@ https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?select
 
 // Can be inconsistent with date, see LIIT 1BX, WI97 page 257
 
+# Mojibake
+
+Some courses with variable topics will include the topic as a subtitle for the course. Perhaps because they were submitted directly by professors, they probably saw less oversight, and non-ASCII characters snuck through.
+
+Who knows what text encoding ISIS uses—it might not even care, and just treats them all as C strings—but while the Schedule of Classes claims, through its HTTP headers, that it's serving UTF-8, the non-ASCII characters have ended up as [mojibake].
+
+[mojibake]: https://en.wikipedia.org/wiki/Mojibake
+
+| Screenshot                                                                                                    | Title (padded length)              | Notes                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![Seventeenth Century French Lit ( 4 Units) MoliÛre et les conflits](../images/ucsd-soc/image.png)            | MoliÛre et les conflits (30)       | [Winter 2011's LTFR 122](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI11&tabNum=tabs-crs&courses=LTFR%20122) probably meant _Molière_.                                                                                                                                                                           |
+| ![Spanish Writing after 1939 ( 4 Units) El cine de Pedro Almodìvar ](../images/ucsd-soc/image-1.png)          | El cine de Pedro Almodìvar (30)    | There is no Pedro "Almodìvar," so [Winter 2011's LISP 129](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI11&tabNum=tabs-crs&courses=LTSP%20129) probably meant Pedro _Almodóvar_.                                                                                                                                 |
+| ![Latin American Poetry ( 4 Units) Poes¥a reciente ](../images/ucsd-soc/image-2.png)                          | Poes¥a reciente (30)               | [Winter 2011's LISP 141](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI11&tabNum=tabs-crs&courses=LTSP%20141) probably meant _poesía reciente_.                                                                                                                                                                   |
+| ![Themes/Intellect&Literary Hist (4 Units) Du Moyen-Age ë 1789 ](../images/ucsd-soc/image-3.png)              | Du Moyen-Age ë 1789 (30)           | The topic for [Fall 2012's LTFR 115](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA12&tabNum=tabs-crs&courses=LTFR%20115) potentially had _à_ instead of ë.                                                                                                                                                       |
+| ![Topics/Literatures in French ( 4 Units) La Litt©rature fantastique](../images/ucsd-soc/image-4.png)         | La Litt©rature fantastique (30)    | The _é_ in _Littérature_ got replaced with the copyright symbol in [Winter 2013's LTFR 141](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI13&tabNum=tabs-crs&courses=LTFR%20141).                                                                                                                                 |
+| ![Topics in Algebraic Geometry ( 4 Units) Hyperk\\"ahler manifolds](../images/ucsd-soc/image-5.png)           | Hyperk\\"ahler manifolds (30)      | [Fall 2018's MATH 206A](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA18&tabNum=tabs-crs&courses=MATH%20206A) is probably referring to _hyperkähler_ manifolds. That said, instead of mojibake, I wonder if the `\"a` sequence was intentionally written because the professor couldn't type the umlaut properly. |
+| ![Top/Computer Sci & Engineering ( 1 -4 Units) Machine Learning forÿRobotics](../images/ucsd-soc/image-6.png) | Machine Learning forÿRobotics (30) | [Spring 2022's CSE 291](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP22&tabNum=tabs-crs&courses=CSE%20291)                                                                                                                                                                                                       |
+
+I wonder what text encoding caused this to happen. ISIS likely uses fixed-length strings, which is why you'll often see course names crushed to fit a character limit, and in code, the server often right-pads strings with spaces. In the HTML, the topics are right-padded to exactly 30 characters long[^entity]. When looking at the raw bytes served from the server, the non-ASCII characters are rendered in _UTF-8_. For example, the Û in _MoliÛre_ was encoded as two bytes. This means that the mojibake occurred upstream on the server side, rather than being a decoding issue in the browser.
+
+Because all topics have the same length of 30 characters, consistent with normal, pure ASCII topics, my hypothesis is that the topics were encoded and stored in ISIS with one text encoding, and read and decoded as another text encoding. The storage encoding could not have been UTF-8 because the non-ASCII character would've taken multiple bytes, and we would've seen the total length be less than 30 characters. The decoder could not have used UTF-8 either because the non-ASCII character should've been decoded as the [replacement character � (U+FFFD)][replacement], or merged with the following character and brought the total length down. Both text encodings thus likely have fixed length encoding and have incompatible extended ASCII sets. Then, the string was encoded as UTF-8, perhaps by the HTTP server, and served to me.
+
+So what pair of encodings could map è to Û? Gemini Flash kept hallucinating answers, so if you can figure it out, please leave a comment below. Alternatively, it's possible that UCSD created their own character encoding set for ISIS, but either the producer or consumer were unaware of it.
+
+| Likely original | Substitution |
+| --------------- | ------------ |
+| è               | Û            |
+| ó               | ì            |
+| í               | ¥            |
+| à               | ë            |
+| é               | ©            |
+
+[replacement]: https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character
+
+[^entity]: The quotation mark in _Hyperk\\"ahler manifolds_ was escaped as {:.language-html}`&#034;`. Resolving it makes the length 30 characters.
+
+<!-- // 'What=Algebra, What=Analysis' SP09 page 340 MATH 87
+// 'MoliÛre et les conflits' WI11 page 318 LTFR 122
+// - pretty sure this is mojibake. but looking at the untrimmed HTML, the
+// full string is still 30 chars even with the mojibake. so ig they're
+// stored as 30 bytes not chars, which makes sense
+// - because they send their HTML with 'Content-Type: text/html;charset=UTF-8'
+// 'El cine de Pedro Almodìvar' WI11 page 322 LTSP 129
+// - should be Almodóvar
+// 'Poes¥a reciente' WI11 page 322 LTSP 141
+// '_LA_' SP11 page 322 LTSP 174
+// 'God,Satan,& the Desert *$95fee' FA12 page 238 ERC 87
+// - yes they put the dollar fee into the topic. it is for an anza borrego trip
+// 'Du Moyen-Age ë 1789' FA12 page 316 LTFR 115
+// 'La Litt©rature fantastique' WI13 page 317 LTFR 141
+// 'Hyperk\"ahler manifolds' MATH 206A, FA18 page 363
+// 'Machine Learning forÿRobotics' SP22 page 204 CSE 291 -->
+
+Honorable mention: [Fall 2012's ERC 87](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA12&tabNum=tabs-crs&courses=ERC%2087), which puts the fee for the course in the topic name.
+
+![Freshman Seminar ( 1 Units) God,Satan,& the Desert *$95fee; This course includes a weekend overnight trip to the desert (a $95 fee is required). The dates of the Anza-Borrego Freshmen Seminar trips will be: Saturday, October 20 or Saturday Oct. 27.](../images/ucsd-soc/image-7.png)
+
 ## Accidentally enrollable discussion
 
 // or in between, see FA05 page 68, BIBC 102, where they seemed to have accidentally made a discussion enrollable
 
-incomplete conversion:
+<!-- incomplete conversion:
 
 // there must be at least one enrollable
 // nvm, see CSE 12, SA04 page 8. they converted CSE 12 from a DI-based A01
 // to LE-based A02, resulting in a crazy situation:
 // - 12: LE A00 (enrollable)
 // - 12: DI A01
-// LA A50 (cancelleed)
+// LA A50 (cancelleed) -->
 
-switching from 001 to A00
+## Changing to letters
 
 // there may be a numeric course where it has no enrollable meetings (and
 // thus there are courses with both numeric and letter sections): SP00
@@ -188,29 +250,12 @@ A50 means nothing
 // SP95 page 447 PEDS 232 has A51 DI
 // WI10 page 529 TDPR 1 has A50 LE -->
 
-annoying SOMI heading:
+## Department with no subject
+
+<!-- comment about how this required overhauling parsing -->
 
 // new department with no repeated subject header seems to only happen
 // with 'Sch of Med Interdisciplinary Crses', e.g. FA07 page 518
-
-mojibake:
-
-// 'What=Algebra, What=Analysis' SP09 page 340 MATH 87
-// 'MoliÛre et les conflits' WI11 page 318 LTFR 122
-// - pretty sure this is mojibake. but looking at the untrimmed HTML, the
-// full string is still 30 chars even with the mojibake. so ig they're
-// stored as 30 bytes not chars, which makes sense
-// - because they send their HTML with 'Content-Type: text/html;charset=UTF-8'
-// 'El cine de Pedro Almodìvar' WI11 page 322 LTSP 129
-// - should be Almodóvar
-// 'Poes¥a reciente' WI11 page 322 LTSP 141
-// '_LA_' SP11 page 322 LTSP 174
-// 'God,Satan,& the Desert *$95fee' FA12 page 238 ERC 87
-// - yes they put the dollar fee into the topic. it is for an anza borrego trip
-// 'Du Moyen-Age ë 1789' FA12 page 316 LTFR 115
-// 'La Litt©rature fantastique' WI13 page 317 LTFR 141
-// 'Hyperk\"ahler manifolds' MATH 206A, FA18 page 363
-// 'Machine Learning forÿRobotics' SP22 page 204 CSE 291
 
 <!-- no instructors, not even staff:
 
@@ -243,7 +288,9 @@ duplicate extra meeting:
 // - SP13 page 100 CAT 124 has three extra meetings, though it seems to be a
 // duplicate pair -->
 
-detached:
+## Detached meetings
+
+<!-- comment about what extra meeting times are -->
 
 // - WI06 page 422 PHYS 2A has two extra C00 lectures attached to.. nothing
 // ... followed by a regular unenrollable meeting
