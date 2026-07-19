@@ -3,7 +3,9 @@ layout: post
 # learnings from the hells of ucsd schedule of classes
 title: TODO
 description: ''
+date: 2026-07-18T18:00
 tags: []
+# image: auto
 ---
 
 <!--
