@@ -28,7 +28,7 @@ What's the scraped data going to be used for? I'm not sure. I'm thinking of maki
 [classrooms]: https://sheeptester.github.io/ucsd-classrooms/
 [bad-sis]: https://esr.ucsd.edu/news/posts/sis-replacing-isis-jun-23.html
 
-[^ts]: And this is with TypeScript 7—the one they rewrote in Go! It was more than 2x slower with TypeScript 6.
+[^ts]: And this is with TypeScript 7—the one they rewrote in Go! It was [more than 2x slower](https://twitter.com/Sheep_tester/status/2075042265777746299) with TypeScript 6.
 
 A few decades ago, Schedule of Classes started out as a physical booklet that you'd have to buy from the bookstore each quarter—at least from what I can gather from the [General Catalog][gen-cat][^gen-cat]—and the first and only enrollment pass was done over the phone. [This 1991 _UCSD Guardian_ archive][guardian] mentions that the system is called "T-REG," which like WebReg was plagued with busy lines as students hunted for open sections with the phone menu. The booklets themselves allegedly contain more information about the old enrollment process, but it seems the UCSD Library hasn't publicly archived them.
 
@@ -379,9 +379,11 @@ lab can be A00 or A01:
 // WI95 page 41 BGGN 271 has lab a00
 // WI95 page 1 AMES 5 has lab A01 -->
 
-<!--
 ## Conclusion
 
+I'm only including this section to let you know that this article is finished, I have nothing else to say, and this wasn't accidentally cut off or anything.
+
+<!--
 I have no conclusion, but I might as well bring up some extremes for class times:
 
 https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA03&tabNum=tabs-crs&courses=ICAM%20130
