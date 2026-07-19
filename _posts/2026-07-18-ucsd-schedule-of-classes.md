@@ -9,7 +9,7 @@ tags:
   - ucsd
   - school
   - html5
-# image: auto
+image: auto
 ---
 
 <!-- notes:
