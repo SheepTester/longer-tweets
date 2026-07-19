@@ -12,15 +12,6 @@ tags:
 # image: auto
 ---
 
-<!--
-
-todo: find
-- other exam times with wrong day
-- max section letter and number
-- variety of hours and minutes for start/end meeting and exam
-- minmax section ID around 200k
- -->
-
 <!-- notes:
 
 - many examples from 2005 because that's year when i started testing my scraper and finding issues
@@ -79,10 +70,9 @@ Subjects have courses, like CSE 11 and CSE 12. Courses have meetings, which can 
 
 But there's also an intermediate structure between courses and meetings. I'm not really sure if there are names for this. "Section" seems to be an ambiguous term; I've heard it refer to a particular meeting (e.g. "discussion section"), or a group of students with the same professor (e.g. "section A00").
 
-In the CSE 11 example, you can see that meetings are grouped by letter. Within each letter, students can enroll in a discussion section (e.g. A01 to A04), and they only need to attend that discussion. This is also the group of students they see the grade distribution for in Academic History after the quarter ends. All students enrolled under the same letter attend the lecture for that letter (e.g. A01 students attend lecture A00), and they share the same exam times. The letters can go up to Q00.
-<!-- TODO: How far can this go? -->
+In the CSE 11 example, you can see that meetings are grouped by letter. Within each letter, students can enroll in a discussion section (e.g. A01 to A04), and they only need to attend that discussion. This is also the group of students they see the grade distribution for in Academic History after the quarter ends. All students enrolled under the same letter attend the lecture for that letter (e.g. A01 students attend lecture A00), and they share the same exam times. The letters can go up to [Z00](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI95&tabNum=tabs-crs&courses=LTEN199&page=3).
 
-Some courses (like seminars) instead use numbers, like 001, 002, and so on. These courses are usually just one meeting, and all students enrolled under that number attend it. I'm guessing this format is for courses that're expected to have many seminars: the numbers can go up to 200.
+Some courses (like seminars) instead use numbers, like 001, 002, and so on. These courses are usually just one meeting, and all students enrolled under that number attend it. I'm guessing this format is for courses that're expected to have many seminars: the numbers can go up to [379](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI20&tabNum=tabs-crs&courses=BGRD%20200&page=11).
 
 With that out of the way, let's get on to the quirks! Also, you might notice that many examples come from 2004–2006. That's because I started running my parser from Summer 2004 to fix issues as they came up, so the first instances of any quirks I found came from then.
 
@@ -171,6 +161,8 @@ Starting around Fall 2019 into 2020, sections started getting IDs with fewer tha
 The overflow was mentioned in Angie Gozum's [post advocating for the replacement of ISIS][bad-sis]:
 
 > As a basic example, the system is running out of numerals to create section identification numbers (section IDs). The system simply was not conceived to be running this long, and therefore the creators did not account for more than a million section IDs. Imagine what would happen if we did reach a point where we could not create any new section IDs. The university would not be able to function effectively because section IDs are at the center of many necessary operations, such as creating a class, course enrollments, student payments, faculty assignments, and more.
+
+Interestingly, by 2026, section IDs have already reached [281474](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SA26&tabNum=tabs-crs&courses=BISP%20199&page=8), even though Winter 1995 started with section ID [210365](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI95&tabNum=tabs-crs&courses=AIP%20197). My scraper did not detect any duplicate section IDs, so I wonder if they're carefully reusing IDs from previously deleted sections, or if they started deleting old sections to reclaim their IDs.
 
 ## Weird course catalog links
 
@@ -386,3 +378,48 @@ lab can be A00 or A01:
 
 // WI95 page 41 BGGN 271 has lab a00
 // WI95 page 1 AMES 5 has lab A01 -->
+
+<!--
+## Conclusion
+
+I have no conclusion, but I might as well bring up some extremes for class times:
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA03&tabNum=tabs-crs&courses=ICAM%20130
+starts at 12 am, ends 3 pm (probably typo). also 12 am is rendered 0a
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SA97&tabNum=tabs-crs&courses=VIS%20107A
+3am, definitely typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP05&tabNum=tabs-crs&courses=HIGR%20240
+4am, typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA25&tabNum=tabs-crs&courses=TDPR%206
+2am, also typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA13&tabNum=tabs-crs&courses=TMC%20198
+starts 11 pm, consistent
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA16&tabNum=tabs-crs&courses=MGT%20401
+:16, typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI99&tabNum=tabs-crs&courses=SIO%20239
+:24, unsure if typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SA22&tabNum=tabs-crs&courses=CSS%20202S
+:44, typo?
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI19&tabNum=tabs-crs&courses=BENG%20140A
+:22, probably typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI97&tabNum=tabs-crs&courses=HIUS%20149
+11 pm problem session, only instance of this
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP17&tabNum=tabs-crs&courses=EDS%20288B
+6 am OT, unlikely to be typo
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA20&tabNum=tabs-crs&courses=MGT%20167
+:39 to :29
+
+https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA25&tabNum=tabs-crs&courses=DDPM%20200
+normal class ends :55
+ -->
