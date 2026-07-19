@@ -1,10 +1,14 @@
 ---
 layout: post
 # learnings from the hells of ucsd schedule of classes
-title: TODO
-description: ''
+title: horrors from the depths of ucsd schedule of classes
+description: Weird quirks I found in UCSD's course schedule database from 1995.
 date: 2026-07-18T18:00
-tags: []
+tags:
+  - programming
+  - ucsd
+  - school
+  - html5
 # image: auto
 ---
 
@@ -14,6 +18,7 @@ todo: find
 - other exam times with wrong day
 - max section letter and number
 - variety of hours and minutes for start/end meeting and exam
+- minmax section ID around 200k
  -->
 
 <!-- notes:
@@ -30,16 +35,17 @@ What's the scraped data going to be used for? I'm not sure. I'm thinking of maki
 [tss]: https://blink.ucsd.edu/instructors/resources/tss/index.html
 [dfa]: https://en.wikipedia.org/wiki/Deterministic_finite_automaton
 [classrooms]: https://sheeptester.github.io/ucsd-classrooms/
+[bad-sis]: https://esr.ucsd.edu/news/posts/sis-replacing-isis-jun-23.html
 
 [^ts]: And this is with TypeScript 7—the one they rewrote in Go! It was more than 2x slower with TypeScript 6.
 
 A few decades ago, Schedule of Classes started out as a physical booklet that you'd have to buy from the bookstore each quarter—at least from what I can gather from the [General Catalog][gen-cat][^gen-cat]—and the first and only enrollment pass was done over the phone. [This 1991 _UCSD Guardian_ archive][guardian] mentions that the system is called "T-REG," which like WebReg was plagued with busy lines as students hunted for open sections with the phone menu. The booklets themselves allegedly contain more information about the old enrollment process, but it seems the UCSD Library hasn't publicly archived them.
 
-Interestingly, based on the _Guardian_ article, ISIS already existed in 1991. [ISIS] is the student database mainframe that is still in use today, at least until it gets replaced by TSS. It stores practically everything: course schedules and enrollment, grades, admissions. Its name is probably part of the reason why UCSD wanted to get rid of it.
+Interestingly, the 1991 _Guardian_ article mentions ISIS. [ISIS] is the student database mainframe that is still in use today, at least until it gets replaced by TSS. It stores practically everything: course schedules and enrollment, grades, admissions. Its name is probably part of the reason why UCSD wanted to get rid of it, but it's also [almost 40 years old][bad-sis].
 
 [isis]: https://blink.ucsd.edu/technology/help-desk/applications/mainframe/ISIS/index.html
 
-But ISIS has a pretty cool-looking retro interface. Here's a screenshot from [UCSD's staff pages][isis-print]:
+Owing to its age, ISIS has a pretty cool-looking retro interface. Here's a screenshot from [UCSD's staff pages][isis-print]:
 
 ![A terminal-looking interface with bright cyan and green text on a black background. Arrows point at various lines on the screen.](../images/ucsd-soc/isis.gif)
 
@@ -157,8 +163,14 @@ Every course in the schedule of classes has a 6-digit section ID. My guess is th
 
 Starting around Fall 2019 into 2020, sections started getting IDs with fewer than 6 digits. I initially thought this was malformed data entry, but it turned out that the section IDs overflowed in [Winter 2020's CSE 299](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI20&tabNum=tabs-crs&courses=CSE%20299), with its [section 004 having ID 1](https://courses.ucsd.edu/coursemain.aspx?section=1). One must assume that section 003 was 999999, but they deleted it. Perhaps `999999` had traditionally been used and treated as a placeholder, so a real section with ID 999999 caused issues.
 
+<!-- TODO: mention 200k -->
+
 <!-- // oh ok that's because their section IDs overflowed
 // yeah this is section 1: https://courses.ucsd.edu/coursemain.aspx?section=1 (WI20 page 232, CSE 299) -->
+
+The overflow was mentioned in Angie Gozum's [post advocating for the replacement of ISIS][bad-sis]:
+
+> As a basic example, the system is running out of numerals to create section identification numbers (section IDs). The system simply was not conceived to be running this long, and therefore the creators did not account for more than a million section IDs. Imagine what would happen if we did reach a point where we could not create any new section IDs. The university would not be able to function effectively because section IDs are at the center of many necessary operations, such as creating a class, course enrollments, student payments, faculty assignments, and more.
 
 ## Weird course catalog links
 
@@ -249,7 +261,13 @@ So what pair of encodings could map è to Û? Gemini Flash kept hallucinating an
 
 ## Accidentally enrollable discussion
 
-// or in between, see FA05 page 68, BIBC 102, where they seemed to have accidentally made a discussion enrollable
+<!-- // or in between, see FA05 page 68, BIBC 102, where they seemed to have accidentally made a discussion enrollable -->
+
+![BIBC 102: 536086 LE A00 TuTh 12:30p-1:50p PETER 108 Hampton, Randolph Y. FULL Waitlist(0) Limit: 400; unenrollable discussions A01–A10; 536097 DI A11 F 1:00p-1:50p HSS 2150 Available seats: 30 Limit: 30](../images/ucsd-soc/bibc102.png)
+
+In Fall 2005, [BIBC 102](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA05&tabNum=tabs-crs&courses=BIBC%20102) seems to have accidentally made a discussion enrollable, but interestingly, no one dared enroll in the discussion, even though the class filled up.
+
+Typically, for these types of classes, UCSD has students select a discussion to enroll in. One possible reason for this is so that one popular discussion time doesn't overflow with students and violate fire code. Instead, as presented, this schedule implies that all 400 students are required to attend all 10 discussions every week, in addition to the lecture.
 
 <!-- incomplete conversion:
 
@@ -260,11 +278,13 @@ So what pair of encodings could map è to Û? Gemini Flash kept hallucinating an
 // - 12: DI A01
 // LA A50 (cancelleed) -->
 
-## Changing to letters
+<!-- ## Changing to letters
 
-// there may be a numeric course where it has no enrollable meetings (and
+For the spring of 2000, [PHYS 1A](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=SP00&tabNum=tabs-crs&courses=PHYS%201A) -->
+
+<!-- // there may be a numeric course where it has no enrollable meetings (and
 // thus there are courses with both numeric and letter sections): SP00
-// page 421 PHYS 1A accidentally created an 001 then switched to A00
+// page 421 PHYS 1A accidentally created an 001 then switched to A00 -->
 
 <!-- skipping numbers:
 
@@ -280,8 +300,28 @@ A50 means nothing
 
 <!-- comment about how this required overhauling parsing -->
 
-// new department with no repeated subject header seems to only happen
-// with 'Sch of Med Interdisciplinary Crses', e.g. FA07 page 518
+This probably is not interesting to you, but it was particularly annoying to me. I had assumed that there was a hierarchy of
+
+- Departments
+  - Subjects
+    - Courses
+
+But then this "[Sch of Med Interdisciplinary Crses](page518)" kept showing up across quarters, throwing a wrench in my state machine.
+
+![Headings: School of Medicine; School of Medicine Core Crses (SOMC ); Sch of Med Interdisciplinary (SOMI ); Sch of Med Interdisciplinary Crses](../images/ucsd-soc/somi.png)
+
+You can distinguish between a department heading, like "School of Medicine," and a subject heading, like "School of Medicine Core Crses," based on whether it has the subject code in parentheses at the end, and whether it has the generation date "As of" below the heading—only subjects have these.
+
+Because a department contains one or more subjects, I assumed a department heading is always followed by a subject heading.
+
+"Sch of Med Interdisciplinary Crses" above appears to be the sole exception. Rather, it shows that the following courses (221, 225, and so on) have the same subject (SOMI) as before the department heading (i.e. same subject as SOMI 420U), but the courses are under a different department (i.e., they're under the School of Medicine Interdisciplinary Courses department rather than the School of Medicine—at least, that's how it seems to be portrayed).
+
+I ultimately changed my data structure from a department-subject-course hierarchy to a flattened list of courses and "commands," where the department/subject headings set a current department/subject value to assign to subsequent courses.
+
+<!-- // new department with no repeated subject header seems to only happen
+// with 'Sch of Med Interdisciplinary Crses', e.g. FA07 page 518 -->
+
+[page518]: https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=FA07&tabNum=tabs-dept&selectedDepartments=AIP+&selectedDepartments=ANES&selectedDepartments=ANTH&selectedDepartments=AUDL&selectedDepartments=BENG&selectedDepartments=BIOL&selectedDepartments=BIOM&selectedDepartments=CMM+&selectedDepartments=CHEM&selectedDepartments=CHIN&selectedDepartments=CLAS&selectedDepartments=CLPH&selectedDepartments=CLIN&selectedDepartments=COGS&selectedDepartments=COMM&selectedDepartments=CSE+&selectedDepartments=CGS+&selectedDepartments=CAT+&selectedDepartments=DOC+&selectedDepartments=ERTH&selectedDepartments=ECON&selectedDepartments=EDS+&selectedDepartments=ECE+&selectedDepartments=ESYS&selectedDepartments=ETHN&selectedDepartments=FPM+&selectedDepartments=HIST&selectedDepartments=HDP+&selectedDepartments=HUM+&selectedDepartments=INTD&selectedDepartments=IRPS&selectedDepartments=JAPN&selectedDepartments=JUDA&selectedDepartments=LATI&selectedDepartments=LING&selectedDepartments=LIT+&selectedDepartments=MAS+&selectedDepartments=MATS&selectedDepartments=MSED&selectedDepartments=MATH&selectedDepartments=MAE+&selectedDepartments=MED+&selectedDepartments=MCWP&selectedDepartments=MUS+&selectedDepartments=NEU+&selectedDepartments=OPTH&selectedDepartments=ORTH&selectedDepartments=PATH&selectedDepartments=PEDS&selectedDepartments=PHAR&selectedDepartments=PHIL&selectedDepartments=PHYS&selectedDepartments=POLI&selectedDepartments=PSY+&selectedDepartments=PSYC&selectedDepartments=RAD+&selectedDepartments=RSM+&selectedDepartments=RELI&selectedDepartments=RMED&selectedDepartments=SDCC&selectedDepartments=SOMI&selectedDepartments=SOE+&selectedDepartments=SOMC&selectedDepartments=STPA&selectedDepartments=SIO+&selectedDepartments=SOC+&selectedDepartments=SE++&selectedDepartments=SURG&selectedDepartments=THEA&selectedDepartments=TWS+&selectedDepartments=USP+&selectedDepartments=VIS+&selectedDepartments=WCWP&page=518
 
 <!-- no instructors, not even staff:
 
@@ -316,10 +356,21 @@ duplicate extra meeting:
 
 ## Detached meetings
 
+In some cases, a meeting can have additional meeting times under the same section code. This feature is often used by lower-division physics classes, where there could be lectures Monday, Wednesday, Friday, but the same lecture would have an additional meeting time one evening per week for a weekly or biweekly quiz.
+
+![PHYS 2A: enrollable lecture B00 taught by Sharma, Vivek A., additional time for lecture B00, discussion B01, followed by problem sessions; additional time for lecture C00, additional time for lecture C00, discussion C01, problem session taught by Sharma, Vivek A., followed by more problem sessions](../images/ucsd-soc/detached.png)
+
+However, these additional meeting times can occasionally be detached, like in [Winter 2006's PHYS 2A](https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm?selectedTerm=WI06&tabNum=tabs-crs&courses=PHYS%202A), where it seems the first lecture time for C00 was accidentally marked as additional.
+This consequently makes C00 unenrollable, and so this for whatever reason moves the instructor to the first problem session's row.
+
+That said, I am not sure if this is just a rendering issue with the Schedule of Classes website, and if students were still able to enroll normally through WebReg (which already existed since at least 2000[^webreg]) despite the data issue.
+
+[^webreg]: The [2000–01 General Catalog](https://library.ucsd.edu/dc/object/bb54633762) mentions "WebReg in StudentLink" on PDF page 57. I am not sure if it's the first edition to mention WebReg, but this just shows that WebReg already existed since 2000.
+
 <!-- comment about what extra meeting times are -->
 
-// - WI06 page 422 PHYS 2A has two extra C00 lectures attached to.. nothing
-// ... followed by a regular unenrollable meeting
+<!-- // - WI06 page 422 PHYS 2A has two extra C00 lectures attached to.. nothing
+// ... followed by a regular unenrollable meeting -->
 
 <!-- extra meeting location TBA:
 
