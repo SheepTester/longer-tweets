@@ -5,7 +5,7 @@ description: People'll just vibe code them! How demoralizing.
 date: 2026-07-26T02:11
 tags:
   - programming
-# image: auto
+image: auto
 ---
 
 I used to encourage people learning to code to make personal projects as practice, to not worry about whether it'd be useful, and to publish them even if they're unfinished to build up a portfolio. That's essentially how [my website][website] came to be. Yet, not many people I know do this, even if they have plenty of time for practicing leetcode. I've always thought it's because they feel the need for an idea that is practical and not a waste of time, or they feel their work is too unpolished to publish.
