@@ -41,7 +41,7 @@ I can only hope that I can stay ahead of the curve, which is why I still program
 
 As for people learning to code, what would I recommend?
 
-- If you haven't settled on CS yet, then don't do CS. I feel like software engineering has never been a role deserving of respect. It may pay well, but the industries it works in have always been questionable at best: data brokering, recommendation algorithms, defense, and data centers.[^my-job] If you started CS now, you'd end up biting the apple of vibe coding and be trapped in a career that's being eaten away by AI.
+- If you haven't settled on CS yet, then don't do CS. I feel like software engineering has never been a role deserving of respect. It may pay well—too well—but the industries it works in have always been questionable at best: data brokering, recommendation algorithms, defense, and data centers.[^my-job] If you started CS now, you'd end up biting the apple of vibe coding and be trapped in a career that's being eaten away by AI.
 
   <!-- If you enjoy coding, you don't need a CS degree nor a SWE job. -->
 
