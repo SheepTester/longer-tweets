@@ -1,18 +1,19 @@
 ---
 layout: post
 title: i can no longer recommend personal projects
-description: People'll just vibe code them! How demoralizing.
+description: People’ll just vibe code them! How demoralizing.
 date: 2026-07-26T02:11
 tags:
   - programming
 image: auto
 ---
 
-I used to encourage people learning to code to make personal projects as practice, to not worry about whether it'd be useful, and to publish them even if they're unfinished to build up a portfolio. That's essentially how [my website][website] came to be. Yet, not many people I know do this, even if they have plenty of time for practicing leetcode. I've always thought it's because they feel the need for an idea that is practical and not a waste of time, or they feel their work is too unpolished to publish.
+I used to encourage people learning to code to make personal projects as practice, to not worry about whether it'd be useful, and to publish them even if they're unfinished to build up a portfolio. That's essentially how [my website][website] came to be. Yet, not many people I know did this, even though they have plenty of time to practice leetcode. I've always thought it's because they feel the need for an idea that is practical and not a waste of time, or they feel their work is too unpolished to publish.
+Or we got older and less creative.
 
 [website]: /
 
-Nonetheless, nowadays, I've 180'd from my position. I can no longer recommend people work on personal projects because I worry they'll just vibe code them. It's demoralizing.
+Nonetheless, nowadays, I've 180'd from my position. I can no longer recommend people work on personal projects because I worry they'll just vibe code them. It feels demoralizing to say this since it's always fun to see what other people come up with when they're not so focused on flattering colleges or employers.
 
 Not that it affects me personally. LLMs haven't really deterred me from pursuing personal projects, though they've taken away any hope of them being useful.[^useful] Perhaps that's why lately I've been working on what I consider to be complete wastes of time, like [scraping UCSD's class schedules][ucsd-soc]—I simply enjoy the mere act of programming by hand, and I care not how useful the end result will be.
 
@@ -22,10 +23,13 @@ Not that it affects me personally. LLMs haven't really deterred me from pursuing
 [doufu]: https://sheeptester.github.io/doufu/
 [ucsd-soc]: /longer-tweets/ucsd-schedule-of-classes/
 
-To me, programming is an art form (that happens to pay well, at least for now). It feels like most traditional art forms—illustrations, prose, videos—are faring with LLMs fairly well[^ai-art-health]: people will reject AI-generated art in these media. However, for programming, aside from video games,[^videogames] I feel like people don't really care whether the app they're using was AI-generated or not.
+<!-- this argument is too weak -->
+<!--
+To me, programming is an art form (that happens to pay well, at least for now). It feels like most traditional art forms—illustrations, prose, videos—are faring with LLMs fairly well:[^ai-art-health] people will generally reject AI-generated art in these media. However, for programming, aside from video games,[^videogames] I feel like people don't really care whether the app they're using was AI-generated or not.
 Therefore, I've accepted that making my personal projects AI-free by itself wouldn't garner much appreciation, and it wouldn't grant me a competitive edge over vibe coded alternatives. Making personal projects by hand must be done purely for the fun of it.
+-->
 
-[^ai-art-health]: Though human artists now have to deal with false AI accusations.
+[^ai-art-health]: Except that human artists now have to deal with false AI accusations.
 
 [^videogames]: Though, come to think of it, maybe I should try making more video games. I don't play many video games and don't have great ideas for one, but I think if I just start playing around, making a crappy toy and sticking ideas into it as they come up, something fun could arise from it.
 
@@ -41,11 +45,11 @@ I can only hope that I can stay ahead of the curve, which is why I still program
 
 As for people learning to code, what would I recommend?
 
-- If you haven't settled on CS yet, then don't do CS. I feel like software engineering has never been a role deserving of respect. It may pay well—too well—but the industries it works in have always been questionable at best: data brokering, recommendation algorithms, defense, and data centers.[^my-job] If you started CS now, you'd end up biting the apple of vibe coding and be trapped in a career that's being eaten away by AI.
+- If you haven't settled on CS yet, then don't do CS. I feel like software engineering has never been a role deserving of respect. It may pay well—too well—but the industries it works in have often been questionable at best: data brokering, recommendation algorithms, defense, and data centers.[^my-job] If you started CS now, you'd end up biting the apple of vibe coding and be trapped in a career that's being eaten away by AI.
 
   <!-- If you enjoy coding, you don't need a CS degree nor a SWE job. -->
 
-- If you're already committed to CS but can't find a job, then focus on networking. Blindly mass-applying [hasn't worked in years][sankey], and with extensions like Simplify and AI-generated resumes, companies are experiencing a deluge of questionable quality candidates that mask you in the haystack.
+- If you're already committed to CS but can't find a job, then focus on networking. Blindly mass-applying [hasn't worked in years][sankey], and with AI-generated resumes and extensions like Simplify, companies are experiencing a deluge of questionable quality candidates that obscure you in the haystack.
 
   University is essentially an overpriced networking experience, so use that time to befriend soon-to-be alumni, and hopefully they can drag you into a job. Or, if you're from the Bay Area, your parents are probably in tech and know people who have founded startups that could take you in.
 
