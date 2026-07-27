@@ -74,7 +74,9 @@ I'm using the list of style guides in the infobox on Wikipedia's [list of style 
 
 [^ap]: The [_AP Stylebook 55th Ed._](https://libgen.com.im/book.php?md5=78756e8fd792a1ff55ce1e932153afe7) for 2020–2022 has an exception for "the start of sports agate summaries." Curiously, AP never uses en dashes, so it uses hyphens for ranges (PDF page 423).
 
-[^apa]: The [_Publication Manual of the American Psychological Association, Seventh Edition_](https://libgen.com.im/book.php?md5=be26866571c2ab02cf7fd5ce708da432) explicitly states not to use spaces and warns that its overuse can "weaken the flow" (162).
+<!-- APA: https://libgen.bz/edition.php?id=138578185 -->
+
+[^apa]: The [_Publication Manual of the American Psychological Association, Seventh Edition_](https://libgen.co.in/book.php?md5=be26866571c2ab02cf7fd5ce708da432) explicitly states not to use spaces and warns that its overuse can "weaken the flow" (162).
 
 [^aus]: The [_Australian Guide to Legal Citation_](https://law.unimelb.edu.au/__data/assets/pdf_file/0005/3181325/AGLC4-with-Bookmarks-1.pdf) surrounds em dashes with spaces in its examples (23).
 
@@ -88,6 +90,13 @@ I'm using the list of style guides in the infobox on Wikipedia's [list of style 
     This isn't a prescription! [_The Cambridge Guide to English Usage_](https://baptistinternationalseminary.org/rhode-island-baptist-seminary/docs/CLASS%20224H%20THE%20CAMBRIDGE%20GUIDE%20TO%20ENGLISH%20USAGE.pdf) is a descriptive take on the overall English language, very similar to this longer tweet, and cites the _Chicago Manual_ and _Oxford Guide to Style_ as unspaced em dash users, and "Butcher" and _Editing Canadian English_ as spaced en dash enjoyers (PDF page 152). The book itself uses the latter convention because it likes how the spaces separate the parenthetical better.
 
     Curiously, it also notes that em dashes have an informal reputation because it gets overused in "unstructured writing," which maybe is where LLMs got their em dash overuse from.
+
+    > > _A loaf of bread, a jug of wine, and—Why are you
+    > > smiling?_
+    >
+    > This use of the dash (em dash) in unstructured writing
+    > has earned it a reputation as an informal punctuation
+    > mark, but the others are quite standard.
 
 [^chicago]: [_The Chicago Manual of Style_ (18th ed.)](https://z-library.im/book/L5w0w0A0kp/the-chicago-manual-of-style-18-edn.html) says dashes are "normally unspaced," but this can be overridden by the particular publication since consistency is more important.
 
