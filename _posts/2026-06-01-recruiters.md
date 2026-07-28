@@ -106,6 +106,10 @@ somehow their office can see nyc three hundred miles away in virginia. they are 
 
 their pay is "competitive"
 
+i asked where they got my email from. two months later, the guy[^voiceadmin] pretends not to hear me and instead links to their [application portal](https://www.voiceadmin.ai/apply). they also have a phone number if you want to chat with a bot
+
+[^voiceadmin]: he has the same profile picture as the CEO on their linked notion but goes by a different last name for some reason
+
 ## Thunderbird
 
 they want to take the fun out of video games
@@ -133,3 +137,17 @@ thinks that job applicants want a project template for slop coding interviews. t
 ## Applied Intuition
 
 grasping at anyone tesla for their hypothetical self driving
+
+## Open System Technologies
+
+they are making an AI API and for some reason want a human to make react dashboards for at least 215 thousand dollar
+
+their email was personalized with details from my linkedin profile
+
+## TraceRoot.AI
+
+they hired a random from openjobs ai which renamed to metix ai[^metix] to look for the first programmer for trace root ai
+
+[^metix]: though they havent updated their emails yet
+
+they plan on tracking users and you get to deal with the data. your actions will be public
