@@ -2,15 +2,19 @@
   class="post-entry {{ post.tags | join ' ' }}{% if post.draft %}draft{% endif %}"
 >
   <header>
-    <time class="date" datetime="{{ page.date | date: '%F' }}">
+    <time
+      class="date"
+      datetime="{{ page.date | date: '%F' }}"
+      style="view-transition-name: time-{{ post.slug }};"
+    >
       {{- post.date | date: '%F, a %A' -}}
     </time>
-    <h2 class="title">
+    <h2 class="title" style="view-transition-name: title-{{ post.slug }};">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
   </header>
   <p class="desc">{{ post.description }}</p>
-  <p class="tags">
+  <p class="tags" style="view-transition-name: tags-{{ post.slug }};">
     {%- for tag in post.tags -%} {%- include tag.html -%} {%- endfor -%}
   </p>
 </article>
