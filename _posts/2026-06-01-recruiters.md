@@ -151,3 +151,17 @@ they hired a random from openjobs ai which renamed to metix ai[^metix] to look f
 [^metix]: though they havent updated their emails yet
 
 they plan on tracking users and you get to deal with the data. your actions will be public
+
+## Listen Labs & Commure
+
+<!-- 4 emails -->
+
+these are two start ups with over hundred million dollar yet sharing a recruiter from helix
+
+google and microsoft apparently think listen lab is trustworthy. it helps them investigate their customers.
+
+commure enhances healthcare bureaucracy with AI
+
+## WeaveGrid[^wg]
+
+they [seek](https://www.weavegrid.com/careers/job-openings?ashby_jid=fe455659-d2b5-4440-8bca-53f0ce513994) tesla people for their EV charging company. they partner with various EV randos like rivian, notably NOT tesla. they hope to interest you in "python microservices"
