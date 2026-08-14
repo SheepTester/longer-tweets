@@ -162,6 +162,10 @@ google and microsoft apparently think listen lab is trustworthy. it helps them i
 
 commure enhances healthcare bureaucracy with AI
 
-## WeaveGrid[^wg]
+## WeaveGrid
 
 they [seek](https://www.weavegrid.com/careers/job-openings?ashby_jid=fe455659-d2b5-4440-8bca-53f0ce513994) tesla people for their EV charging company. they partner with various EV randos like rivian, notably NOT tesla. they hope to interest you in "python microservices"
+
+## Luzid
+
+ten people in a trenchcoat trying to get companies to switch from their organic, homegrown apps to SAP slop. their customers are random letters, and they are resorting to [rocket](https://www.getrocket.com/) to look for randos
