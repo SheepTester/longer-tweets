@@ -26,6 +26,8 @@ randomly shared a "body update" (😳??) with me. here's one of their "public st
 
 ## Somewear Labs
 
+<!-- 180k -->
+
 they want new members for their polycule in sf or chicago. they will pay under two hundred thousand bases, and for four days a week you are permitted to be at home. foreigners prohibited. they have TEN million dollars. this is considered "exciting"
 
 you will need to be resposible and do networks stuff. i think they are sending you into the mariana trench (BIG water pressure down there) and you will need to be reliable and secure
@@ -46,6 +48,8 @@ just imagine: you are trying to solve cancer. they want to be your annoying lab 
 
 ## Pallet
 
+<!-- 200k -->
+
 immediately begins email worrying that i might find pallet uninteresting. guy also claims to have infiltrated other startups
 
 ## Greylock
@@ -53,6 +57,8 @@ immediately begins email worrying that i might find pallet uninteresting. guy al
 they make tech companies big. apparently after talking to engineers they can sell the conversation somehow
 
 ## Vos Consultants
+
+<!-- 400k -->
 
 they allegedly have a "start up" with money yet are too timid to reveal its name. they euphemistically refer to it with exclusively ai buzzwords across three emails
 
@@ -70,6 +76,8 @@ hedge fund. selling points are "small team" and "we are making it not a small te
 
 they do not have a "formal application process" which grants them the power to do anything, like exclude certain populations they disfavor
 
+they said they got my email from juicebox and offered to remove it. however, 4 months later, the same team sent 3 successive emails to me again
+
 ## Metantz / Zettabyte
 
 <span lang="zh-TW">會說中文嗎？</span> they want a "vue/next.js" dev (is that not nuxt? or is their codebase a result of two highly opiniated engineers) who can draw rectangles in figma. the worst part? it's in palo alto
@@ -82,9 +90,11 @@ healthcare is expensive enough, but what if we drew money away from hospitals in
 
 it is unclear what they do but they have thirty one million dollar
 
-their job posting links are broken
+their [job posting links](https://znsrc.com/c/supdwmznft) are broken
 
 ## MBS Innovations
+
+<!-- 200k -->
 
 this guy is an interview dealer. he says many nameless companies are looking for people
 
@@ -126,6 +136,8 @@ guy who emailed me has his google pfp set to a screenshot from a flash photo wit
 
 ## Ambra
 
+<!-- 175k -->
+
 three people in a trenchcoat promise to automate ambulence insurance charges. only now are they trying to find an engineer.
 
 they cannot be contacted because the sender address is not real.
@@ -134,11 +146,13 @@ they cannot be contacted because the sender address is not real.
 
 thinks that job applicants want a project template for slop coding interviews. they have an exclusive in-group (the exclusivity makes it "private") for collecting your data. _they_ get to choose what companies you apply for.
 
-## Applied Intuition
+<!-- ## Applied Intuition
 
-grasping at anyone tesla for their hypothetical self driving
+grasping at anyone tesla for their hypothetical self driving -->
 
 ## Open System Technologies
+
+<!-- 215k -->
 
 they are making an AI API and for some reason want a human to make react dashboards for at least 215 thousand dollar
 
@@ -169,3 +183,19 @@ they [seek](https://www.weavegrid.com/careers/job-openings?ashby_jid=fe455659-d2
 ## Luzid
 
 ten people in a trenchcoat trying to get companies to switch from their organic, homegrown apps to SAP slop. their customers are random letters, and they are resorting to [rocket](https://www.getrocket.com/) to look for randos
+
+## fucking Palantir
+
+<!-- 150k -->
+
+working with lumos talents to turn real drones into a game like starcraft. i guess they want to enders game the middle east
+
+## [Hidani Tech](https://hidanitech.com/)
+
+they have a very specific mission statement: make apps and contribute to solutions. they had emailed me before a year ago
+
+## Notability
+
+<!-- 120k -->
+
+they want humans to add AI to their react app. they are near a bart station
