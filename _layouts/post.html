@@ -4,11 +4,17 @@ layout: default
 
 <article>
   <header>
-    <time class="date" datetime="{{ page.date | date: '%F' }}">
+    <time
+      class="date"
+      datetime="{{ page.date | date: '%F' }}"
+      style="view-transition-name: time-{{ page.slug }};"
+    >
       {{- page.date | date: '%F, a %A' -}}
     </time>
-    <h1 class="title">{{ page.title }}</h1>
-    <p class="tags">
+    <h1 class="title" style="view-transition-name: title-{{ page.slug }};">
+      {{ page.title }}
+    </h1>
+    <p class="tags" style="view-transition-name: tags-{{ page.slug }};">
       {%- for tag in page.tags -%} {%- include tag.html -%} {%- endfor -%}
     </p>
   </header>
