@@ -199,3 +199,9 @@ they have a very specific mission statement: make apps and contribute to solutio
 <!-- 120k -->
 
 they want humans to add AI to their react app. they are near a bart station
+
+## Clera
+
+<!-- 140k -->
+
+([clera](https://summitrole.us) is the recruiter) anonymous saas slop has already gotten money but somehow doesnt have any programmers yet and is looking for their first. you will only get 1.5% of the "business"
