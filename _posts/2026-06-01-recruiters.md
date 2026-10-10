@@ -198,10 +198,26 @@ they have a very specific mission statement: make apps and contribute to solutio
 
 <!-- 120k -->
 
-they want humans to add AI to their react app. they are near a bart station
+they [want humans](https://job-boards.greenhouse.io/gingerlabsinc/jobs/4928821008) to add AI to their react app. they are near a bart station
+
+the recruiters are from [subgraph](https://subgraph-search.tech/) and used two different names during my interactions with them, neither of which matched the name in their email address
 
 ## Clera
 
 <!-- 140k -->
 
 ([clera](https://summitrole.us) is the recruiter) anonymous saas slop has already gotten money but somehow doesnt have any programmers yet and is looking for their first. you will only get 1.5% of the "business"
+
+## micro1
+
+they use hirex consultancy to find gamedev contractors to do AI labelling. they claimed it was $90/hr but after replying with an email containing the word "interested" (hirex has an amazing response time of 2 minutes and apparently collects emails using "google bolean search") the [job listing](https://jobs.micro1.ai/post/43c43368-acf4-42f8-8351-74173291c5ac) says it's only $21/hr
+
+## [roles.cc](https://www.roles.cc/)
+
+they seek victims for startups and scrape emails from "Contactout and Rocketreach" (they call this activity "enriching")
+
+## AfterQuery
+
+[amya agency](https://www.amya.agency/) claims afterquery is YC's biggest unicorn. afterquery makes data infra for AI, whatever that means
+
+other victims of amya include: openevidence, profound, listen labs, netic, judgment labs
