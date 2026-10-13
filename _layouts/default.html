@@ -54,7 +54,12 @@
     {%- endif -%}
   </head>
   <body>
-    <div class="background"></div>
+    <img
+      class="background"
+      src="{{ '/images/blur.png' | relative_url }}"
+      aria-hidden="true"
+      draggable="false"
+    />
     <button class="toggle-accessible" id="toggle-accessible">
       <span class="toggle-accessible-badge">Enable accessible theme</span>
     </button>
